@@ -334,17 +334,6 @@ namespace google { namespace protobuf { namespace compiler { namespace objective
       field_generators_.get(descriptor_->field(i)).GenerateSynthesizeSource(printer);
     }
 
-/*
-    printer->Print("- (void) dealloc {\n");
-    printer->Indent();
-    for (int i = 0; i < descriptor_->field_count(); i++) {
-      field_generators_.get(descriptor_->field(i)).GenerateDeallocSource(printer);
-    }
-    printer->Outdent();
-    printer->Print(
-      "  [super dealloc];\n"
-      "}\n");
-*/
     printer->Print(
       "- (id) init {\n"
       "  if ((self = [super init])) {\n");
@@ -842,11 +831,7 @@ namespace google { namespace protobuf { namespace compiler { namespace objective
       "@end\n"
       "\n"
       "@implementation $classname$_Builder\n"
-      "@synthesize result;\n"
-      "- (void) dealloc {\n"
-      "  self.result = nil;\n"
-      "  [super dealloc];\n"
-      "}\n",
+      "@synthesize result;\n",
       "classname", ClassName(descriptor_));
 
     printer->Print(
