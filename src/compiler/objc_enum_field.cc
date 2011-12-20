@@ -106,11 +106,6 @@ namespace google { namespace protobuf { namespace compiler { namespace objective
       "@synthesize $name$;\n");
   }
 
-/*
-  void EnumFieldGenerator::GenerateDeallocSource(io::Printer* printer) const {
-  }
-
-*/
   void EnumFieldGenerator::GenerateInitializationSource(io::Printer* printer) const {
     printer->Print(variables_, "self.$name$ = $default$;\n");
   }
@@ -274,12 +269,6 @@ namespace google { namespace protobuf { namespace compiler { namespace objective
     printer->Print(variables_, "@dynamic $name$;\n");
   }
 
-/*
-  void RepeatedEnumFieldGenerator::GenerateDeallocSource(io::Printer* printer) const {
-    printer->Print(variables_,
-      "self.$list_name$ = nil;\n");
-  }
-*/
 
   void RepeatedEnumFieldGenerator::GenerateInitializationSource(io::Printer* printer) const {
   }
