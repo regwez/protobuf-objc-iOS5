@@ -242,7 +242,7 @@ namespace google { namespace protobuf { namespace compiler { namespace objective
   void PrimitiveFieldGenerator::GeneratePropertyHeader(io::Printer* printer) const {
     if (IsReferenceType(GetObjectiveCType(descriptor_))) {
       printer->Print(variables_,
-        "@property (readonly, retain)$storage_attribute$ $storage_type$ $name$;\n");
+        "@property (readonly, strong)$storage_attribute$ $storage_type$ $name$;\n");
     } else if (GetObjectiveCType(descriptor_) == OBJECTIVECTYPE_BOOLEAN) {
       printer->Print(variables_,
         "- (BOOL) $name$;\n");
@@ -256,7 +256,7 @@ namespace google { namespace protobuf { namespace compiler { namespace objective
   void PrimitiveFieldGenerator::GenerateExtensionSource(io::Printer* printer) const {
     if (IsReferenceType(GetObjectiveCType(descriptor_))) {
       printer->Print(variables_,
-        "@property (retain)$storage_attribute$ $storage_type$ $name$;\n");
+        "@property (strong)$storage_attribute$ $storage_type$ $name$;\n");
     } else {
       printer->Print(variables_,
         "@property $storage_type$ $name$;\n");
@@ -286,14 +286,14 @@ namespace google { namespace protobuf { namespace compiler { namespace objective
     }
   }
 
-
+/*
   void PrimitiveFieldGenerator::GenerateDeallocSource(io::Printer* printer) const {
     if (IsReferenceType(GetObjectiveCType(descriptor_))) {
       printer->Print(variables_,
         "self.$name$ = nil;\n");
     }
   }
-
+*/
 
   void PrimitiveFieldGenerator::GenerateInitializationSource(io::Printer* printer) const {
     printer->Print(variables_,
@@ -448,12 +448,12 @@ namespace google { namespace protobuf { namespace compiler { namespace objective
 
 
   void RepeatedPrimitiveFieldGenerator::GeneratePropertyHeader(io::Printer* printer) const {
-    printer->Print(variables_, "@property (readonly, retain) PBArray * $name$;\n");
+    printer->Print(variables_, "@property (readonly, strong) PBArray * $name$;\n");
   }
 
 
   void RepeatedPrimitiveFieldGenerator::GenerateExtensionSource(io::Printer* printer) const {
-    printer->Print(variables_, "@property (retain) PBAppendableArray * $list_name$;\n");
+    printer->Print(variables_, "@property (strong) PBAppendableArray * $list_name$;\n");
   }
 
 
@@ -462,11 +462,11 @@ namespace google { namespace protobuf { namespace compiler { namespace objective
     printer->Print(variables_, "@dynamic $name$;\n");
   }
 
-
+/*
   void RepeatedPrimitiveFieldGenerator::GenerateDeallocSource(io::Printer* printer) const {
     printer->Print(variables_, "self.$list_name$ = nil;\n");
   }
-
+*/
 
   void RepeatedPrimitiveFieldGenerator::GenerateInitializationSource(io::Printer* printer) const {;
   }
@@ -551,7 +551,7 @@ namespace google { namespace protobuf { namespace compiler { namespace objective
     printer->Print(variables_,
       "if (other.$list_name$.count > 0) {\n"
       "  if (result.$list_name$ == nil) {\n"
-      "    result.$list_name$ = [[other.$list_name$ copyWithZone:[other.$list_name$ zone]] autorelease];\n"
+      "    result.$list_name$ = [other.$list_name$ copyWithZone:[other.$list_name$ zone]];\n"
       "  } else {\n"
       "    [result.$list_name$ appendArray:other.$list_name$];\n"
       "  }\n"

@@ -334,6 +334,7 @@ namespace google { namespace protobuf { namespace compiler { namespace objective
       field_generators_.get(descriptor_->field(i)).GenerateSynthesizeSource(printer);
     }
 
+/*
     printer->Print("- (void) dealloc {\n");
     printer->Indent();
     for (int i = 0; i < descriptor_->field_count(); i++) {
@@ -343,7 +344,7 @@ namespace google { namespace protobuf { namespace compiler { namespace objective
     printer->Print(
       "  [super dealloc];\n"
       "}\n");
-
+*/
     printer->Print(
       "- (id) init {\n"
       "  if ((self = [super init])) {\n");
@@ -392,7 +393,7 @@ namespace google { namespace protobuf { namespace compiler { namespace objective
 
     printer->Print(
       "+ ($classname$_Builder*) builder {\n"
-      "  return [[[$classname$_Builder alloc] init] autorelease];\n"
+      "  return [[$classname$_Builder alloc] init];\n"
       "}\n"
       "+ ($classname$_Builder*) builderWithPrototype:($classname$*) prototype {\n"
       "  return [[$classname$ builder] mergeFrom:prototype];\n"
@@ -837,7 +838,7 @@ namespace google { namespace protobuf { namespace compiler { namespace objective
   void MessageGenerator::GenerateBuilderSource(io::Printer* printer) {
     printer->Print(
       "@interface $classname$_Builder()\n"
-      "@property (retain) $classname$* result;\n"
+      "@property (strong) $classname$* result;\n"
       "@end\n"
       "\n"
       "@implementation $classname$_Builder\n"
@@ -851,7 +852,7 @@ namespace google { namespace protobuf { namespace compiler { namespace objective
     printer->Print(
       "- (id) init {\n"
       "  if ((self = [super init])) {\n"
-      "    self.result = [[[$classname$ alloc] init] autorelease];\n"
+      "    self.result = [[$classname$ alloc] init];\n"
       "  }\n"
       "  return self;\n"
       "}\n",
@@ -883,7 +884,7 @@ namespace google { namespace protobuf { namespace compiler { namespace objective
 
     printer->Print(
       "- ($classname$_Builder*) clear {\n"
-      "  self.result = [[[$classname$ alloc] init] autorelease];\n"
+      "  self.result = [[$classname$ alloc] init];\n"
       "  return self;\n"
       "}\n"
       "- ($classname$_Builder*) clone {\n"
@@ -909,7 +910,7 @@ namespace google { namespace protobuf { namespace compiler { namespace objective
 
     printer->Outdent();
     printer->Print(
-      "  $classname$* returnMe = [[result retain] autorelease];\n"
+      "  $classname$* returnMe = result;\n"
       "  self.result = nil;\n"
       "  return returnMe;\n"
       "}\n",

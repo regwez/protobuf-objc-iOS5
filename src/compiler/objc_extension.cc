@@ -155,14 +155,14 @@ namespace google { namespace protobuf { namespace compiler { namespace objective
 
     printer->Print(
       vars,
-      "  [[PBConcreteExtensionField extensionWithType:$extension_type$\n"
+      "  [PBConcreteExtensionField extensionWithType:$extension_type$\n"
       "                                 extendedClass:[$extended_type$ class]\n"
       "                                   fieldNumber:$number$\n"
       "                                  defaultValue:$default$\n"
       "                           messageOrGroupClass:[$type$ class]\n"
       "                                    isRepeated:$is_repeated$\n"
       "                                      isPacked:$is_packed$\n"
-      "                        isMessageSetWireFormat:$is_wire_format$] retain];\n");
+      "                        isMessageSetWireFormat:$is_wire_format$];\n");
   }
 
   void ExtensionGenerator::GenerateRegistrationSource(io::Printer* printer) {
