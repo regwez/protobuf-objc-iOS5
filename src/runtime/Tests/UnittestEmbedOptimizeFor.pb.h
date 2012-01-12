@@ -119,11 +119,11 @@
 @private
   BOOL hasOptionalMessage_:1;
   TestOptimizedForSize* optionalMessage;
-  PBAppendableArray * repeatedMessageArray;
+  NSMutableArray * repeatedMessageArray;
 }
 - (BOOL) hasOptionalMessage;
-@property (readonly, retain) TestOptimizedForSize* optionalMessage;
-@property (readonly, retain) PBArray * repeatedMessage;
+@property (readonly, strong) TestOptimizedForSize* optionalMessage;
+@property (readonly, strong) NSMutableArray * repeatedMessage;
 - (TestOptimizedForSize*)repeatedMessageAtIndex:(NSUInteger)index;
 
 + (TestEmbedOptimizedForSize*) defaultInstance;

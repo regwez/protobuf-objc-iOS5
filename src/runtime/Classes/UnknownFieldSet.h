@@ -24,7 +24,7 @@
   NSDictionary* fields;
 }
 
-@property (readonly, retain) NSDictionary* fields;
+@property (readonly, strong) NSDictionary* fields;
 
 + (PBUnknownFieldSet*) defaultInstance;
 

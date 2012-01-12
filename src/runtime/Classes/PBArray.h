@@ -24,7 +24,6 @@ extern NSString * const PBArrayAllocationFailureException;
 
 typedef enum _PBArrayValueType
 {
-	PBArrayValueTypeObject,
 	PBArrayValueTypeBool,
 	PBArrayValueTypeInt32,
 	PBArrayValueTypeUInt32,
@@ -36,8 +35,8 @@ typedef enum _PBArrayValueType
 
 // PBArray is an immutable array class that's optimized for storing primitive
 // values.  All values stored in an PBArray instance must have the same type
-// (PBArrayValueType).  Object values (PBArrayValueTypeObject) are retained.
-@interface PBArray : NSObject <NSCopying, NSFastEnumeration>
+// (PBArrayValueType). 
+@interface PBArray : NSObject <NSCopying>
 {
 @protected
 	PBArrayValueType	_valueType;
@@ -46,8 +45,8 @@ typedef enum _PBArrayValueType
 	void *				_data;
 }
 
+
 - (NSUInteger)count;
-- (id)objectAtIndex:(NSUInteger)index;
 - (BOOL)boolAtIndex:(NSUInteger)index;
 - (int32_t)int32AtIndex:(NSUInteger)index;
 - (uint32_t)uint32AtIndex:(NSUInteger)index;
@@ -84,7 +83,6 @@ typedef enum _PBArrayValueType
 // the end of the array.
 @interface PBAppendableArray : PBArray
 
-- (void)addObject:(id)value;
 - (void)addBool:(BOOL)value;
 - (void)addInt32:(int32_t)value;
 - (void)addUint32:(uint32_t)value;

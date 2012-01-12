@@ -23,8 +23,8 @@
 
 
 @interface PBCodedInputStream ()
-@property (retain) NSMutableData* buffer;
-@property (retain) NSInputStream* input;
+@property (strong) NSMutableData* buffer;
+@property (strong) NSInputStream* input;
 @end
 
 
@@ -39,10 +39,6 @@ const int32_t BUFFER_SIZE = 4096;
 
 - (void) dealloc {
   [input close];
-  self.buffer = nil;
-  self.input = nil;
-
-  [super dealloc];
 }
 
 
@@ -79,12 +75,12 @@ const int32_t BUFFER_SIZE = 4096;
 
 
 + (PBCodedInputStream*) streamWithData:(NSData*) data {
-  return [[[PBCodedInputStream alloc] initWithData:data] autorelease];
+  return [[PBCodedInputStream alloc] initWithData:data];
 }
 
 
 + (PBCodedInputStream*) streamWithInputStream:(NSInputStream*) input {
-  return [[[PBCodedInputStream alloc] initWithInputStream:input] autorelease];
+  return [[PBCodedInputStream alloc] initWithInputStream:input];
 }
 
 
@@ -224,15 +220,15 @@ const int32_t BUFFER_SIZE = 4096;
     // Fast path:  We already have the bytes in a contiguous buffer, so
     //   just copy directly from it.
     //  new String(buffer, bufferPos, size, "UTF-8");
-    NSString* result = [[[NSString alloc] initWithBytes:(((uint8_t*) buffer.bytes) + bufferPos)
+    NSString* result = [[NSString alloc] initWithBytes:(((uint8_t*) buffer.bytes) + bufferPos)
                                                  length:size
-                                               encoding:NSUTF8StringEncoding] autorelease];
+                                               encoding:NSUTF8StringEncoding] ;
     bufferPos += size;
     return result;
   } else {
     // Slow path:  Build a byte array first then copy it.
     NSData* data = [self readRawData:size];
-    return [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
+    return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] ;
   }
 }
 

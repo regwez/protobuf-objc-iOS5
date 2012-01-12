@@ -24,9 +24,9 @@
 #import "WireFormat.h"
 
 @interface PBUnknownFieldSet_Builder ()
-@property (retain) NSMutableDictionary* fields;
+@property (strong) NSMutableDictionary* fields;
 @property int32_t lastFieldNumber;
-@property (retain) PBMutableField* lastField;
+@property (strong) PBMutableField* lastField;
 @end
 
 
@@ -35,15 +35,6 @@
 @synthesize fields;
 @synthesize lastFieldNumber;
 @synthesize lastField;
-
-
-- (void) dealloc {
-  self.fields = nil;
-  self.lastFieldNumber = 0;
-  self.lastField = nil;
-
-  [super dealloc];
-}
 
 
 - (id) init {
@@ -55,7 +46,7 @@
 
 
 + (PBUnknownFieldSet_Builder*) createBuilder:(PBUnknownFieldSet*) unknownFields {
-  PBUnknownFieldSet_Builder* builder = [[[PBUnknownFieldSet_Builder alloc] init] autorelease];
+  PBUnknownFieldSet_Builder* builder = [[PBUnknownFieldSet_Builder alloc] init];
   [builder mergeUnknownFields:unknownFields];
   return builder;
 }

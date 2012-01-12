@@ -25,11 +25,14 @@
 #import "Utilities.h"
 #import "WireFormat.h"
 
+BOOL typeIsFixedSize(PBExtensionType type);
+int32_t typeSize(PBExtensionType type);
+
 @interface PBConcreteExtensionField()
 @property PBExtensionType type;
 @property (assign) Class extendedClass;
 @property int32_t fieldNumber;
-@property (retain) id defaultValue;
+@property (strong) id defaultValue;
 @property (assign) Class messageOrGroupClass;
 @property BOOL isRepeated;
 @property BOOL isPacked;
@@ -46,18 +49,6 @@
 @synthesize isRepeated;
 @synthesize isPacked;
 @synthesize isMessageSetWireFormat;
-
-- (void) dealloc {
-  self.type = 0;
-  self.extendedClass = nil;
-  self.fieldNumber = 0;
-  self.defaultValue = nil;
-  self.messageOrGroupClass = nil;
-  self.isRepeated = NO;
-  self.isPacked = NO;
-  self.isMessageSetWireFormat = NO;
-  [super dealloc];
-}
 
 
 - (id)     initWithType:(PBExtensionType) type_
@@ -91,14 +82,14 @@
                                    isRepeated:(BOOL) isRepeated
                                      isPacked:(BOOL) isPacked
                        isMessageSetWireFormat:(BOOL) isMessageSetWireFormat {
-  return [[[PBConcreteExtensionField alloc] initWithType:type
+  return [[PBConcreteExtensionField alloc] initWithType:type
                                          extendedClass:extendedClass
                                            fieldNumber:fieldNumber
                                           defaultValue:defaultValue
                              messageOrGroupClass:messageOrGroupClass
                                             isRepeated:isRepeated
                                               isPacked:isPacked
-                                isMessageSetWireFormat:isMessageSetWireFormat] autorelease];
+                                isMessageSetWireFormat:isMessageSetWireFormat] ;
 }
 
 

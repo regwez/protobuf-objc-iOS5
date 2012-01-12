@@ -12,7 +12,7 @@ static PBExtensionRegistry* extensionRegistry = nil;
   if (self == [UnittestEmptyRoot class]) {
     PBMutableExtensionRegistry* registry = [PBMutableExtensionRegistry registry];
     [self registerAllExtensions:registry];
-    extensionRegistry = [registry retain];
+    extensionRegistry = registry;
   }
 }
 + (void) registerAllExtensions:(PBMutableExtensionRegistry*) registry {

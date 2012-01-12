@@ -25,7 +25,7 @@
 
 
 @interface PBGeneratedMessage ()
-@property (retain) PBUnknownFieldSet* unknownFields;
+@property (strong) PBUnknownFieldSet* unknownFields;
 @end
 
 

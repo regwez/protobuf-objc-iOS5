@@ -109,6 +109,8 @@ string BoxValue(const FieldDescriptor* field, const string& value);
 
 const char* GetArrayValueType(const FieldDescriptor* field);
 
+bool isObjectArray(const FieldDescriptor* field);
+
 // Escape C++ trigraphs by escaping question marks to \?
 string EscapeTrigraphs(const string& to_escape);
 

@@ -94,756 +94,756 @@ static PBExtensionRegistry* extensionRegistry = nil;
 + (void) initialize {
   if (self == [UnittestLiteRoot class]) {
     UnittestLiteRoot_optionalInt32ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeInt32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeInt32
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:1
                                       defaultValue:[NSNumber numberWithInt:0]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_optionalInt64ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeInt64
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeInt64
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:2
                                       defaultValue:[NSNumber numberWithLongLong:0L]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_optionalUint32ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeUInt32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeUInt32
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:3
                                       defaultValue:[NSNumber numberWithInt:0]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_optionalUint64ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeUInt64
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeUInt64
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:4
                                       defaultValue:[NSNumber numberWithLongLong:0L]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_optionalSint32ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeSInt32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeSInt32
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:5
                                       defaultValue:[NSNumber numberWithInt:0]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_optionalSint64ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeSInt64
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeSInt64
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:6
                                       defaultValue:[NSNumber numberWithLongLong:0L]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_optionalFixed32ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeFixed32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeFixed32
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:7
                                       defaultValue:[NSNumber numberWithInt:0]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_optionalFixed64ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeFixed64
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeFixed64
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:8
                                       defaultValue:[NSNumber numberWithLongLong:0L]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_optionalSfixed32ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeSFixed32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeSFixed32
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:9
                                       defaultValue:[NSNumber numberWithInt:0]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_optionalSfixed64ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeSFixed64
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeSFixed64
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:10
                                       defaultValue:[NSNumber numberWithLongLong:0L]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_optionalFloatExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeFloat
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeFloat
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:11
                                       defaultValue:[NSNumber numberWithFloat:0]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_optionalDoubleExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeDouble
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeDouble
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:12
                                       defaultValue:[NSNumber numberWithDouble:0]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_optionalBoolExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeBool
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeBool
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:13
                                       defaultValue:[NSNumber numberWithBool:NO]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_optionalStringExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeString
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeString
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:14
                                       defaultValue:@""
                                messageOrGroupClass:[NSString class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_optionalBytesExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeBytes
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeBytes
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:15
                                       defaultValue:[NSData data]
                                messageOrGroupClass:[NSData class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_optionalGroupExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeGroup
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeGroup
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:16
                                       defaultValue:[OptionalGroup_extension_lite defaultInstance]
                                messageOrGroupClass:[OptionalGroup_extension_lite class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_optionalNestedMessageExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:18
                                       defaultValue:[TestAllTypesLite_NestedMessage defaultInstance]
                                messageOrGroupClass:[TestAllTypesLite_NestedMessage class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_optionalForeignMessageExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:19
                                       defaultValue:[ForeignMessageLite defaultInstance]
                                messageOrGroupClass:[ForeignMessageLite class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_optionalImportMessageExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:20
                                       defaultValue:[ImportMessageLite defaultInstance]
                                messageOrGroupClass:[ImportMessageLite class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_optionalNestedEnumExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeEnum
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeEnum
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:21
                                       defaultValue:[NSNumber numberWithInt:TestAllTypesLite_NestedEnumFoo]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_optionalForeignEnumExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeEnum
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeEnum
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:22
                                       defaultValue:[NSNumber numberWithInt:ForeignEnumLiteForeignLiteFoo]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_optionalImportEnumExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeEnum
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeEnum
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:23
                                       defaultValue:[NSNumber numberWithInt:ImportEnumLiteImportLiteFoo]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_optionalStringPieceExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeString
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeString
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:24
                                       defaultValue:@""
                                messageOrGroupClass:[NSString class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_optionalCordExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeString
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeString
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:25
                                       defaultValue:@""
                                messageOrGroupClass:[NSString class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_repeatedInt32ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeInt32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeInt32
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:31
                                       defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeInt32]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:YES
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_repeatedInt64ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeInt64
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeInt64
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:32
                                       defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeInt64]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:YES
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_repeatedUint32ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeUInt32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeUInt32
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:33
                                       defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeUInt32]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:YES
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_repeatedUint64ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeUInt64
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeUInt64
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:34
                                       defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeUInt64]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:YES
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_repeatedSint32ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeSInt32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeSInt32
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:35
                                       defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeInt32]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:YES
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_repeatedSint64ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeSInt64
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeSInt64
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:36
                                       defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeInt64]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:YES
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_repeatedFixed32ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeFixed32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeFixed32
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:37
                                       defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeUInt32]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:YES
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_repeatedFixed64ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeFixed64
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeFixed64
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:38
                                       defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeUInt64]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:YES
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_repeatedSfixed32ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeSFixed32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeSFixed32
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:39
                                       defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeInt32]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:YES
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_repeatedSfixed64ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeSFixed64
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeSFixed64
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:40
                                       defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeInt64]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:YES
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_repeatedFloatExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeFloat
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeFloat
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:41
                                       defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeFloat]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:YES
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_repeatedDoubleExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeDouble
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeDouble
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:42
                                       defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeDouble]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:YES
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_repeatedBoolExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeBool
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeBool
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:43
                                       defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeBool]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:YES
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_repeatedStringExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeString
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeString
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:44
-                                      defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeObject]
+                                      defaultValue:[[NSArray alloc ]init]
                                messageOrGroupClass:[NSString class]
                                         isRepeated:YES
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_repeatedBytesExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeBytes
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeBytes
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:45
-                                      defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeObject]
+                                      defaultValue:[[NSArray alloc ]init]
                                messageOrGroupClass:[NSData class]
                                         isRepeated:YES
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_repeatedGroupExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeGroup
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeGroup
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:46
-                                      defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeObject]
+                                      defaultValue:[[NSArray alloc ]init]
                                messageOrGroupClass:[RepeatedGroup_extension_lite class]
                                         isRepeated:YES
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_repeatedNestedMessageExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:48
-                                      defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeObject]
+                                      defaultValue:[[NSArray alloc ]init]
                                messageOrGroupClass:[TestAllTypesLite_NestedMessage class]
                                         isRepeated:YES
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_repeatedForeignMessageExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:49
-                                      defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeObject]
+                                      defaultValue:[[NSArray alloc ]init]
                                messageOrGroupClass:[ForeignMessageLite class]
                                         isRepeated:YES
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_repeatedImportMessageExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:50
-                                      defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeObject]
+                                      defaultValue:[[NSArray alloc ]init]
                                messageOrGroupClass:[ImportMessageLite class]
                                         isRepeated:YES
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_repeatedNestedEnumExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeEnum
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeEnum
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:51
-                                      defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeObject]
+                                      defaultValue:[[NSArray alloc ]init]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:YES
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_repeatedForeignEnumExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeEnum
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeEnum
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:52
-                                      defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeObject]
+                                      defaultValue:[[NSArray alloc ]init]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:YES
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_repeatedImportEnumExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeEnum
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeEnum
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:53
-                                      defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeObject]
+                                      defaultValue:[[NSArray alloc ]init]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:YES
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_repeatedStringPieceExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeString
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeString
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:54
-                                      defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeObject]
+                                      defaultValue:[[NSArray alloc ]init]
                                messageOrGroupClass:[NSString class]
                                         isRepeated:YES
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_repeatedCordExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeString
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeString
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:55
-                                      defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeObject]
+                                      defaultValue:[[NSArray alloc ]init]
                                messageOrGroupClass:[NSString class]
                                         isRepeated:YES
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_defaultInt32ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeInt32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeInt32
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:61
                                       defaultValue:[NSNumber numberWithInt:41]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_defaultInt64ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeInt64
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeInt64
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:62
                                       defaultValue:[NSNumber numberWithLongLong:42L]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_defaultUint32ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeUInt32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeUInt32
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:63
                                       defaultValue:[NSNumber numberWithInt:43]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_defaultUint64ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeUInt64
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeUInt64
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:64
                                       defaultValue:[NSNumber numberWithLongLong:44L]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_defaultSint32ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeSInt32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeSInt32
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:65
                                       defaultValue:[NSNumber numberWithInt:-45]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_defaultSint64ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeSInt64
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeSInt64
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:66
                                       defaultValue:[NSNumber numberWithLongLong:46L]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_defaultFixed32ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeFixed32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeFixed32
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:67
                                       defaultValue:[NSNumber numberWithInt:47]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_defaultFixed64ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeFixed64
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeFixed64
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:68
                                       defaultValue:[NSNumber numberWithLongLong:48L]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_defaultSfixed32ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeSFixed32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeSFixed32
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:69
                                       defaultValue:[NSNumber numberWithInt:49]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_defaultSfixed64ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeSFixed64
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeSFixed64
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:70
                                       defaultValue:[NSNumber numberWithLongLong:-50L]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_defaultFloatExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeFloat
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeFloat
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:71
                                       defaultValue:[NSNumber numberWithFloat:51.5]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_defaultDoubleExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeDouble
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeDouble
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:72
                                       defaultValue:[NSNumber numberWithDouble:52000]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_defaultBoolExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeBool
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeBool
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:73
                                       defaultValue:[NSNumber numberWithBool:YES]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_defaultStringExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeString
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeString
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:74
                                       defaultValue:@"hello"
                                messageOrGroupClass:[NSString class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_defaultBytesExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeBytes
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeBytes
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:75
                                       defaultValue:[NSData dataWithBytes:"world" length:5]
                                messageOrGroupClass:[NSData class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_defaultNestedEnumExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeEnum
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeEnum
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:81
                                       defaultValue:[NSNumber numberWithInt:TestAllTypesLite_NestedEnumBar]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_defaultForeignEnumExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeEnum
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeEnum
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:82
                                       defaultValue:[NSNumber numberWithInt:ForeignEnumLiteForeignLiteBar]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_defaultImportEnumExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeEnum
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeEnum
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:83
                                       defaultValue:[NSNumber numberWithInt:ImportEnumLiteImportLiteBar]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_defaultStringPieceExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeString
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeString
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:84
                                       defaultValue:@"abc"
                                messageOrGroupClass:[NSString class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_defaultCordExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeString
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeString
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:85
                                       defaultValue:@"123"
                                messageOrGroupClass:[NSString class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_packedInt32ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeInt32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeInt32
                                      extendedClass:[TestPackedExtensionsLite class]
                                        fieldNumber:90
                                       defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeInt32]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:YES
                                           isPacked:YES
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_packedInt64ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeInt64
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeInt64
                                      extendedClass:[TestPackedExtensionsLite class]
                                        fieldNumber:91
                                       defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeInt64]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:YES
                                           isPacked:YES
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_packedUint32ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeUInt32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeUInt32
                                      extendedClass:[TestPackedExtensionsLite class]
                                        fieldNumber:92
                                       defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeUInt32]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:YES
                                           isPacked:YES
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_packedUint64ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeUInt64
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeUInt64
                                      extendedClass:[TestPackedExtensionsLite class]
                                        fieldNumber:93
                                       defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeUInt64]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:YES
                                           isPacked:YES
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_packedSint32ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeSInt32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeSInt32
                                      extendedClass:[TestPackedExtensionsLite class]
                                        fieldNumber:94
                                       defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeInt32]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:YES
                                           isPacked:YES
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_packedSint64ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeSInt64
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeSInt64
                                      extendedClass:[TestPackedExtensionsLite class]
                                        fieldNumber:95
                                       defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeInt64]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:YES
                                           isPacked:YES
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_packedFixed32ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeFixed32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeFixed32
                                      extendedClass:[TestPackedExtensionsLite class]
                                        fieldNumber:96
                                       defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeUInt32]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:YES
                                           isPacked:YES
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_packedFixed64ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeFixed64
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeFixed64
                                      extendedClass:[TestPackedExtensionsLite class]
                                        fieldNumber:97
                                       defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeUInt64]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:YES
                                           isPacked:YES
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_packedSfixed32ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeSFixed32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeSFixed32
                                      extendedClass:[TestPackedExtensionsLite class]
                                        fieldNumber:98
                                       defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeInt32]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:YES
                                           isPacked:YES
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_packedSfixed64ExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeSFixed64
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeSFixed64
                                      extendedClass:[TestPackedExtensionsLite class]
                                        fieldNumber:99
                                       defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeInt64]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:YES
                                           isPacked:YES
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_packedFloatExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeFloat
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeFloat
                                      extendedClass:[TestPackedExtensionsLite class]
                                        fieldNumber:100
                                       defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeFloat]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:YES
                                           isPacked:YES
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_packedDoubleExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeDouble
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeDouble
                                      extendedClass:[TestPackedExtensionsLite class]
                                        fieldNumber:101
                                       defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeDouble]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:YES
                                           isPacked:YES
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_packedBoolExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeBool
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeBool
                                      extendedClass:[TestPackedExtensionsLite class]
                                        fieldNumber:102
                                       defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeBool]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:YES
                                           isPacked:YES
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestLiteRoot_packedEnumExtensionLite =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeEnum
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeEnum
                                      extendedClass:[TestPackedExtensionsLite class]
                                        fieldNumber:103
-                                      defaultValue:[PBArray arrayWithValueType:PBArrayValueTypeObject]
+                                      defaultValue:[[NSArray alloc ]init]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:YES
                                           isPacked:YES
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     TestNestedExtensionLite_nestedExtension =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeInt32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeInt32
                                      extendedClass:[TestAllExtensionsLite class]
                                        fieldNumber:12345
                                       defaultValue:[NSNumber numberWithInt:0]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     PBMutableExtensionRegistry* registry = [PBMutableExtensionRegistry registry];
     [self registerAllExtensions:registry];
     [UnittestImportLiteRoot registerAllExtensions:registry];
-    extensionRegistry = [registry retain];
+    extensionRegistry = registry;
   }
 }
 + (void) registerAllExtensions:(PBMutableExtensionRegistry*) registry {
@@ -1203,41 +1203,41 @@ BOOL ForeignEnumLiteIsValidValue(ForeignEnumLite value) {
 @property Float32 optionalFloat;
 @property Float64 optionalDouble;
 @property BOOL optionalBool;
-@property (retain) NSString* optionalString;
-@property (retain) NSData* optionalBytes;
-@property (retain) TestAllTypesLite_OptionalGroup* optionalGroup;
-@property (retain) TestAllTypesLite_NestedMessage* optionalNestedMessage;
-@property (retain) ForeignMessageLite* optionalForeignMessage;
-@property (retain) ImportMessageLite* optionalImportMessage;
+@property (strong) NSString* optionalString;
+@property (strong) NSData* optionalBytes;
+@property (strong) TestAllTypesLite_OptionalGroup* optionalGroup;
+@property (strong) TestAllTypesLite_NestedMessage* optionalNestedMessage;
+@property (strong) ForeignMessageLite* optionalForeignMessage;
+@property (strong) ImportMessageLite* optionalImportMessage;
 @property TestAllTypesLite_NestedEnum optionalNestedEnum;
 @property ForeignEnumLite optionalForeignEnum;
 @property ImportEnumLite optionalImportEnum;
-@property (retain) NSString* optionalStringPiece;
-@property (retain) NSString* optionalCord;
-@property (retain) PBAppendableArray * repeatedInt32Array;
-@property (retain) PBAppendableArray * repeatedInt64Array;
-@property (retain) PBAppendableArray * repeatedUint32Array;
-@property (retain) PBAppendableArray * repeatedUint64Array;
-@property (retain) PBAppendableArray * repeatedSint32Array;
-@property (retain) PBAppendableArray * repeatedSint64Array;
-@property (retain) PBAppendableArray * repeatedFixed32Array;
-@property (retain) PBAppendableArray * repeatedFixed64Array;
-@property (retain) PBAppendableArray * repeatedSfixed32Array;
-@property (retain) PBAppendableArray * repeatedSfixed64Array;
-@property (retain) PBAppendableArray * repeatedFloatArray;
-@property (retain) PBAppendableArray * repeatedDoubleArray;
-@property (retain) PBAppendableArray * repeatedBoolArray;
-@property (retain) PBAppendableArray * repeatedStringArray;
-@property (retain) PBAppendableArray * repeatedBytesArray;
-@property (retain) PBAppendableArray * repeatedGroupArray;
-@property (retain) PBAppendableArray * repeatedNestedMessageArray;
-@property (retain) PBAppendableArray * repeatedForeignMessageArray;
-@property (retain) PBAppendableArray * repeatedImportMessageArray;
-@property (retain) PBAppendableArray * repeatedNestedEnumArray;
-@property (retain) PBAppendableArray * repeatedForeignEnumArray;
-@property (retain) PBAppendableArray * repeatedImportEnumArray;
-@property (retain) PBAppendableArray * repeatedStringPieceArray;
-@property (retain) PBAppendableArray * repeatedCordArray;
+@property (strong) NSString* optionalStringPiece;
+@property (strong) NSString* optionalCord;
+@property (strong) PBAppendableArray * repeatedInt32Array;
+@property (strong) PBAppendableArray * repeatedInt64Array;
+@property (strong) PBAppendableArray * repeatedUint32Array;
+@property (strong) PBAppendableArray * repeatedUint64Array;
+@property (strong) PBAppendableArray * repeatedSint32Array;
+@property (strong) PBAppendableArray * repeatedSint64Array;
+@property (strong) PBAppendableArray * repeatedFixed32Array;
+@property (strong) PBAppendableArray * repeatedFixed64Array;
+@property (strong) PBAppendableArray * repeatedSfixed32Array;
+@property (strong) PBAppendableArray * repeatedSfixed64Array;
+@property (strong) PBAppendableArray * repeatedFloatArray;
+@property (strong) PBAppendableArray * repeatedDoubleArray;
+@property (strong) PBAppendableArray * repeatedBoolArray;
+@property (strong) NSMutableArray * repeatedStringArray;
+@property (strong) NSMutableArray * repeatedBytesArray;
+@property (strong) NSMutableArray * repeatedGroupArray;
+@property (strong) NSMutableArray * repeatedNestedMessageArray;
+@property (strong) NSMutableArray * repeatedForeignMessageArray;
+@property (strong) NSMutableArray * repeatedImportMessageArray;
+@property (strong) PBAppendableArray * repeatedNestedEnumArray;
+@property (strong) PBAppendableArray * repeatedForeignEnumArray;
+@property (strong) PBAppendableArray * repeatedImportEnumArray;
+@property (strong) NSMutableArray * repeatedStringPieceArray;
+@property (strong) NSMutableArray * repeatedCordArray;
 @property int32_t defaultInt32;
 @property int64_t defaultInt64;
 @property uint32_t defaultUint32;
@@ -1251,13 +1251,13 @@ BOOL ForeignEnumLiteIsValidValue(ForeignEnumLite value) {
 @property Float32 defaultFloat;
 @property Float64 defaultDouble;
 @property BOOL defaultBool;
-@property (retain) NSString* defaultString;
-@property (retain) NSData* defaultBytes;
+@property (strong) NSString* defaultString;
+@property (strong) NSData* defaultBytes;
 @property TestAllTypesLite_NestedEnum defaultNestedEnum;
 @property ForeignEnumLite defaultForeignEnum;
 @property ImportEnumLite defaultImportEnum;
-@property (retain) NSString* defaultStringPiece;
-@property (retain) NSString* defaultCord;
+@property (strong) NSString* defaultStringPiece;
+@property (strong) NSString* defaultCord;
 @end
 
 @implementation TestAllTypesLite
@@ -1628,45 +1628,7 @@ BOOL ForeignEnumLiteIsValidValue(ForeignEnumLite value) {
   hasDefaultCord_ = !!value;
 }
 @synthesize defaultCord;
-- (void) dealloc {
-  self.optionalString = nil;
-  self.optionalBytes = nil;
-  self.optionalGroup = nil;
-  self.optionalNestedMessage = nil;
-  self.optionalForeignMessage = nil;
-  self.optionalImportMessage = nil;
-  self.optionalStringPiece = nil;
-  self.optionalCord = nil;
-  self.repeatedInt32Array = nil;
-  self.repeatedInt64Array = nil;
-  self.repeatedUint32Array = nil;
-  self.repeatedUint64Array = nil;
-  self.repeatedSint32Array = nil;
-  self.repeatedSint64Array = nil;
-  self.repeatedFixed32Array = nil;
-  self.repeatedFixed64Array = nil;
-  self.repeatedSfixed32Array = nil;
-  self.repeatedSfixed64Array = nil;
-  self.repeatedFloatArray = nil;
-  self.repeatedDoubleArray = nil;
-  self.repeatedBoolArray = nil;
-  self.repeatedStringArray = nil;
-  self.repeatedBytesArray = nil;
-  self.repeatedGroupArray = nil;
-  self.repeatedNestedMessageArray = nil;
-  self.repeatedForeignMessageArray = nil;
-  self.repeatedImportMessageArray = nil;
-  self.repeatedNestedEnumArray = nil;
-  self.repeatedForeignEnumArray = nil;
-  self.repeatedImportEnumArray = nil;
-  self.repeatedStringPieceArray = nil;
-  self.repeatedCordArray = nil;
-  self.defaultString = nil;
-  self.defaultBytes = nil;
-  self.defaultStringPiece = nil;
-  self.defaultCord = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.optionalInt32 = 0;
@@ -1806,37 +1768,37 @@ static TestAllTypesLite* defaultTestAllTypesLiteInstance = nil;
 - (BOOL)repeatedBoolAtIndex:(NSUInteger)index {
   return [repeatedBoolArray boolAtIndex:index];
 }
-- (PBArray *)repeatedString {
+- (NSMutableArray *)repeatedString {
   return repeatedStringArray;
 }
 - (NSString*)repeatedStringAtIndex:(NSUInteger)index {
   return [repeatedStringArray objectAtIndex:index];
 }
-- (PBArray *)repeatedBytes {
+- (NSArray *)repeatedBytes {
   return repeatedBytesArray;
 }
 - (NSData*)repeatedBytesAtIndex:(NSUInteger)index {
   return [repeatedBytesArray objectAtIndex:index];
 }
-- (PBArray *)repeatedGroup {
+- (NSArray *)repeatedGroup {
   return repeatedGroupArray;
 }
 - (TestAllTypesLite_RepeatedGroup*)repeatedGroupAtIndex:(NSUInteger)index {
   return [repeatedGroupArray objectAtIndex:index];
 }
-- (PBArray *)repeatedNestedMessage {
+- (NSArray *)repeatedNestedMessage {
   return repeatedNestedMessageArray;
 }
 - (TestAllTypesLite_NestedMessage*)repeatedNestedMessageAtIndex:(NSUInteger)index {
   return [repeatedNestedMessageArray objectAtIndex:index];
 }
-- (PBArray *)repeatedForeignMessage {
+- (NSArray *)repeatedForeignMessage {
   return repeatedForeignMessageArray;
 }
 - (ForeignMessageLite*)repeatedForeignMessageAtIndex:(NSUInteger)index {
   return [repeatedForeignMessageArray objectAtIndex:index];
 }
-- (PBArray *)repeatedImportMessage {
+- (NSArray *)repeatedImportMessage {
   return repeatedImportMessageArray;
 }
 - (ImportMessageLite*)repeatedImportMessageAtIndex:(NSUInteger)index {
@@ -1860,13 +1822,13 @@ static TestAllTypesLite* defaultTestAllTypesLiteInstance = nil;
 - (ImportEnumLite)repeatedImportEnumAtIndex:(NSUInteger)index {
   return [repeatedImportEnumArray int32AtIndex:index];
 }
-- (PBArray *)repeatedStringPiece {
+- (NSArray *)repeatedStringPiece {
   return repeatedStringPieceArray;
 }
 - (NSString*)repeatedStringPieceAtIndex:(NSUInteger)index {
   return [repeatedStringPieceArray objectAtIndex:index];
 }
-- (PBArray *)repeatedCord {
+- (NSArray *)repeatedCord {
   return repeatedCordArray;
 }
 - (NSString*)repeatedCordAtIndex:(NSUInteger)index {
@@ -2041,17 +2003,17 @@ static TestAllTypesLite* defaultTestAllTypesLiteInstance = nil;
   }
   const NSUInteger repeatedStringArrayCount = self.repeatedStringArray.count;
   if (repeatedStringArrayCount > 0) {
-    const NSString* *values = (const NSString* *)self.repeatedStringArray.data;
-    for (NSUInteger i = 0; i < repeatedStringArrayCount; ++i) {
-      [output writeString:44 value:values[i]];
-    }
+
+      
+      for(NSString *value in   self.repeatedStringArray){
+          [output writeString:44 value:value];
+      }
   }
   const NSUInteger repeatedBytesArrayCount = self.repeatedBytesArray.count;
-  if (repeatedBytesArrayCount > 0) {
-    const NSData* *values = (const NSData* *)self.repeatedBytesArray.data;
-    for (NSUInteger i = 0; i < repeatedBytesArrayCount; ++i) {
-      [output writeData:45 value:values[i]];
-    }
+  if (repeatedBytesArrayCount > 0) {      
+      for(NSData *value in   self.repeatedBytesArray){
+          [output writeData:45 value:value];
+      }
   }
   for (TestAllTypesLite_RepeatedGroup *element in self.repeatedGroupArray) {
     [output writeGroup:46 value:element];
@@ -2082,17 +2044,19 @@ static TestAllTypesLite* defaultTestAllTypesLiteInstance = nil;
   }
   const NSUInteger repeatedStringPieceArrayCount = self.repeatedStringPieceArray.count;
   if (repeatedStringPieceArrayCount > 0) {
-    const NSString* *values = (const NSString* *)self.repeatedStringPieceArray.data;
-    for (NSUInteger i = 0; i < repeatedStringPieceArrayCount; ++i) {
-      [output writeString:54 value:values[i]];
-    }
+
+    
+      for(NSString *value in   self.repeatedStringPieceArray){
+          [output writeString:54 value:value];
+      }
   }
   const NSUInteger repeatedCordArrayCount = self.repeatedCordArray.count;
   if (repeatedCordArrayCount > 0) {
-    const NSString* *values = (const NSString* *)self.repeatedCordArray.data;
-    for (NSUInteger i = 0; i < repeatedCordArrayCount; ++i) {
-      [output writeString:55 value:values[i]];
-    }
+
+      for(NSString *value in   self.repeatedCordArray){
+          [output writeString:55 value:value];
+      }
+
   }
   if (self.hasDefaultInt32) {
     [output writeInt32:61 value:self.defaultInt32];
@@ -2346,21 +2310,20 @@ static TestAllTypesLite* defaultTestAllTypesLiteInstance = nil;
   }
   {
     int32_t dataSize = 0;
-    const NSUInteger count = self.repeatedStringArray.count;
-    const NSString* *values = (const NSString* *)self.repeatedStringArray.data;
-    for (NSUInteger i = 0; i < count; ++i) {
-      dataSize += computeStringSizeNoTag(values[i]);
-    }
+    const NSUInteger count = [self.repeatedStringArray count];
+   for(NSString *value in self.repeatedStringArray){
+          dataSize += computeStringSizeNoTag(value);
+      }
     size += dataSize;
     size += 2 * count;
   }
   {
     int32_t dataSize = 0;
     const NSUInteger count = self.repeatedBytesArray.count;
-    const NSData* *values = (const NSData* *)self.repeatedBytesArray.data;
-    for (NSUInteger i = 0; i < count; ++i) {
-      dataSize += computeDataSizeNoTag(values[i]);
-    }
+      
+      for(NSData *value in self.repeatedBytesArray){
+          dataSize += computeDataSizeNoTag(value);
+      } 
     size += dataSize;
     size += 2 * count;
   }
@@ -2409,20 +2372,22 @@ static TestAllTypesLite* defaultTestAllTypesLiteInstance = nil;
   {
     int32_t dataSize = 0;
     const NSUInteger count = self.repeatedStringPieceArray.count;
-    const NSString* *values = (const NSString* *)self.repeatedStringPieceArray.data;
-    for (NSUInteger i = 0; i < count; ++i) {
-      dataSize += computeStringSizeNoTag(values[i]);
-    }
+
+      for(NSString *value in self.repeatedStringPieceArray){
+          dataSize += computeStringSizeNoTag(value);
+      }  
+      
     size += dataSize;
     size += 2 * count;
   }
   {
     int32_t dataSize = 0;
     const NSUInteger count = self.repeatedCordArray.count;
-    const NSString* *values = (const NSString* *)self.repeatedCordArray.data;
-    for (NSUInteger i = 0; i < count; ++i) {
-      dataSize += computeStringSizeNoTag(values[i]);
-    }
+
+      for(NSString *value in self.repeatedCordArray){
+          dataSize += computeStringSizeNoTag(value);
+      }  
+
     size += dataSize;
     size += 2 * count;
   }
@@ -2509,7 +2474,7 @@ static TestAllTypesLite* defaultTestAllTypesLiteInstance = nil;
   return (TestAllTypesLite*)[[[TestAllTypesLite builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (TestAllTypesLite_Builder*) builder {
-  return [[[TestAllTypesLite_Builder alloc] init] autorelease];
+  return [[TestAllTypesLite_Builder alloc] init] ;
 }
 + (TestAllTypesLite_Builder*) builderWithPrototype:(TestAllTypesLite*) prototype {
   return [[TestAllTypesLite builder] mergeFrom:prototype];
@@ -2605,45 +2570,65 @@ static TestAllTypesLite* defaultTestAllTypesLiteInstance = nil;
   if (self.hasOptionalCord) {
     [output appendFormat:@"%@%@: %@\n", indent, @"optionalCord", self.optionalCord];
   }
-  for (NSNumber* value in self.repeatedInt32Array) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"repeatedInt32", value];
-  }
-  for (NSNumber* value in self.repeatedInt64Array) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"repeatedInt64", value];
-  }
-  for (NSNumber* value in self.repeatedUint32Array) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"repeatedUint32", value];
-  }
-  for (NSNumber* value in self.repeatedUint64Array) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"repeatedUint64", value];
-  }
-  for (NSNumber* value in self.repeatedSint32Array) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"repeatedSint32", value];
-  }
-  for (NSNumber* value in self.repeatedSint64Array) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"repeatedSint64", value];
-  }
-  for (NSNumber* value in self.repeatedFixed32Array) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"repeatedFixed32", value];
-  }
-  for (NSNumber* value in self.repeatedFixed64Array) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"repeatedFixed64", value];
-  }
-  for (NSNumber* value in self.repeatedSfixed32Array) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"repeatedSfixed32", value];
-  }
-  for (NSNumber* value in self.repeatedSfixed64Array) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"repeatedSfixed64", value];
-  }
-  for (NSNumber* value in self.repeatedFloatArray) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"repeatedFloat", value];
-  }
-  for (NSNumber* value in self.repeatedDoubleArray) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"repeatedDouble", value];
-  }
-  for (NSNumber* value in self.repeatedBoolArray) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"repeatedBool", value];
-  }
+    
+    for(int i=0;i<self.repeatedInt32Array.count;i++){
+        [output appendFormat:@"%@%@: %@\n", indent, @"repeatedInt32", [self.repeatedInt32Array int32AtIndex:i]];
+    }
+    
+    for(int i=0;i<self.repeatedInt64Array.count;i++){
+        [output appendFormat:@"%@%@: %@\n", indent, @"repeatedInt64", [self.repeatedInt64Array int64AtIndex:i]];
+    }
+    
+    for(int i=0;i<self.repeatedUint32Array.count;i++){
+        [output appendFormat:@"%@%@: %@\n", indent, @"repeatedUint32", [self.repeatedUint32Array uint32AtIndex:i]];
+    }
+    
+    for(int i=0;i<self.repeatedUint64Array.count;i++){
+        [output appendFormat:@"%@%@: %@\n", indent, @"repeatedUint64", [self.repeatedUint64Array uint64AtIndex:i]];
+    }
+    
+    for(int i=0;i<self.repeatedSint32Array.count;i++){
+        [output appendFormat:@"%@%@: %@\n", indent, @"repeatedSint32", [self.repeatedSint32Array int32AtIndex:i]];
+    }
+    
+    for(int i=0;i<self.repeatedSint64Array.count;i++){
+        [output appendFormat:@"%@%@: %@\n", indent, @"repeatedSint64", [self.repeatedSint64Array int64AtIndex:i]];
+    }
+    
+    for(int i=0;i<self.repeatedFixed32Array.count;i++){
+        [output appendFormat:@"%@%@: %@\n", indent, @"repeatedFixed32", [self.repeatedFixed32Array uint32AtIndex:i]];
+    }
+    
+    for(int i=0;i<self.repeatedFixed64Array.count;i++){
+        [output appendFormat:@"%@%@: %@\n", indent, @"repeatedFixed64", [self.repeatedFixed64Array uint64AtIndex:i]];
+    }
+    
+    for(int i=0;i<self.repeatedSfixed32Array.count;i++){
+        [output appendFormat:@"%@%@: %@\n", indent, @"repeatedSfixed32", [self.repeatedSfixed32Array int32AtIndex:i]];
+    }
+
+    for(int i=0;i<self.repeatedSfixed64Array.count;i++){
+        [output appendFormat:@"%@%@: %@\n", indent, @"repeatedSfixed64", [self.repeatedSfixed64Array int64AtIndex:i]];
+    }
+    
+    for(int i=0;i<self.repeatedFloatArray.count;i++){
+        [output appendFormat:@"%@%@: %@\n", indent, @"repeatedFloat", [self.repeatedFloatArray floatAtIndex:i]];
+    }
+    
+    for(int i=0;i<self.repeatedDoubleArray.count;i++){
+        [output appendFormat:@"%@%@: %@\n", indent, @"repeatedDouble", [self.repeatedDoubleArray doubleAtIndex:i]];
+    }
+    
+    for(int i=0;i<self.repeatedBoolArray.count;i++){
+        [output appendFormat:@"%@%@: %@\n", indent, @"repeatedBool", [self.repeatedBoolArray boolAtIndex:i]];
+    }
+    
+    for(int i=0;i<self.repeatedInt32Array.count;i++){
+        [output appendFormat:@"%@%@: %@\n", indent, @"repeatedInt32", [self.repeatedInt32Array int32AtIndex:i]];
+    }
+
+
+
   for (NSString* element in self.repeatedStringArray) {
     [output appendFormat:@"%@%@: %@\n", indent, @"repeatedString", element];
   }
@@ -2674,15 +2659,21 @@ static TestAllTypesLite* defaultTestAllTypesLiteInstance = nil;
                      withIndent:[NSString stringWithFormat:@"%@  ", indent]];
     [output appendFormat:@"%@}\n", indent];
   }
-  for (NSNumber* element in self.repeatedNestedEnumArray) {
-    [output appendFormat:@"%@%@: %d\n", indent, @"repeatedNestedEnum", element.intValue];
-  }
-  for (NSNumber* element in self.repeatedForeignEnumArray) {
-    [output appendFormat:@"%@%@: %d\n", indent, @"repeatedForeignEnum", element.intValue];
-  }
-  for (NSNumber* element in self.repeatedImportEnumArray) {
-    [output appendFormat:@"%@%@: %d\n", indent, @"repeatedImportEnum", element.intValue];
-  }
+    for(int i=0;i<self.repeatedNestedEnumArray.count;i++){
+        [output appendFormat:@"%@%@: %@\n", indent, @"repeatedNestedEnum", [self.repeatedNestedEnumArray uint32AtIndex:i]];
+    }
+    
+    for(int i=0;i<self.repeatedForeignEnumArray.count;i++){
+        [output appendFormat:@"%@%@: %@\n", indent, @"repeatedForeignEnum", [self.repeatedForeignEnumArray uint32AtIndex:i]];
+    }
+    
+    for(int i=0;i<self.repeatedImportEnumArray.count;i++){
+        [output appendFormat:@"%@%@: %@\n", indent, @"repeatedImportEnum", [self.repeatedImportEnumArray uint32AtIndex:i]];
+    }
+    
+
+    
+
   for (NSString* element in self.repeatedStringPieceArray) {
     [output appendFormat:@"%@%@: %@\n", indent, @"repeatedStringPiece", element];
   }
@@ -3016,45 +3007,61 @@ static TestAllTypesLite* defaultTestAllTypesLiteInstance = nil;
   if (self.hasOptionalCord) {
     hashCode = hashCode * 31 + [self.optionalCord hash];
   }
-  for (NSNumber* value in self.repeatedInt32Array) {
-    hashCode = hashCode * 31 + [value intValue];
-  }
-  for (NSNumber* value in self.repeatedInt64Array) {
-    hashCode = hashCode * 31 + [value intValue];
-  }
-  for (NSNumber* value in self.repeatedUint32Array) {
-    hashCode = hashCode * 31 + [value intValue];
-  }
-  for (NSNumber* value in self.repeatedUint64Array) {
-    hashCode = hashCode * 31 + [value intValue];
-  }
-  for (NSNumber* value in self.repeatedSint32Array) {
-    hashCode = hashCode * 31 + [value intValue];
-  }
-  for (NSNumber* value in self.repeatedSint64Array) {
-    hashCode = hashCode * 31 + [value intValue];
-  }
-  for (NSNumber* value in self.repeatedFixed32Array) {
-    hashCode = hashCode * 31 + [value intValue];
-  }
-  for (NSNumber* value in self.repeatedFixed64Array) {
-    hashCode = hashCode * 31 + [value intValue];
-  }
-  for (NSNumber* value in self.repeatedSfixed32Array) {
-    hashCode = hashCode * 31 + [value intValue];
-  }
-  for (NSNumber* value in self.repeatedSfixed64Array) {
-    hashCode = hashCode * 31 + [value intValue];
-  }
-  for (NSNumber* value in self.repeatedFloatArray) {
-    hashCode = hashCode * 31 + [value intValue];
-  }
-  for (NSNumber* value in self.repeatedDoubleArray) {
-    hashCode = hashCode * 31 + [value intValue];
-  }
-  for (NSNumber* value in self.repeatedBoolArray) {
-    hashCode = hashCode * 31 + [value intValue];
-  }
+    
+    for(int i=0;i<self.repeatedInt32Array.count;i++){
+        hashCode = hashCode * 31 + [self.repeatedInt32Array int32AtIndex:i];
+    }
+    
+    for(int i=0;i<self.repeatedInt64Array.count;i++){
+        hashCode = hashCode * 31 + [self.repeatedInt64Array int64AtIndex:i];
+    }
+    
+    for(int i=0;i<self.repeatedUint32Array.count;i++){
+        hashCode = hashCode * 31 + [self.repeatedUint32Array uint32AtIndex:i];
+    }
+    
+    for(int i=0;i<self.repeatedUint64Array.count;i++){
+        hashCode = hashCode * 31 + [self.repeatedUint64Array uint64AtIndex:i];
+    }
+    
+    for(int i=0;i<self.repeatedSint32Array.count;i++){
+        hashCode = hashCode * 31 + [self.repeatedSint32Array int32AtIndex:i];
+    }
+    
+    for(int i=0;i<self.repeatedSint64Array.count;i++){
+        hashCode = hashCode * 31 + [self.repeatedSint64Array int64AtIndex:i];
+    }
+    
+    for(int i=0;i<self.repeatedFixed32Array.count;i++){
+        hashCode = hashCode * 31 + [self.repeatedFixed32Array uint32AtIndex:i];
+    }
+    
+    for(int i=0;i<self.repeatedFixed64Array.count;i++){
+        hashCode = hashCode * 31 + [self.repeatedFixed64Array uint64AtIndex:i];
+    }
+
+    for(int i=0;i<self.repeatedSfixed32Array.count;i++){
+        hashCode = hashCode * 31 + [self.repeatedSfixed32Array int32AtIndex:i];
+    }
+    
+    for(int i=0;i<self.repeatedSfixed64Array.count;i++){
+        hashCode = hashCode * 31 + [self.repeatedSfixed64Array int64AtIndex:i];
+    }
+    
+    for(int i=0;i<self.repeatedFloatArray.count;i++){
+        hashCode = hashCode * 31 + [self.repeatedFloatArray floatAtIndex:i];
+    }
+    
+    for(int i=0;i<self.repeatedDoubleArray.count;i++){
+        hashCode = hashCode * 31 + [self.repeatedDoubleArray doubleAtIndex:i];
+    }
+    
+    for(int i=0;i<self.repeatedBoolArray.count;i++){
+        hashCode = hashCode * 31 + [self.repeatedBoolArray boolAtIndex:i];
+    }
+
+
+
   for (NSString* element in self.repeatedStringArray) {
     hashCode = hashCode * 31 + [element hash];
   }
@@ -3073,15 +3080,21 @@ static TestAllTypesLite* defaultTestAllTypesLiteInstance = nil;
   for (ImportMessageLite* element in self.repeatedImportMessageArray) {
     hashCode = hashCode * 31 + [element hash];
   }
-  for (NSNumber* element in self.repeatedNestedEnumArray) {
-    hashCode = hashCode * 31 + element.intValue;
-  }
-  for (NSNumber* element in self.repeatedForeignEnumArray) {
-    hashCode = hashCode * 31 + element.intValue;
-  }
-  for (NSNumber* element in self.repeatedImportEnumArray) {
-    hashCode = hashCode * 31 + element.intValue;
-  }
+  
+    
+    for(int i=0;i<self.repeatedNestedEnumArray.count;i++){
+        hashCode = hashCode * 31 + [self.repeatedNestedEnumArray uint32AtIndex:i];
+    }
+    
+    for(int i=0;i<self.repeatedForeignEnumArray.count;i++){
+        hashCode = hashCode * 31 + [self.repeatedForeignEnumArray uint32AtIndex:i];
+    }
+    
+    for(int i=0;i<self.repeatedImportEnumArray.count;i++){
+        hashCode = hashCode * 31 + [self.repeatedImportEnumArray uint32AtIndex:i];
+    }
+    
+
   for (NSString* element in self.repeatedStringPieceArray) {
     hashCode = hashCode * 31 + [element hash];
   }
@@ -3176,9 +3189,7 @@ BOOL TestAllTypesLite_NestedEnumIsValidValue(TestAllTypesLite_NestedEnum value) 
   hasBb_ = !!value;
 }
 @synthesize bb;
-- (void) dealloc {
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.bb = 0;
@@ -3239,7 +3250,7 @@ static TestAllTypesLite_NestedMessage* defaultTestAllTypesLite_NestedMessageInst
   return (TestAllTypesLite_NestedMessage*)[[[TestAllTypesLite_NestedMessage builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (TestAllTypesLite_NestedMessage_Builder*) builder {
-  return [[[TestAllTypesLite_NestedMessage_Builder alloc] init] autorelease];
+  return [[TestAllTypesLite_NestedMessage_Builder alloc] init] ;
 }
 + (TestAllTypesLite_NestedMessage_Builder*) builderWithPrototype:(TestAllTypesLite_NestedMessage*) prototype {
   return [[TestAllTypesLite_NestedMessage builder] mergeFrom:prototype];
@@ -3281,18 +3292,15 @@ static TestAllTypesLite_NestedMessage* defaultTestAllTypesLite_NestedMessageInst
 @end
 
 @interface TestAllTypesLite_NestedMessage_Builder()
-@property (retain) TestAllTypesLite_NestedMessage* result;
+@property (strong) TestAllTypesLite_NestedMessage* result;
 @end
 
 @implementation TestAllTypesLite_NestedMessage_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[TestAllTypesLite_NestedMessage alloc] init] autorelease];
+    self.result = [[TestAllTypesLite_NestedMessage alloc] init];
   }
   return self;
 }
@@ -3300,7 +3308,7 @@ static TestAllTypesLite_NestedMessage* defaultTestAllTypesLite_NestedMessageInst
   return result;
 }
 - (TestAllTypesLite_NestedMessage_Builder*) clear {
-  self.result = [[[TestAllTypesLite_NestedMessage alloc] init] autorelease];
+  self.result = [[TestAllTypesLite_NestedMessage alloc] init];
   return self;
 }
 - (TestAllTypesLite_NestedMessage_Builder*) clone {
@@ -3314,7 +3322,7 @@ static TestAllTypesLite_NestedMessage* defaultTestAllTypesLite_NestedMessageInst
   return [self buildPartial];
 }
 - (TestAllTypesLite_NestedMessage*) buildPartial {
-  TestAllTypesLite_NestedMessage* returnMe = [[result retain] autorelease];
+  TestAllTypesLite_NestedMessage* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -3384,9 +3392,7 @@ static TestAllTypesLite_NestedMessage* defaultTestAllTypesLite_NestedMessageInst
   hasA_ = !!value;
 }
 @synthesize a;
-- (void) dealloc {
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.a = 0;
@@ -3447,7 +3453,7 @@ static TestAllTypesLite_OptionalGroup* defaultTestAllTypesLite_OptionalGroupInst
   return (TestAllTypesLite_OptionalGroup*)[[[TestAllTypesLite_OptionalGroup builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (TestAllTypesLite_OptionalGroup_Builder*) builder {
-  return [[[TestAllTypesLite_OptionalGroup_Builder alloc] init] autorelease];
+  return [[TestAllTypesLite_OptionalGroup_Builder alloc] init];
 }
 + (TestAllTypesLite_OptionalGroup_Builder*) builderWithPrototype:(TestAllTypesLite_OptionalGroup*) prototype {
   return [[TestAllTypesLite_OptionalGroup builder] mergeFrom:prototype];
@@ -3489,18 +3495,15 @@ static TestAllTypesLite_OptionalGroup* defaultTestAllTypesLite_OptionalGroupInst
 @end
 
 @interface TestAllTypesLite_OptionalGroup_Builder()
-@property (retain) TestAllTypesLite_OptionalGroup* result;
+@property (strong) TestAllTypesLite_OptionalGroup* result;
 @end
 
 @implementation TestAllTypesLite_OptionalGroup_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[TestAllTypesLite_OptionalGroup alloc] init] autorelease];
+    self.result = [[TestAllTypesLite_OptionalGroup alloc] init];
   }
   return self;
 }
@@ -3508,7 +3511,7 @@ static TestAllTypesLite_OptionalGroup* defaultTestAllTypesLite_OptionalGroupInst
   return result;
 }
 - (TestAllTypesLite_OptionalGroup_Builder*) clear {
-  self.result = [[[TestAllTypesLite_OptionalGroup alloc] init] autorelease];
+  self.result = [[TestAllTypesLite_OptionalGroup alloc] init];
   return self;
 }
 - (TestAllTypesLite_OptionalGroup_Builder*) clone {
@@ -3522,7 +3525,7 @@ static TestAllTypesLite_OptionalGroup* defaultTestAllTypesLite_OptionalGroupInst
   return [self buildPartial];
 }
 - (TestAllTypesLite_OptionalGroup*) buildPartial {
-  TestAllTypesLite_OptionalGroup* returnMe = [[result retain] autorelease];
+  TestAllTypesLite_OptionalGroup* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -3592,9 +3595,7 @@ static TestAllTypesLite_OptionalGroup* defaultTestAllTypesLite_OptionalGroupInst
   hasA_ = !!value;
 }
 @synthesize a;
-- (void) dealloc {
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.a = 0;
@@ -3655,7 +3656,7 @@ static TestAllTypesLite_RepeatedGroup* defaultTestAllTypesLite_RepeatedGroupInst
   return (TestAllTypesLite_RepeatedGroup*)[[[TestAllTypesLite_RepeatedGroup builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (TestAllTypesLite_RepeatedGroup_Builder*) builder {
-  return [[[TestAllTypesLite_RepeatedGroup_Builder alloc] init] autorelease];
+  return [[TestAllTypesLite_RepeatedGroup_Builder alloc] init];
 }
 + (TestAllTypesLite_RepeatedGroup_Builder*) builderWithPrototype:(TestAllTypesLite_RepeatedGroup*) prototype {
   return [[TestAllTypesLite_RepeatedGroup builder] mergeFrom:prototype];
@@ -3697,18 +3698,15 @@ static TestAllTypesLite_RepeatedGroup* defaultTestAllTypesLite_RepeatedGroupInst
 @end
 
 @interface TestAllTypesLite_RepeatedGroup_Builder()
-@property (retain) TestAllTypesLite_RepeatedGroup* result;
+@property (strong) TestAllTypesLite_RepeatedGroup* result;
 @end
 
 @implementation TestAllTypesLite_RepeatedGroup_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[TestAllTypesLite_RepeatedGroup alloc] init] autorelease];
+    self.result = [[TestAllTypesLite_RepeatedGroup alloc] init];
   }
   return self;
 }
@@ -3716,7 +3714,7 @@ static TestAllTypesLite_RepeatedGroup* defaultTestAllTypesLite_RepeatedGroupInst
   return result;
 }
 - (TestAllTypesLite_RepeatedGroup_Builder*) clear {
-  self.result = [[[TestAllTypesLite_RepeatedGroup alloc] init] autorelease];
+  self.result = [[TestAllTypesLite_RepeatedGroup alloc] init];
   return self;
 }
 - (TestAllTypesLite_RepeatedGroup_Builder*) clone {
@@ -3730,7 +3728,7 @@ static TestAllTypesLite_RepeatedGroup* defaultTestAllTypesLite_RepeatedGroupInst
   return [self buildPartial];
 }
 - (TestAllTypesLite_RepeatedGroup*) buildPartial {
-  TestAllTypesLite_RepeatedGroup* returnMe = [[result retain] autorelease];
+  TestAllTypesLite_RepeatedGroup* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -3788,18 +3786,15 @@ static TestAllTypesLite_RepeatedGroup* defaultTestAllTypesLite_RepeatedGroupInst
 @end
 
 @interface TestAllTypesLite_Builder()
-@property (retain) TestAllTypesLite* result;
+@property (strong) TestAllTypesLite* result;
 @end
 
 @implementation TestAllTypesLite_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[TestAllTypesLite alloc] init] autorelease];
+    self.result = [[TestAllTypesLite alloc] init];
   }
   return self;
 }
@@ -3807,7 +3802,7 @@ static TestAllTypesLite_RepeatedGroup* defaultTestAllTypesLite_RepeatedGroupInst
   return result;
 }
 - (TestAllTypesLite_Builder*) clear {
-  self.result = [[[TestAllTypesLite alloc] init] autorelease];
+  self.result = [[TestAllTypesLite alloc] init];
   return self;
 }
 - (TestAllTypesLite_Builder*) clone {
@@ -3821,7 +3816,7 @@ static TestAllTypesLite_RepeatedGroup* defaultTestAllTypesLite_RepeatedGroupInst
   return [self buildPartial];
 }
 - (TestAllTypesLite*) buildPartial {
-  TestAllTypesLite* returnMe = [[result retain] autorelease];
+  TestAllTypesLite* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -3903,170 +3898,170 @@ static TestAllTypesLite_RepeatedGroup* defaultTestAllTypesLite_RepeatedGroupInst
   }
   if (other.repeatedInt32Array.count > 0) {
     if (result.repeatedInt32Array == nil) {
-      result.repeatedInt32Array = [[other.repeatedInt32Array copyWithZone:[other.repeatedInt32Array zone]] autorelease];
+      result.repeatedInt32Array = [other.repeatedInt32Array copy];
     } else {
       [result.repeatedInt32Array appendArray:other.repeatedInt32Array];
     }
   }
   if (other.repeatedInt64Array.count > 0) {
     if (result.repeatedInt64Array == nil) {
-      result.repeatedInt64Array = [[other.repeatedInt64Array copyWithZone:[other.repeatedInt64Array zone]] autorelease];
+      result.repeatedInt64Array = [other.repeatedInt64Array copy];
     } else {
       [result.repeatedInt64Array appendArray:other.repeatedInt64Array];
     }
   }
   if (other.repeatedUint32Array.count > 0) {
     if (result.repeatedUint32Array == nil) {
-      result.repeatedUint32Array = [[other.repeatedUint32Array copyWithZone:[other.repeatedUint32Array zone]] autorelease];
+      result.repeatedUint32Array = [other.repeatedUint32Array copy];
     } else {
       [result.repeatedUint32Array appendArray:other.repeatedUint32Array];
     }
   }
   if (other.repeatedUint64Array.count > 0) {
     if (result.repeatedUint64Array == nil) {
-      result.repeatedUint64Array = [[other.repeatedUint64Array copyWithZone:[other.repeatedUint64Array zone]] autorelease];
+      result.repeatedUint64Array = [other.repeatedUint64Array copy];
     } else {
       [result.repeatedUint64Array appendArray:other.repeatedUint64Array];
     }
   }
   if (other.repeatedSint32Array.count > 0) {
     if (result.repeatedSint32Array == nil) {
-      result.repeatedSint32Array = [[other.repeatedSint32Array copyWithZone:[other.repeatedSint32Array zone]] autorelease];
+      result.repeatedSint32Array = [other.repeatedSint32Array copy];
     } else {
       [result.repeatedSint32Array appendArray:other.repeatedSint32Array];
     }
   }
   if (other.repeatedSint64Array.count > 0) {
     if (result.repeatedSint64Array == nil) {
-      result.repeatedSint64Array = [[other.repeatedSint64Array copyWithZone:[other.repeatedSint64Array zone]] autorelease];
+      result.repeatedSint64Array = [other.repeatedSint64Array copy];
     } else {
       [result.repeatedSint64Array appendArray:other.repeatedSint64Array];
     }
   }
   if (other.repeatedFixed32Array.count > 0) {
     if (result.repeatedFixed32Array == nil) {
-      result.repeatedFixed32Array = [[other.repeatedFixed32Array copyWithZone:[other.repeatedFixed32Array zone]] autorelease];
+      result.repeatedFixed32Array = [other.repeatedFixed32Array copy];
     } else {
       [result.repeatedFixed32Array appendArray:other.repeatedFixed32Array];
     }
   }
   if (other.repeatedFixed64Array.count > 0) {
     if (result.repeatedFixed64Array == nil) {
-      result.repeatedFixed64Array = [[other.repeatedFixed64Array copyWithZone:[other.repeatedFixed64Array zone]] autorelease];
+      result.repeatedFixed64Array = [other.repeatedFixed64Array copy];
     } else {
       [result.repeatedFixed64Array appendArray:other.repeatedFixed64Array];
     }
   }
   if (other.repeatedSfixed32Array.count > 0) {
     if (result.repeatedSfixed32Array == nil) {
-      result.repeatedSfixed32Array = [[other.repeatedSfixed32Array copyWithZone:[other.repeatedSfixed32Array zone]] autorelease];
+      result.repeatedSfixed32Array = [other.repeatedSfixed32Array copy];
     } else {
       [result.repeatedSfixed32Array appendArray:other.repeatedSfixed32Array];
     }
   }
   if (other.repeatedSfixed64Array.count > 0) {
     if (result.repeatedSfixed64Array == nil) {
-      result.repeatedSfixed64Array = [[other.repeatedSfixed64Array copyWithZone:[other.repeatedSfixed64Array zone]] autorelease];
+      result.repeatedSfixed64Array = [other.repeatedSfixed64Array copy];
     } else {
       [result.repeatedSfixed64Array appendArray:other.repeatedSfixed64Array];
     }
   }
   if (other.repeatedFloatArray.count > 0) {
     if (result.repeatedFloatArray == nil) {
-      result.repeatedFloatArray = [[other.repeatedFloatArray copyWithZone:[other.repeatedFloatArray zone]] autorelease];
+      result.repeatedFloatArray = [other.repeatedFloatArray copy];
     } else {
       [result.repeatedFloatArray appendArray:other.repeatedFloatArray];
     }
   }
   if (other.repeatedDoubleArray.count > 0) {
     if (result.repeatedDoubleArray == nil) {
-      result.repeatedDoubleArray = [[other.repeatedDoubleArray copyWithZone:[other.repeatedDoubleArray zone]] autorelease];
+      result.repeatedDoubleArray = [other.repeatedDoubleArray copy];
     } else {
       [result.repeatedDoubleArray appendArray:other.repeatedDoubleArray];
     }
   }
   if (other.repeatedBoolArray.count > 0) {
     if (result.repeatedBoolArray == nil) {
-      result.repeatedBoolArray = [[other.repeatedBoolArray copyWithZone:[other.repeatedBoolArray zone]] autorelease];
+      result.repeatedBoolArray = [other.repeatedBoolArray copy];
     } else {
       [result.repeatedBoolArray appendArray:other.repeatedBoolArray];
     }
   }
   if (other.repeatedStringArray.count > 0) {
     if (result.repeatedStringArray == nil) {
-      result.repeatedStringArray = [[other.repeatedStringArray copyWithZone:[other.repeatedStringArray zone]] autorelease];
+      result.repeatedStringArray = [other.repeatedStringArray copy];
     } else {
-      [result.repeatedStringArray appendArray:other.repeatedStringArray];
+      [result.repeatedStringArray addObjectsFromArray:other.repeatedStringArray];
     }
   }
   if (other.repeatedBytesArray.count > 0) {
     if (result.repeatedBytesArray == nil) {
-      result.repeatedBytesArray = [[other.repeatedBytesArray copyWithZone:[other.repeatedBytesArray zone]] autorelease];
+      result.repeatedBytesArray = [other.repeatedBytesArray copy];
     } else {
-      [result.repeatedBytesArray appendArray:other.repeatedBytesArray];
+      [result.repeatedBytesArray addObjectsFromArray:other.repeatedBytesArray];
     }
   }
   if (other.repeatedGroupArray.count > 0) {
     if (result.repeatedGroupArray == nil) {
-      result.repeatedGroupArray = [[other.repeatedGroupArray copyWithZone:[other.repeatedGroupArray zone]] autorelease];
+      result.repeatedGroupArray = [other.repeatedGroupArray copy];
     } else {
-      [result.repeatedGroupArray appendArray:other.repeatedGroupArray];
+      [result.repeatedGroupArray addObjectsFromArray:other.repeatedGroupArray];
     }
   }
   if (other.repeatedNestedMessageArray.count > 0) {
     if (result.repeatedNestedMessageArray == nil) {
-      result.repeatedNestedMessageArray = [[other.repeatedNestedMessageArray copyWithZone:[other.repeatedNestedMessageArray zone]] autorelease];
+      result.repeatedNestedMessageArray = [other.repeatedNestedMessageArray copy];
     } else {
-      [result.repeatedNestedMessageArray appendArray:other.repeatedNestedMessageArray];
+      [result.repeatedNestedMessageArray addObjectsFromArray:other.repeatedNestedMessageArray];
     }
   }
   if (other.repeatedForeignMessageArray.count > 0) {
     if (result.repeatedForeignMessageArray == nil) {
-      result.repeatedForeignMessageArray = [[other.repeatedForeignMessageArray copyWithZone:[other.repeatedForeignMessageArray zone]] autorelease];
+      result.repeatedForeignMessageArray = [other.repeatedForeignMessageArray copy];
     } else {
-      [result.repeatedForeignMessageArray appendArray:other.repeatedForeignMessageArray];
+      [result.repeatedForeignMessageArray addObjectsFromArray:other.repeatedForeignMessageArray];
     }
   }
   if (other.repeatedImportMessageArray.count > 0) {
     if (result.repeatedImportMessageArray == nil) {
-      result.repeatedImportMessageArray = [[other.repeatedImportMessageArray copyWithZone:[other.repeatedImportMessageArray zone]] autorelease];
+      result.repeatedImportMessageArray = [other.repeatedImportMessageArray copy];
     } else {
-      [result.repeatedImportMessageArray appendArray:other.repeatedImportMessageArray];
+      [result.repeatedImportMessageArray addObjectsFromArray:other.repeatedImportMessageArray];
     }
   }
   if (other.repeatedNestedEnumArray.count > 0) {
     if (result.repeatedNestedEnumArray == nil) {
-      result.repeatedNestedEnumArray = [[other.repeatedNestedEnumArray copyWithZone:[other.repeatedNestedEnumArray zone]] autorelease];
+      result.repeatedNestedEnumArray = [other.repeatedNestedEnumArray copy];
     } else {
       [result.repeatedNestedEnumArray appendArray:other.repeatedNestedEnumArray];
     }
   }
   if (other.repeatedForeignEnumArray.count > 0) {
     if (result.repeatedForeignEnumArray == nil) {
-      result.repeatedForeignEnumArray = [[other.repeatedForeignEnumArray copyWithZone:[other.repeatedForeignEnumArray zone]] autorelease];
+      result.repeatedForeignEnumArray = [other.repeatedForeignEnumArray copy];
     } else {
       [result.repeatedForeignEnumArray appendArray:other.repeatedForeignEnumArray];
     }
   }
   if (other.repeatedImportEnumArray.count > 0) {
     if (result.repeatedImportEnumArray == nil) {
-      result.repeatedImportEnumArray = [[other.repeatedImportEnumArray copyWithZone:[other.repeatedImportEnumArray zone]] autorelease];
+      result.repeatedImportEnumArray = [other.repeatedImportEnumArray copy];
     } else {
       [result.repeatedImportEnumArray appendArray:other.repeatedImportEnumArray];
     }
   }
   if (other.repeatedStringPieceArray.count > 0) {
     if (result.repeatedStringPieceArray == nil) {
-      result.repeatedStringPieceArray = [[other.repeatedStringPieceArray copyWithZone:[other.repeatedStringPieceArray zone]] autorelease];
+      result.repeatedStringPieceArray = [other.repeatedStringPieceArray copy];
     } else {
-      [result.repeatedStringPieceArray appendArray:other.repeatedStringPieceArray];
+      [result.repeatedStringPieceArray addObjectsFromArray:other.repeatedStringPieceArray];
     }
   }
   if (other.repeatedCordArray.count > 0) {
     if (result.repeatedCordArray == nil) {
-      result.repeatedCordArray = [[other.repeatedCordArray copyWithZone:[other.repeatedCordArray zone]] autorelease];
+      result.repeatedCordArray = [other.repeatedCordArray copy];
     } else {
-      [result.repeatedCordArray appendArray:other.repeatedCordArray];
+      [result.repeatedCordArray addObjectsFromArray:other.repeatedCordArray];
     }
   }
   if (other.hasDefaultInt32) {
@@ -5263,7 +5258,7 @@ static TestAllTypesLite_RepeatedGroup* defaultTestAllTypesLite_RepeatedGroupInst
   result.repeatedBoolArray = nil;
   return self;
 }
-- (PBAppendableArray *)repeatedString {
+- (NSMutableArray *)repeatedString {
   return result.repeatedStringArray;
 }
 - (NSString*)repeatedStringAtIndex:(NSUInteger)index {
@@ -5271,24 +5266,21 @@ static TestAllTypesLite_RepeatedGroup* defaultTestAllTypesLite_RepeatedGroupInst
 }
 - (TestAllTypesLite_Builder *)addRepeatedString:(NSString*)value {
   if (result.repeatedStringArray == nil) {
-    result.repeatedStringArray = [PBAppendableArray arrayWithValueType:PBArrayValueTypeObject];
+    result.repeatedStringArray = [[NSMutableArray alloc] init];
   }
   [result.repeatedStringArray addObject:value];
   return self;
 }
 - (TestAllTypesLite_Builder *)setRepeatedStringArray:(NSArray *)array {
-  result.repeatedStringArray = [PBAppendableArray arrayWithArray:array valueType:PBArrayValueTypeObject];
+    result.repeatedStringArray = [[NSMutableArray alloc ] initWithArray:array] ;
   return self;
 }
-- (TestAllTypesLite_Builder *)setRepeatedStringValues:(const NSString* *)values count:(NSUInteger)count {
-  result.repeatedStringArray = [PBAppendableArray arrayWithValues:values count:count valueType:PBArrayValueTypeObject];
-  return self;
-}
+
 - (TestAllTypesLite_Builder *)clearRepeatedString {
   result.repeatedStringArray = nil;
   return self;
 }
-- (PBAppendableArray *)repeatedBytes {
+- (NSMutableArray *)repeatedBytes {
   return result.repeatedBytesArray;
 }
 - (NSData*)repeatedBytesAtIndex:(NSUInteger)index {
@@ -5296,24 +5288,21 @@ static TestAllTypesLite_RepeatedGroup* defaultTestAllTypesLite_RepeatedGroupInst
 }
 - (TestAllTypesLite_Builder *)addRepeatedBytes:(NSData*)value {
   if (result.repeatedBytesArray == nil) {
-    result.repeatedBytesArray = [PBAppendableArray arrayWithValueType:PBArrayValueTypeObject];
+    result.repeatedBytesArray = [[NSMutableArray alloc] init];
   }
   [result.repeatedBytesArray addObject:value];
   return self;
 }
 - (TestAllTypesLite_Builder *)setRepeatedBytesArray:(NSArray *)array {
-  result.repeatedBytesArray = [PBAppendableArray arrayWithArray:array valueType:PBArrayValueTypeObject];
+  result.repeatedBytesArray = [[NSMutableArray alloc ] initWithArray:array];
   return self;
 }
-- (TestAllTypesLite_Builder *)setRepeatedBytesValues:(const NSData* *)values count:(NSUInteger)count {
-  result.repeatedBytesArray = [PBAppendableArray arrayWithValues:values count:count valueType:PBArrayValueTypeObject];
-  return self;
-}
+
 - (TestAllTypesLite_Builder *)clearRepeatedBytes {
   result.repeatedBytesArray = nil;
   return self;
 }
-- (PBAppendableArray *)repeatedGroup {
+- (NSMutableArray *)repeatedGroup {
   return result.repeatedGroupArray;
 }
 - (TestAllTypesLite_RepeatedGroup*)repeatedGroupAtIndex:(NSUInteger)index {
@@ -5321,24 +5310,21 @@ static TestAllTypesLite_RepeatedGroup* defaultTestAllTypesLite_RepeatedGroupInst
 }
 - (TestAllTypesLite_Builder *)addRepeatedGroup:(TestAllTypesLite_RepeatedGroup*)value {
   if (result.repeatedGroupArray == nil) {
-    result.repeatedGroupArray = [PBAppendableArray arrayWithValueType:PBArrayValueTypeObject];
+    result.repeatedGroupArray = [[NSMutableArray alloc] init];
   }
   [result.repeatedGroupArray addObject:value];
   return self;
 }
 - (TestAllTypesLite_Builder *)setRepeatedGroupArray:(NSArray *)array {
-  result.repeatedGroupArray = [PBAppendableArray arrayWithArray:array valueType:PBArrayValueTypeObject];
+  result.repeatedGroupArray = [[NSMutableArray alloc ] initWithArray:array];
   return self;
 }
-- (TestAllTypesLite_Builder *)setRepeatedGroupValues:(const TestAllTypesLite_RepeatedGroup* *)values count:(NSUInteger)count {
-  result.repeatedGroupArray = [PBAppendableArray arrayWithValues:values count:count valueType:PBArrayValueTypeObject];
-  return self;
-}
+
 - (TestAllTypesLite_Builder *)clearRepeatedGroup {
   result.repeatedGroupArray = nil;
   return self;
 }
-- (PBAppendableArray *)repeatedNestedMessage {
+- (NSMutableArray *)repeatedNestedMessage {
   return result.repeatedNestedMessageArray;
 }
 - (TestAllTypesLite_NestedMessage*)repeatedNestedMessageAtIndex:(NSUInteger)index {
@@ -5346,24 +5332,21 @@ static TestAllTypesLite_RepeatedGroup* defaultTestAllTypesLite_RepeatedGroupInst
 }
 - (TestAllTypesLite_Builder *)addRepeatedNestedMessage:(TestAllTypesLite_NestedMessage*)value {
   if (result.repeatedNestedMessageArray == nil) {
-    result.repeatedNestedMessageArray = [PBAppendableArray arrayWithValueType:PBArrayValueTypeObject];
+    result.repeatedNestedMessageArray = [[NSMutableArray alloc] init];
   }
   [result.repeatedNestedMessageArray addObject:value];
   return self;
 }
 - (TestAllTypesLite_Builder *)setRepeatedNestedMessageArray:(NSArray *)array {
-  result.repeatedNestedMessageArray = [PBAppendableArray arrayWithArray:array valueType:PBArrayValueTypeObject];
+  result.repeatedNestedMessageArray = [[NSMutableArray alloc ] initWithArray:array];
   return self;
 }
-- (TestAllTypesLite_Builder *)setRepeatedNestedMessageValues:(const TestAllTypesLite_NestedMessage* *)values count:(NSUInteger)count {
-  result.repeatedNestedMessageArray = [PBAppendableArray arrayWithValues:values count:count valueType:PBArrayValueTypeObject];
-  return self;
-}
+
 - (TestAllTypesLite_Builder *)clearRepeatedNestedMessage {
   result.repeatedNestedMessageArray = nil;
   return self;
 }
-- (PBAppendableArray *)repeatedForeignMessage {
+- (NSMutableArray *)repeatedForeignMessage {
   return result.repeatedForeignMessageArray;
 }
 - (ForeignMessageLite*)repeatedForeignMessageAtIndex:(NSUInteger)index {
@@ -5371,24 +5354,21 @@ static TestAllTypesLite_RepeatedGroup* defaultTestAllTypesLite_RepeatedGroupInst
 }
 - (TestAllTypesLite_Builder *)addRepeatedForeignMessage:(ForeignMessageLite*)value {
   if (result.repeatedForeignMessageArray == nil) {
-    result.repeatedForeignMessageArray = [PBAppendableArray arrayWithValueType:PBArrayValueTypeObject];
+    result.repeatedForeignMessageArray = [[NSMutableArray alloc] init];
   }
   [result.repeatedForeignMessageArray addObject:value];
   return self;
 }
 - (TestAllTypesLite_Builder *)setRepeatedForeignMessageArray:(NSArray *)array {
-  result.repeatedForeignMessageArray = [PBAppendableArray arrayWithArray:array valueType:PBArrayValueTypeObject];
+  result.repeatedForeignMessageArray = [[NSMutableArray alloc ] initWithArray:array];
   return self;
 }
-- (TestAllTypesLite_Builder *)setRepeatedForeignMessageValues:(const ForeignMessageLite* *)values count:(NSUInteger)count {
-  result.repeatedForeignMessageArray = [PBAppendableArray arrayWithValues:values count:count valueType:PBArrayValueTypeObject];
-  return self;
-}
+
 - (TestAllTypesLite_Builder *)clearRepeatedForeignMessage {
   result.repeatedForeignMessageArray = nil;
   return self;
 }
-- (PBAppendableArray *)repeatedImportMessage {
+- (NSMutableArray *)repeatedImportMessage {
   return result.repeatedImportMessageArray;
 }
 - (ImportMessageLite*)repeatedImportMessageAtIndex:(NSUInteger)index {
@@ -5396,19 +5376,16 @@ static TestAllTypesLite_RepeatedGroup* defaultTestAllTypesLite_RepeatedGroupInst
 }
 - (TestAllTypesLite_Builder *)addRepeatedImportMessage:(ImportMessageLite*)value {
   if (result.repeatedImportMessageArray == nil) {
-    result.repeatedImportMessageArray = [PBAppendableArray arrayWithValueType:PBArrayValueTypeObject];
+    result.repeatedImportMessageArray = [[NSMutableArray alloc] init];
   }
   [result.repeatedImportMessageArray addObject:value];
   return self;
 }
 - (TestAllTypesLite_Builder *)setRepeatedImportMessageArray:(NSArray *)array {
-  result.repeatedImportMessageArray = [PBAppendableArray arrayWithArray:array valueType:PBArrayValueTypeObject];
+  result.repeatedImportMessageArray = [[NSMutableArray alloc ] initWithArray:array];
   return self;
 }
-- (TestAllTypesLite_Builder *)setRepeatedImportMessageValues:(const ImportMessageLite* *)values count:(NSUInteger)count {
-  result.repeatedImportMessageArray = [PBAppendableArray arrayWithValues:values count:count valueType:PBArrayValueTypeObject];
-  return self;
-}
+
 - (TestAllTypesLite_Builder *)clearRepeatedImportMessage {
   result.repeatedImportMessageArray = nil;
   return self;
@@ -5488,7 +5465,7 @@ static TestAllTypesLite_RepeatedGroup* defaultTestAllTypesLite_RepeatedGroupInst
   result.repeatedImportEnumArray = nil;
   return self;
 }
-- (PBAppendableArray *)repeatedStringPiece {
+- (NSMutableArray *)repeatedStringPiece {
   return result.repeatedStringPieceArray;
 }
 - (NSString*)repeatedStringPieceAtIndex:(NSUInteger)index {
@@ -5496,24 +5473,21 @@ static TestAllTypesLite_RepeatedGroup* defaultTestAllTypesLite_RepeatedGroupInst
 }
 - (TestAllTypesLite_Builder *)addRepeatedStringPiece:(NSString*)value {
   if (result.repeatedStringPieceArray == nil) {
-    result.repeatedStringPieceArray = [PBAppendableArray arrayWithValueType:PBArrayValueTypeObject];
+    result.repeatedStringPieceArray = [[NSMutableArray alloc] init];
   }
   [result.repeatedStringPieceArray addObject:value];
   return self;
 }
 - (TestAllTypesLite_Builder *)setRepeatedStringPieceArray:(NSArray *)array {
-  result.repeatedStringPieceArray = [PBAppendableArray arrayWithArray:array valueType:PBArrayValueTypeObject];
+  result.repeatedStringPieceArray = [[NSMutableArray alloc ] initWithArray:array];
   return self;
 }
-- (TestAllTypesLite_Builder *)setRepeatedStringPieceValues:(const NSString* *)values count:(NSUInteger)count {
-  result.repeatedStringPieceArray = [PBAppendableArray arrayWithValues:values count:count valueType:PBArrayValueTypeObject];
-  return self;
-}
+
 - (TestAllTypesLite_Builder *)clearRepeatedStringPiece {
   result.repeatedStringPieceArray = nil;
   return self;
 }
-- (PBAppendableArray *)repeatedCord {
+- (NSMutableArray *)repeatedCord {
   return result.repeatedCordArray;
 }
 - (NSString*)repeatedCordAtIndex:(NSUInteger)index {
@@ -5521,19 +5495,16 @@ static TestAllTypesLite_RepeatedGroup* defaultTestAllTypesLite_RepeatedGroupInst
 }
 - (TestAllTypesLite_Builder *)addRepeatedCord:(NSString*)value {
   if (result.repeatedCordArray == nil) {
-    result.repeatedCordArray = [PBAppendableArray arrayWithValueType:PBArrayValueTypeObject];
+    result.repeatedCordArray = [[NSMutableArray alloc] init];
   }
   [result.repeatedCordArray addObject:value];
   return self;
 }
 - (TestAllTypesLite_Builder *)setRepeatedCordArray:(NSArray *)array {
-  result.repeatedCordArray = [PBAppendableArray arrayWithArray:array valueType:PBArrayValueTypeObject];
+  result.repeatedCordArray = [[NSMutableArray alloc ] initWithArray:array];
   return self;
 }
-- (TestAllTypesLite_Builder *)setRepeatedCordValues:(const NSString* *)values count:(NSUInteger)count {
-  result.repeatedCordArray = [PBAppendableArray arrayWithValues:values count:count valueType:PBArrayValueTypeObject];
-  return self;
-}
+
 - (TestAllTypesLite_Builder *)clearRepeatedCord {
   result.repeatedCordArray = nil;
   return self;
@@ -5873,9 +5844,7 @@ static TestAllTypesLite_RepeatedGroup* defaultTestAllTypesLite_RepeatedGroupInst
   hasC_ = !!value;
 }
 @synthesize c;
-- (void) dealloc {
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.c = 0;
@@ -5936,7 +5905,7 @@ static ForeignMessageLite* defaultForeignMessageLiteInstance = nil;
   return (ForeignMessageLite*)[[[ForeignMessageLite builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (ForeignMessageLite_Builder*) builder {
-  return [[[ForeignMessageLite_Builder alloc] init] autorelease];
+  return [[ForeignMessageLite_Builder alloc] init];
 }
 + (ForeignMessageLite_Builder*) builderWithPrototype:(ForeignMessageLite*) prototype {
   return [[ForeignMessageLite builder] mergeFrom:prototype];
@@ -5978,18 +5947,15 @@ static ForeignMessageLite* defaultForeignMessageLiteInstance = nil;
 @end
 
 @interface ForeignMessageLite_Builder()
-@property (retain) ForeignMessageLite* result;
+@property (strong) ForeignMessageLite* result;
 @end
 
 @implementation ForeignMessageLite_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[ForeignMessageLite alloc] init] autorelease];
+    self.result = [[ForeignMessageLite alloc] init];
   }
   return self;
 }
@@ -5997,7 +5963,7 @@ static ForeignMessageLite* defaultForeignMessageLiteInstance = nil;
   return result;
 }
 - (ForeignMessageLite_Builder*) clear {
-  self.result = [[[ForeignMessageLite alloc] init] autorelease];
+  self.result = [[ForeignMessageLite alloc] init];
   return self;
 }
 - (ForeignMessageLite_Builder*) clone {
@@ -6011,7 +5977,7 @@ static ForeignMessageLite* defaultForeignMessageLiteInstance = nil;
   return [self buildPartial];
 }
 - (ForeignMessageLite*) buildPartial {
-  ForeignMessageLite* returnMe = [[result retain] autorelease];
+  ForeignMessageLite* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -6069,20 +6035,20 @@ static ForeignMessageLite* defaultForeignMessageLiteInstance = nil;
 @end
 
 @interface TestPackedTypesLite ()
-@property (retain) PBAppendableArray * packedInt32Array;
-@property (retain) PBAppendableArray * packedInt64Array;
-@property (retain) PBAppendableArray * packedUint32Array;
-@property (retain) PBAppendableArray * packedUint64Array;
-@property (retain) PBAppendableArray * packedSint32Array;
-@property (retain) PBAppendableArray * packedSint64Array;
-@property (retain) PBAppendableArray * packedFixed32Array;
-@property (retain) PBAppendableArray * packedFixed64Array;
-@property (retain) PBAppendableArray * packedSfixed32Array;
-@property (retain) PBAppendableArray * packedSfixed64Array;
-@property (retain) PBAppendableArray * packedFloatArray;
-@property (retain) PBAppendableArray * packedDoubleArray;
-@property (retain) PBAppendableArray * packedBoolArray;
-@property (retain) PBAppendableArray * packedEnumArray;
+@property (strong) PBAppendableArray * packedInt32Array;
+@property (strong) PBAppendableArray * packedInt64Array;
+@property (strong) PBAppendableArray * packedUint32Array;
+@property (strong) PBAppendableArray * packedUint64Array;
+@property (strong) PBAppendableArray * packedSint32Array;
+@property (strong) PBAppendableArray * packedSint64Array;
+@property (strong) PBAppendableArray * packedFixed32Array;
+@property (strong) PBAppendableArray * packedFixed64Array;
+@property (strong) PBAppendableArray * packedSfixed32Array;
+@property (strong) PBAppendableArray * packedSfixed64Array;
+@property (strong) PBAppendableArray * packedFloatArray;
+@property (strong) PBAppendableArray * packedDoubleArray;
+@property (strong) PBAppendableArray * packedBoolArray;
+@property (strong) PBAppendableArray * packedEnumArray;
 @end
 
 @implementation TestPackedTypesLite
@@ -6115,23 +6081,7 @@ static ForeignMessageLite* defaultForeignMessageLiteInstance = nil;
 @dynamic packedBool;
 @synthesize packedEnumArray;
 @dynamic packedEnum;
-- (void) dealloc {
-  self.packedInt32Array = nil;
-  self.packedInt64Array = nil;
-  self.packedUint32Array = nil;
-  self.packedUint64Array = nil;
-  self.packedSint32Array = nil;
-  self.packedSint64Array = nil;
-  self.packedFixed32Array = nil;
-  self.packedFixed64Array = nil;
-  self.packedSfixed32Array = nil;
-  self.packedSfixed64Array = nil;
-  self.packedFloatArray = nil;
-  self.packedDoubleArray = nil;
-  self.packedBoolArray = nil;
-  self.packedEnumArray = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
   }
@@ -6570,7 +6520,7 @@ static TestPackedTypesLite* defaultTestPackedTypesLiteInstance = nil;
   return (TestPackedTypesLite*)[[[TestPackedTypesLite builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (TestPackedTypesLite_Builder*) builder {
-  return [[[TestPackedTypesLite_Builder alloc] init] autorelease];
+  return [[TestPackedTypesLite_Builder alloc] init] ;
 }
 + (TestPackedTypesLite_Builder*) builderWithPrototype:(TestPackedTypesLite*) prototype {
   return [[TestPackedTypesLite builder] mergeFrom:prototype];
@@ -6582,48 +6532,64 @@ static TestPackedTypesLite* defaultTestPackedTypesLiteInstance = nil;
   return [TestPackedTypesLite builderWithPrototype:self];
 }
 - (void) writeDescriptionTo:(NSMutableString*) output withIndent:(NSString*) indent {
-  for (NSNumber* value in self.packedInt32Array) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"packedInt32", value];
-  }
-  for (NSNumber* value in self.packedInt64Array) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"packedInt64", value];
-  }
-  for (NSNumber* value in self.packedUint32Array) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"packedUint32", value];
-  }
-  for (NSNumber* value in self.packedUint64Array) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"packedUint64", value];
-  }
-  for (NSNumber* value in self.packedSint32Array) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"packedSint32", value];
-  }
-  for (NSNumber* value in self.packedSint64Array) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"packedSint64", value];
-  }
-  for (NSNumber* value in self.packedFixed32Array) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"packedFixed32", value];
-  }
-  for (NSNumber* value in self.packedFixed64Array) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"packedFixed64", value];
-  }
-  for (NSNumber* value in self.packedSfixed32Array) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"packedSfixed32", value];
-  }
-  for (NSNumber* value in self.packedSfixed64Array) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"packedSfixed64", value];
-  }
-  for (NSNumber* value in self.packedFloatArray) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"packedFloat", value];
-  }
-  for (NSNumber* value in self.packedDoubleArray) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"packedDouble", value];
-  }
-  for (NSNumber* value in self.packedBoolArray) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"packedBool", value];
-  }
-  for (NSNumber* element in self.packedEnumArray) {
-    [output appendFormat:@"%@%@: %d\n", indent, @"packedEnum", element.intValue];
-  }
+
+    for(int i=0;i<self.packedInt32Array.count;i++){
+        [output appendFormat:@"%@%@: %@\n", indent, @"packedInt32", [self.packedInt32Array int32AtIndex:i]];
+    }
+    
+    for(int i=0;i<self.packedInt64Array.count;i++){
+        [output appendFormat:@"%@%@: %@\n", indent, @"packedInt64", [self.packedInt64Array int64AtIndex:i]];
+    }
+    
+    for(int i=0;i<self.packedUint32Array.count;i++){
+        [output appendFormat:@"%@%@: %@\n", indent, @"packedUint32", [self.packedUint32Array uint32AtIndex:i]];
+    }
+    
+    for(int i=0;i<self.packedUint64Array.count;i++){
+        [output appendFormat:@"%@%@: %@\n", indent, @"packedUint64", [self.packedUint64Array uint64AtIndex:i]];
+    }
+    
+    for(int i=0;i<self.packedSint32Array.count;i++){
+        [output appendFormat:@"%@%@: %@\n", indent, @"packedSint32", [self.packedSint32Array int32AtIndex:i]];
+    }
+    
+    for(int i=0;i<self.packedSint64Array.count;i++){
+        [output appendFormat:@"%@%@: %@\n", indent, @"packedSint64", [self.packedSint64Array int64AtIndex:i]];
+    }
+    
+    for(int i=0;i<self.packedFixed32Array.count;i++){
+        [output appendFormat:@"%@%@: %@\n", indent, @"packedFixed32", [self.packedFixed32Array uint32AtIndex:i]];
+    }
+    
+    for(int i=0;i<self.packedFixed64Array.count;i++){
+        [output appendFormat:@"%@%@: %@\n", indent, @"packedFixed64", [self.packedFixed64Array uint64AtIndex:i]];
+    }
+    
+    for(int i=0;i<self.packedSfixed32Array.count;i++){
+        [output appendFormat:@"%@%@: %@\n", indent, @"packedSfixed32", [self.packedSfixed32Array int32AtIndex:i]];
+    }
+    
+    for(int i=0;i<self.packedFixed64Array.count;i++){
+        [output appendFormat:@"%@%@: %@\n", indent, @"packedSfixed64", [self.packedSfixed64Array int64AtIndex:i]];
+    }
+    
+    for(int i=0;i<self.packedFloatArray.count;i++){
+        [output appendFormat:@"%@%@: %@\n", indent, @"packedFloat", [self.packedFloatArray floatAtIndex:i]];
+    }
+    
+    for(int i=0;i<self.packedDoubleArray.count;i++){
+        [output appendFormat:@"%@%@: %@\n", indent, @"packedDouble", [self.packedDoubleArray doubleAtIndex:i]];
+    }
+
+    for(int i=0;i<self.packedBoolArray.count;i++){
+        [output appendFormat:@"%@%@: %@\n", indent, @"packedBool", [self.packedBoolArray boolAtIndex:i]];
+    }
+
+    for(int i=0;i<self.packedEnumArray.count;i++){
+        [output appendFormat:@"%@%@: %@\n", indent, @"packedEnum", [self.packedEnumArray uint32AtIndex:i]];
+    }
+
+
   [self.unknownFields writeDescriptionTo:output withIndent:indent];
 }
 - (BOOL) isEqual:(id)other {
@@ -6667,66 +6633,80 @@ static TestPackedTypesLite* defaultTestPackedTypesLiteInstance = nil;
 }
 - (NSUInteger) hash {
   NSUInteger hashCode = 7;
-  for (NSNumber* value in self.packedInt32Array) {
-    hashCode = hashCode * 31 + [value intValue];
-  }
-  for (NSNumber* value in self.packedInt64Array) {
-    hashCode = hashCode * 31 + [value intValue];
-  }
-  for (NSNumber* value in self.packedUint32Array) {
-    hashCode = hashCode * 31 + [value intValue];
-  }
-  for (NSNumber* value in self.packedUint64Array) {
-    hashCode = hashCode * 31 + [value intValue];
-  }
-  for (NSNumber* value in self.packedSint32Array) {
-    hashCode = hashCode * 31 + [value intValue];
-  }
-  for (NSNumber* value in self.packedSint64Array) {
-    hashCode = hashCode * 31 + [value intValue];
-  }
-  for (NSNumber* value in self.packedFixed32Array) {
-    hashCode = hashCode * 31 + [value intValue];
-  }
-  for (NSNumber* value in self.packedFixed64Array) {
-    hashCode = hashCode * 31 + [value intValue];
-  }
-  for (NSNumber* value in self.packedSfixed32Array) {
-    hashCode = hashCode * 31 + [value intValue];
-  }
-  for (NSNumber* value in self.packedSfixed64Array) {
-    hashCode = hashCode * 31 + [value intValue];
-  }
-  for (NSNumber* value in self.packedFloatArray) {
-    hashCode = hashCode * 31 + [value intValue];
-  }
-  for (NSNumber* value in self.packedDoubleArray) {
-    hashCode = hashCode * 31 + [value intValue];
-  }
-  for (NSNumber* value in self.packedBoolArray) {
-    hashCode = hashCode * 31 + [value intValue];
-  }
-  for (NSNumber* element in self.packedEnumArray) {
-    hashCode = hashCode * 31 + element.intValue;
-  }
+    
+    
+    for(int i=0;i<self.packedInt32Array.count;i++){
+        hashCode = hashCode * 31 + [self.packedInt32Array int32AtIndex:i];
+    }
+    
+    for(int i=0;i<self.packedInt64Array.count;i++){
+        hashCode = hashCode * 31 + [self.packedInt64Array int64AtIndex:i];
+    }
+    
+    for(int i=0;i<self.packedUint32Array.count;i++){
+        hashCode = hashCode * 31 + [self.packedUint32Array uint32AtIndex:i];
+    }
+    
+    for(int i=0;i<self.packedUint64Array.count;i++){
+        hashCode = hashCode * 31 + [self.packedUint64Array uint64AtIndex:i];
+    }
+    
+    for(int i=0;i<self.packedSint32Array.count;i++){
+        hashCode = hashCode * 31 + [self.packedSint32Array int32AtIndex:i];
+    }
+    
+    for(int i=0;i<self.packedSint64Array.count;i++){
+        hashCode = hashCode * 31 + [self.packedSint64Array int64AtIndex:i];
+    }
+    
+    for(int i=0;i<self.packedFixed32Array.count;i++){
+        hashCode = hashCode * 31 + [self.packedFixed32Array uint32AtIndex:i];
+    }
+    
+    for(int i=0;i<self.packedFixed64Array.count;i++){
+        hashCode = hashCode * 31 + [self.packedFixed64Array uint64AtIndex:i];
+    }
+    
+    for(int i=0;i<self.packedSfixed32Array.count;i++){
+        hashCode = hashCode * 31 + [self.packedSfixed32Array int32AtIndex:i];
+    }
+    
+    for(int i=0;i<self.packedSfixed64Array.count;i++){
+        hashCode = hashCode * 31 + [self.packedSfixed64Array int64AtIndex:i];
+    }
+    
+    for(int i=0;i<self.packedFloatArray.count;i++){
+        hashCode = hashCode * 31 + [self.packedFloatArray floatAtIndex:i];
+    }
+    
+    for(int i=0;i<self.packedDoubleArray.count;i++){
+        hashCode = hashCode * 31 + [self.packedDoubleArray doubleAtIndex:i];
+    }
+    
+    for(int i=0;i<self.packedBoolArray.count;i++){
+        hashCode = hashCode * 31 + [self.packedBoolArray boolAtIndex:i];
+    }
+    
+    for(int i=0;i<self.packedEnumArray.count;i++){
+        hashCode = hashCode * 31 + [self.packedEnumArray uint32AtIndex:i];
+    }
+
+
   hashCode = hashCode * 31 + [self.unknownFields hash];
   return hashCode;
 }
 @end
 
 @interface TestPackedTypesLite_Builder()
-@property (retain) TestPackedTypesLite* result;
+@property (strong) TestPackedTypesLite* result;
 @end
 
 @implementation TestPackedTypesLite_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[TestPackedTypesLite alloc] init] autorelease];
+    self.result = [[TestPackedTypesLite alloc] init] ;
   }
   return self;
 }
@@ -6734,7 +6714,7 @@ static TestPackedTypesLite* defaultTestPackedTypesLiteInstance = nil;
   return result;
 }
 - (TestPackedTypesLite_Builder*) clear {
-  self.result = [[[TestPackedTypesLite alloc] init] autorelease];
+  self.result = [[TestPackedTypesLite alloc] init] ;
   return self;
 }
 - (TestPackedTypesLite_Builder*) clone {
@@ -6748,7 +6728,7 @@ static TestPackedTypesLite* defaultTestPackedTypesLiteInstance = nil;
   return [self buildPartial];
 }
 - (TestPackedTypesLite*) buildPartial {
-  TestPackedTypesLite* returnMe = [[result retain] autorelease];
+  TestPackedTypesLite* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -6758,98 +6738,98 @@ static TestPackedTypesLite* defaultTestPackedTypesLiteInstance = nil;
   }
   if (other.packedInt32Array.count > 0) {
     if (result.packedInt32Array == nil) {
-      result.packedInt32Array = [[other.packedInt32Array copyWithZone:[other.packedInt32Array zone]] autorelease];
+      result.packedInt32Array = [other.packedInt32Array copy];
     } else {
       [result.packedInt32Array appendArray:other.packedInt32Array];
     }
   }
   if (other.packedInt64Array.count > 0) {
     if (result.packedInt64Array == nil) {
-      result.packedInt64Array = [[other.packedInt64Array copyWithZone:[other.packedInt64Array zone]] autorelease];
+      result.packedInt64Array = [other.packedInt64Array copy];
     } else {
       [result.packedInt64Array appendArray:other.packedInt64Array];
     }
   }
   if (other.packedUint32Array.count > 0) {
     if (result.packedUint32Array == nil) {
-      result.packedUint32Array = [[other.packedUint32Array copyWithZone:[other.packedUint32Array zone]] autorelease];
+      result.packedUint32Array = [other.packedUint32Array copy];
     } else {
       [result.packedUint32Array appendArray:other.packedUint32Array];
     }
   }
   if (other.packedUint64Array.count > 0) {
     if (result.packedUint64Array == nil) {
-      result.packedUint64Array = [[other.packedUint64Array copyWithZone:[other.packedUint64Array zone]] autorelease];
+      result.packedUint64Array = [other.packedUint64Array copy];
     } else {
       [result.packedUint64Array appendArray:other.packedUint64Array];
     }
   }
   if (other.packedSint32Array.count > 0) {
     if (result.packedSint32Array == nil) {
-      result.packedSint32Array = [[other.packedSint32Array copyWithZone:[other.packedSint32Array zone]] autorelease];
+      result.packedSint32Array = [other.packedSint32Array copy];
     } else {
       [result.packedSint32Array appendArray:other.packedSint32Array];
     }
   }
   if (other.packedSint64Array.count > 0) {
     if (result.packedSint64Array == nil) {
-      result.packedSint64Array = [[other.packedSint64Array copyWithZone:[other.packedSint64Array zone]] autorelease];
+      result.packedSint64Array = [other.packedSint64Array copy];
     } else {
       [result.packedSint64Array appendArray:other.packedSint64Array];
     }
   }
   if (other.packedFixed32Array.count > 0) {
     if (result.packedFixed32Array == nil) {
-      result.packedFixed32Array = [[other.packedFixed32Array copyWithZone:[other.packedFixed32Array zone]] autorelease];
+      result.packedFixed32Array = [other.packedFixed32Array copy];
     } else {
       [result.packedFixed32Array appendArray:other.packedFixed32Array];
     }
   }
   if (other.packedFixed64Array.count > 0) {
     if (result.packedFixed64Array == nil) {
-      result.packedFixed64Array = [[other.packedFixed64Array copyWithZone:[other.packedFixed64Array zone]] autorelease];
+      result.packedFixed64Array = [other.packedFixed64Array copy];
     } else {
       [result.packedFixed64Array appendArray:other.packedFixed64Array];
     }
   }
   if (other.packedSfixed32Array.count > 0) {
     if (result.packedSfixed32Array == nil) {
-      result.packedSfixed32Array = [[other.packedSfixed32Array copyWithZone:[other.packedSfixed32Array zone]] autorelease];
+      result.packedSfixed32Array = [other.packedSfixed32Array copy];
     } else {
       [result.packedSfixed32Array appendArray:other.packedSfixed32Array];
     }
   }
   if (other.packedSfixed64Array.count > 0) {
     if (result.packedSfixed64Array == nil) {
-      result.packedSfixed64Array = [[other.packedSfixed64Array copyWithZone:[other.packedSfixed64Array zone]] autorelease];
+      result.packedSfixed64Array = [other.packedSfixed64Array copy];
     } else {
       [result.packedSfixed64Array appendArray:other.packedSfixed64Array];
     }
   }
   if (other.packedFloatArray.count > 0) {
     if (result.packedFloatArray == nil) {
-      result.packedFloatArray = [[other.packedFloatArray copyWithZone:[other.packedFloatArray zone]] autorelease];
+      result.packedFloatArray = [other.packedFloatArray copy];
     } else {
       [result.packedFloatArray appendArray:other.packedFloatArray];
     }
   }
   if (other.packedDoubleArray.count > 0) {
     if (result.packedDoubleArray == nil) {
-      result.packedDoubleArray = [[other.packedDoubleArray copyWithZone:[other.packedDoubleArray zone]] autorelease];
+      result.packedDoubleArray = [other.packedDoubleArray copy];
     } else {
       [result.packedDoubleArray appendArray:other.packedDoubleArray];
     }
   }
   if (other.packedBoolArray.count > 0) {
     if (result.packedBoolArray == nil) {
-      result.packedBoolArray = [[other.packedBoolArray copyWithZone:[other.packedBoolArray zone]] autorelease];
+      result.packedBoolArray = [other.packedBoolArray copy];
     } else {
       [result.packedBoolArray appendArray:other.packedBoolArray];
     }
   }
   if (other.packedEnumArray.count > 0) {
     if (result.packedEnumArray == nil) {
-      result.packedEnumArray = [[other.packedEnumArray copyWithZone:[other.packedEnumArray zone]] autorelease];
+      result.packedEnumArray = [other.packedEnumArray copy];
     } else {
       [result.packedEnumArray appendArray:other.packedEnumArray];
     }
@@ -7405,9 +7385,7 @@ static TestPackedTypesLite* defaultTestPackedTypesLiteInstance = nil;
 
 @implementation TestAllExtensionsLite
 
-- (void) dealloc {
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
   }
@@ -7468,7 +7446,7 @@ static TestAllExtensionsLite* defaultTestAllExtensionsLiteInstance = nil;
   return (TestAllExtensionsLite*)[[[TestAllExtensionsLite builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (TestAllExtensionsLite_Builder*) builder {
-  return [[[TestAllExtensionsLite_Builder alloc] init] autorelease];
+  return [[TestAllExtensionsLite_Builder alloc] init];
 }
 + (TestAllExtensionsLite_Builder*) builderWithPrototype:(TestAllExtensionsLite*) prototype {
   return [[TestAllExtensionsLite builder] mergeFrom:prototype];
@@ -7508,18 +7486,15 @@ static TestAllExtensionsLite* defaultTestAllExtensionsLiteInstance = nil;
 @end
 
 @interface TestAllExtensionsLite_Builder()
-@property (retain) TestAllExtensionsLite* result;
+@property (strong) TestAllExtensionsLite* result;
 @end
 
 @implementation TestAllExtensionsLite_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[TestAllExtensionsLite alloc] init] autorelease];
+    self.result = [[TestAllExtensionsLite alloc] init];
   }
   return self;
 }
@@ -7527,7 +7502,7 @@ static TestAllExtensionsLite* defaultTestAllExtensionsLiteInstance = nil;
   return result;
 }
 - (TestAllExtensionsLite_Builder*) clear {
-  self.result = [[[TestAllExtensionsLite alloc] init] autorelease];
+  self.result = [[TestAllExtensionsLite alloc] init];
   return self;
 }
 - (TestAllExtensionsLite_Builder*) clone {
@@ -7541,7 +7516,7 @@ static TestAllExtensionsLite* defaultTestAllExtensionsLiteInstance = nil;
   return [self buildPartial];
 }
 - (TestAllExtensionsLite*) buildPartial {
-  TestAllExtensionsLite* returnMe = [[result retain] autorelease];
+  TestAllExtensionsLite* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -7589,9 +7564,7 @@ static TestAllExtensionsLite* defaultTestAllExtensionsLiteInstance = nil;
   hasA_ = !!value;
 }
 @synthesize a;
-- (void) dealloc {
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.a = 0;
@@ -7652,7 +7625,7 @@ static OptionalGroup_extension_lite* defaultOptionalGroup_extension_liteInstance
   return (OptionalGroup_extension_lite*)[[[OptionalGroup_extension_lite builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (OptionalGroup_extension_lite_Builder*) builder {
-  return [[[OptionalGroup_extension_lite_Builder alloc] init] autorelease];
+  return [[OptionalGroup_extension_lite_Builder alloc] init];
 }
 + (OptionalGroup_extension_lite_Builder*) builderWithPrototype:(OptionalGroup_extension_lite*) prototype {
   return [[OptionalGroup_extension_lite builder] mergeFrom:prototype];
@@ -7694,18 +7667,15 @@ static OptionalGroup_extension_lite* defaultOptionalGroup_extension_liteInstance
 @end
 
 @interface OptionalGroup_extension_lite_Builder()
-@property (retain) OptionalGroup_extension_lite* result;
+@property (strong) OptionalGroup_extension_lite* result;
 @end
 
 @implementation OptionalGroup_extension_lite_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[OptionalGroup_extension_lite alloc] init] autorelease];
+    self.result = [[OptionalGroup_extension_lite alloc] init];
   }
   return self;
 }
@@ -7713,7 +7683,7 @@ static OptionalGroup_extension_lite* defaultOptionalGroup_extension_liteInstance
   return result;
 }
 - (OptionalGroup_extension_lite_Builder*) clear {
-  self.result = [[[OptionalGroup_extension_lite alloc] init] autorelease];
+  self.result = [[OptionalGroup_extension_lite alloc] init];
   return self;
 }
 - (OptionalGroup_extension_lite_Builder*) clone {
@@ -7727,7 +7697,7 @@ static OptionalGroup_extension_lite* defaultOptionalGroup_extension_liteInstance
   return [self buildPartial];
 }
 - (OptionalGroup_extension_lite*) buildPartial {
-  OptionalGroup_extension_lite* returnMe = [[result retain] autorelease];
+  OptionalGroup_extension_lite* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -7797,9 +7767,7 @@ static OptionalGroup_extension_lite* defaultOptionalGroup_extension_liteInstance
   hasA_ = !!value;
 }
 @synthesize a;
-- (void) dealloc {
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.a = 0;
@@ -7860,7 +7828,7 @@ static RepeatedGroup_extension_lite* defaultRepeatedGroup_extension_liteInstance
   return (RepeatedGroup_extension_lite*)[[[RepeatedGroup_extension_lite builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (RepeatedGroup_extension_lite_Builder*) builder {
-  return [[[RepeatedGroup_extension_lite_Builder alloc] init] autorelease];
+  return [[RepeatedGroup_extension_lite_Builder alloc] init];
 }
 + (RepeatedGroup_extension_lite_Builder*) builderWithPrototype:(RepeatedGroup_extension_lite*) prototype {
   return [[RepeatedGroup_extension_lite builder] mergeFrom:prototype];
@@ -7902,18 +7870,15 @@ static RepeatedGroup_extension_lite* defaultRepeatedGroup_extension_liteInstance
 @end
 
 @interface RepeatedGroup_extension_lite_Builder()
-@property (retain) RepeatedGroup_extension_lite* result;
+@property (strong) RepeatedGroup_extension_lite* result;
 @end
 
 @implementation RepeatedGroup_extension_lite_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[RepeatedGroup_extension_lite alloc] init] autorelease];
+    self.result = [[RepeatedGroup_extension_lite alloc] init];
   }
   return self;
 }
@@ -7921,7 +7886,7 @@ static RepeatedGroup_extension_lite* defaultRepeatedGroup_extension_liteInstance
   return result;
 }
 - (RepeatedGroup_extension_lite_Builder*) clear {
-  self.result = [[[RepeatedGroup_extension_lite alloc] init] autorelease];
+  self.result = [[RepeatedGroup_extension_lite alloc] init];
   return self;
 }
 - (RepeatedGroup_extension_lite_Builder*) clone {
@@ -7935,7 +7900,7 @@ static RepeatedGroup_extension_lite* defaultRepeatedGroup_extension_liteInstance
   return [self buildPartial];
 }
 - (RepeatedGroup_extension_lite*) buildPartial {
-  RepeatedGroup_extension_lite* returnMe = [[result retain] autorelease];
+  RepeatedGroup_extension_lite* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -7997,9 +7962,7 @@ static RepeatedGroup_extension_lite* defaultRepeatedGroup_extension_liteInstance
 
 @implementation TestPackedExtensionsLite
 
-- (void) dealloc {
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
   }
@@ -8060,7 +8023,7 @@ static TestPackedExtensionsLite* defaultTestPackedExtensionsLiteInstance = nil;
   return (TestPackedExtensionsLite*)[[[TestPackedExtensionsLite builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (TestPackedExtensionsLite_Builder*) builder {
-  return [[[TestPackedExtensionsLite_Builder alloc] init] autorelease];
+  return [[TestPackedExtensionsLite_Builder alloc] init];
 }
 + (TestPackedExtensionsLite_Builder*) builderWithPrototype:(TestPackedExtensionsLite*) prototype {
   return [[TestPackedExtensionsLite builder] mergeFrom:prototype];
@@ -8100,18 +8063,15 @@ static TestPackedExtensionsLite* defaultTestPackedExtensionsLiteInstance = nil;
 @end
 
 @interface TestPackedExtensionsLite_Builder()
-@property (retain) TestPackedExtensionsLite* result;
+@property (strong) TestPackedExtensionsLite* result;
 @end
 
 @implementation TestPackedExtensionsLite_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[TestPackedExtensionsLite alloc] init] autorelease];
+    self.result = [[TestPackedExtensionsLite alloc] init];
   }
   return self;
 }
@@ -8119,7 +8079,7 @@ static TestPackedExtensionsLite* defaultTestPackedExtensionsLiteInstance = nil;
   return result;
 }
 - (TestPackedExtensionsLite_Builder*) clear {
-  self.result = [[[TestPackedExtensionsLite alloc] init] autorelease];
+  self.result = [[TestPackedExtensionsLite alloc] init];
   return self;
 }
 - (TestPackedExtensionsLite_Builder*) clone {
@@ -8133,7 +8093,7 @@ static TestPackedExtensionsLite* defaultTestPackedExtensionsLiteInstance = nil;
   return [self buildPartial];
 }
 - (TestPackedExtensionsLite*) buildPartial {
-  TestPackedExtensionsLite* returnMe = [[result retain] autorelease];
+  TestPackedExtensionsLite* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -8173,9 +8133,7 @@ static TestPackedExtensionsLite* defaultTestPackedExtensionsLiteInstance = nil;
 
 @implementation TestNestedExtensionLite
 
-- (void) dealloc {
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
   }
@@ -8232,7 +8190,7 @@ static TestNestedExtensionLite* defaultTestNestedExtensionLiteInstance = nil;
   return (TestNestedExtensionLite*)[[[TestNestedExtensionLite builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (TestNestedExtensionLite_Builder*) builder {
-  return [[[TestNestedExtensionLite_Builder alloc] init] autorelease];
+  return [[TestNestedExtensionLite_Builder alloc] init];
 }
 + (TestNestedExtensionLite_Builder*) builderWithPrototype:(TestNestedExtensionLite*) prototype {
   return [[TestNestedExtensionLite builder] mergeFrom:prototype];
@@ -8265,18 +8223,15 @@ static TestNestedExtensionLite* defaultTestNestedExtensionLiteInstance = nil;
 @end
 
 @interface TestNestedExtensionLite_Builder()
-@property (retain) TestNestedExtensionLite* result;
+@property (strong) TestNestedExtensionLite* result;
 @end
 
 @implementation TestNestedExtensionLite_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[TestNestedExtensionLite alloc] init] autorelease];
+    self.result = [[TestNestedExtensionLite alloc] init];
   }
   return self;
 }
@@ -8284,7 +8239,7 @@ static TestNestedExtensionLite* defaultTestNestedExtensionLiteInstance = nil;
   return result;
 }
 - (TestNestedExtensionLite_Builder*) clear {
-  self.result = [[[TestNestedExtensionLite alloc] init] autorelease];
+  self.result = [[TestNestedExtensionLite alloc] init];
   return self;
 }
 - (TestNestedExtensionLite_Builder*) clone {
@@ -8298,7 +8253,7 @@ static TestNestedExtensionLite* defaultTestNestedExtensionLiteInstance = nil;
   return [self buildPartial];
 }
 - (TestNestedExtensionLite*) buildPartial {
-  TestNestedExtensionLite* returnMe = [[result retain] autorelease];
+  TestNestedExtensionLite* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -8345,9 +8300,7 @@ static TestNestedExtensionLite* defaultTestNestedExtensionLiteInstance = nil;
   hasDeprecatedField_ = !!value;
 }
 @synthesize deprecatedField;
-- (void) dealloc {
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.deprecatedField = 0;
@@ -8408,7 +8361,7 @@ static TestDeprecatedLite* defaultTestDeprecatedLiteInstance = nil;
   return (TestDeprecatedLite*)[[[TestDeprecatedLite builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (TestDeprecatedLite_Builder*) builder {
-  return [[[TestDeprecatedLite_Builder alloc] init] autorelease];
+  return [[TestDeprecatedLite_Builder alloc] init];
 }
 + (TestDeprecatedLite_Builder*) builderWithPrototype:(TestDeprecatedLite*) prototype {
   return [[TestDeprecatedLite builder] mergeFrom:prototype];
@@ -8450,18 +8403,15 @@ static TestDeprecatedLite* defaultTestDeprecatedLiteInstance = nil;
 @end
 
 @interface TestDeprecatedLite_Builder()
-@property (retain) TestDeprecatedLite* result;
+@property (strong) TestDeprecatedLite* result;
 @end
 
 @implementation TestDeprecatedLite_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[TestDeprecatedLite alloc] init] autorelease];
+    self.result = [[TestDeprecatedLite alloc] init];
   }
   return self;
 }
@@ -8469,7 +8419,7 @@ static TestDeprecatedLite* defaultTestDeprecatedLiteInstance = nil;
   return result;
 }
 - (TestDeprecatedLite_Builder*) clear {
-  self.result = [[[TestDeprecatedLite alloc] init] autorelease];
+  self.result = [[TestDeprecatedLite alloc] init];
   return self;
 }
 - (TestDeprecatedLite_Builder*) clone {
@@ -8483,7 +8433,7 @@ static TestDeprecatedLite* defaultTestDeprecatedLiteInstance = nil;
   return [self buildPartial];
 }
 - (TestDeprecatedLite*) buildPartial {
-  TestDeprecatedLite* returnMe = [[result retain] autorelease];
+  TestDeprecatedLite* returnMe = result;
   self.result = nil;
   return returnMe;
 }

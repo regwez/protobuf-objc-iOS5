@@ -54,396 +54,396 @@ static PBExtensionRegistry* extensionRegistry = nil;
 + (void) initialize {
   if (self == [UnittestCustomOptionsRoot class]) {
     UnittestCustomOptionsRoot_fileOpt1 =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeUInt64
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeUInt64
                                      extendedClass:[PBFileOptions class]
                                        fieldNumber:7736974
                                       defaultValue:[NSNumber numberWithLongLong:0L]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_messageOpt1 =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeInt32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeInt32
                                      extendedClass:[PBMessageOptions class]
                                        fieldNumber:7739036
                                       defaultValue:[NSNumber numberWithInt:0]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_fieldOpt1 =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeFixed64
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeFixed64
                                      extendedClass:[PBFieldOptions class]
                                        fieldNumber:7740936
                                       defaultValue:[NSNumber numberWithLongLong:0L]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_fieldOpt2 =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeInt32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeInt32
                                      extendedClass:[PBFieldOptions class]
                                        fieldNumber:7753913
                                       defaultValue:[NSNumber numberWithInt:42]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_enumOpt1 =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeSFixed32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeSFixed32
                                      extendedClass:[PBEnumOptions class]
                                        fieldNumber:7753576
                                       defaultValue:[NSNumber numberWithInt:0]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_enumValueOpt1 =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeInt32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeInt32
                                      extendedClass:[PBEnumValueOptions class]
                                        fieldNumber:1560678
                                       defaultValue:[NSNumber numberWithInt:0]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_serviceOpt1 =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeSInt64
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeSInt64
                                      extendedClass:[PBServiceOptions class]
                                        fieldNumber:7887650
                                       defaultValue:[NSNumber numberWithLongLong:0L]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_methodOpt1 =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeEnum
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeEnum
                                      extendedClass:[PBMethodOptions class]
                                        fieldNumber:7890860
                                       defaultValue:[NSNumber numberWithInt:MethodOpt1Methodopt1Val1]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_boolOpt =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeBool
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeBool
                                      extendedClass:[PBMessageOptions class]
                                        fieldNumber:7706090
                                       defaultValue:[NSNumber numberWithBool:NO]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_int32Opt =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeInt32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeInt32
                                      extendedClass:[PBMessageOptions class]
                                        fieldNumber:7705709
                                       defaultValue:[NSNumber numberWithInt:0]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_int64Opt =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeInt64
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeInt64
                                      extendedClass:[PBMessageOptions class]
                                        fieldNumber:7705542
                                       defaultValue:[NSNumber numberWithLongLong:0L]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_uint32Opt =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeUInt32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeUInt32
                                      extendedClass:[PBMessageOptions class]
                                        fieldNumber:7704880
                                       defaultValue:[NSNumber numberWithInt:0]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_uint64Opt =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeUInt64
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeUInt64
                                      extendedClass:[PBMessageOptions class]
                                        fieldNumber:7702367
                                       defaultValue:[NSNumber numberWithLongLong:0L]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_sint32Opt =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeSInt32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeSInt32
                                      extendedClass:[PBMessageOptions class]
                                        fieldNumber:7701568
                                       defaultValue:[NSNumber numberWithInt:0]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_sint64Opt =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeSInt64
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeSInt64
                                      extendedClass:[PBMessageOptions class]
                                        fieldNumber:7700863
                                       defaultValue:[NSNumber numberWithLongLong:0L]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_fixed32Opt =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeFixed32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeFixed32
                                      extendedClass:[PBMessageOptions class]
                                        fieldNumber:7700307
                                       defaultValue:[NSNumber numberWithInt:0]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_fixed64Opt =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeFixed64
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeFixed64
                                      extendedClass:[PBMessageOptions class]
                                        fieldNumber:7700194
                                       defaultValue:[NSNumber numberWithLongLong:0L]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_sfixed32Opt =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeSFixed32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeSFixed32
                                      extendedClass:[PBMessageOptions class]
                                        fieldNumber:7698645
                                       defaultValue:[NSNumber numberWithInt:0]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_sfixed64Opt =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeSFixed64
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeSFixed64
                                      extendedClass:[PBMessageOptions class]
                                        fieldNumber:7685475
                                       defaultValue:[NSNumber numberWithLongLong:0L]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_floatOpt =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeFloat
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeFloat
                                      extendedClass:[PBMessageOptions class]
                                        fieldNumber:7675390
                                       defaultValue:[NSNumber numberWithFloat:0]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_doubleOpt =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeDouble
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeDouble
                                      extendedClass:[PBMessageOptions class]
                                        fieldNumber:7673293
                                       defaultValue:[NSNumber numberWithDouble:0]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_stringOpt =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeString
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeString
                                      extendedClass:[PBMessageOptions class]
                                        fieldNumber:7673285
                                       defaultValue:@""
                                messageOrGroupClass:[NSString class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_bytesOpt =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeBytes
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeBytes
                                      extendedClass:[PBMessageOptions class]
                                        fieldNumber:7673238
                                       defaultValue:[NSData data]
                                messageOrGroupClass:[NSData class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_enumOpt =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeEnum
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeEnum
                                      extendedClass:[PBMessageOptions class]
                                        fieldNumber:7673233
                                       defaultValue:[NSNumber numberWithInt:DummyMessageContainingEnum_TestEnumTypeTestOptionEnumType1]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_messageTypeOpt =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
                                      extendedClass:[PBMessageOptions class]
                                        fieldNumber:7665967
                                       defaultValue:[DummyMessageInvalidAsOptionType defaultInstance]
                                messageOrGroupClass:[DummyMessageInvalidAsOptionType class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_quux =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeInt32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeInt32
                                      extendedClass:[ComplexOptionType1 class]
                                        fieldNumber:7663707
                                       defaultValue:[NSNumber numberWithInt:0]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_corge =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
                                      extendedClass:[ComplexOptionType1 class]
                                        fieldNumber:7663442
                                       defaultValue:[ComplexOptionType3 defaultInstance]
                                messageOrGroupClass:[ComplexOptionType3 class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_grault =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeInt32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeInt32
                                      extendedClass:[ComplexOptionType2 class]
                                        fieldNumber:7650927
                                       defaultValue:[NSNumber numberWithInt:0]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_garply =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
                                      extendedClass:[ComplexOptionType2 class]
                                        fieldNumber:7649992
                                       defaultValue:[ComplexOptionType1 defaultInstance]
                                messageOrGroupClass:[ComplexOptionType1 class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_complexOpt1 =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
                                      extendedClass:[PBMessageOptions class]
                                        fieldNumber:7646756
                                       defaultValue:[ComplexOptionType1 defaultInstance]
                                messageOrGroupClass:[ComplexOptionType1 class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_complexOpt2 =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
                                      extendedClass:[PBMessageOptions class]
                                        fieldNumber:7636949
                                       defaultValue:[ComplexOptionType2 defaultInstance]
                                messageOrGroupClass:[ComplexOptionType2 class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_complexOpt3 =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
                                      extendedClass:[PBMessageOptions class]
                                        fieldNumber:7636463
                                       defaultValue:[ComplexOptionType3 defaultInstance]
                                messageOrGroupClass:[ComplexOptionType3 class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_complexOpt6 =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeGroup
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeGroup
                                      extendedClass:[PBMessageOptions class]
                                        fieldNumber:7595468
                                       defaultValue:[ComplexOpt6 defaultInstance]
                                messageOrGroupClass:[ComplexOpt6 class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_fileopt =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
                                      extendedClass:[PBFileOptions class]
                                        fieldNumber:15478479
                                       defaultValue:[Aggregate defaultInstance]
                                messageOrGroupClass:[Aggregate class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_msgopt =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
                                      extendedClass:[PBMessageOptions class]
                                        fieldNumber:15480088
                                       defaultValue:[Aggregate defaultInstance]
                                messageOrGroupClass:[Aggregate class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_fieldopt =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
                                      extendedClass:[PBFieldOptions class]
                                        fieldNumber:15481374
                                       defaultValue:[Aggregate defaultInstance]
                                messageOrGroupClass:[Aggregate class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_enumopt =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
                                      extendedClass:[PBEnumOptions class]
                                        fieldNumber:15483218
                                       defaultValue:[Aggregate defaultInstance]
                                messageOrGroupClass:[Aggregate class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_enumvalopt =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
                                      extendedClass:[PBEnumValueOptions class]
                                        fieldNumber:15486921
                                       defaultValue:[Aggregate defaultInstance]
                                messageOrGroupClass:[Aggregate class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_serviceopt =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
                                      extendedClass:[PBServiceOptions class]
                                        fieldNumber:15497145
                                       defaultValue:[Aggregate defaultInstance]
                                messageOrGroupClass:[Aggregate class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     UnittestCustomOptionsRoot_methodopt =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
                                      extendedClass:[PBMethodOptions class]
                                        fieldNumber:15512713
                                       defaultValue:[Aggregate defaultInstance]
                                messageOrGroupClass:[Aggregate class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     ComplexOptionType2_ComplexOptionType4_complexOpt4 =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
                                      extendedClass:[PBMessageOptions class]
                                        fieldNumber:7633546
                                       defaultValue:[ComplexOptionType2_ComplexOptionType4 defaultInstance]
                                messageOrGroupClass:[ComplexOptionType2_ComplexOptionType4 class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     AggregateMessageSetElement_messageSetExtension =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
                                      extendedClass:[AggregateMessageSet class]
                                        fieldNumber:15447542
                                       defaultValue:[AggregateMessageSetElement defaultInstance]
                                messageOrGroupClass:[AggregateMessageSetElement class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:YES] retain];
+                            isMessageSetWireFormat:YES];
     Aggregate_nested =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
                                      extendedClass:[PBFileOptions class]
                                        fieldNumber:15476903
                                       defaultValue:[Aggregate defaultInstance]
                                messageOrGroupClass:[Aggregate class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO];
     PBMutableExtensionRegistry* registry = [PBMutableExtensionRegistry registry];
     [self registerAllExtensions:registry];
     [PBDescriptorRoot registerAllExtensions:registry];
-    extensionRegistry = [registry retain];
+    extensionRegistry = registry;
   }
 }
 + (void) registerAllExtensions:(PBMutableExtensionRegistry*) registry {
@@ -631,7 +631,7 @@ BOOL AggregateEnumIsValidValue(AggregateEnum value) {
   }
 }
 @interface TestMessageWithCustomOptions ()
-@property (retain) NSString* field1;
+@property (strong) NSString* field1;
 @end
 
 @implementation TestMessageWithCustomOptions
@@ -643,10 +643,7 @@ BOOL AggregateEnumIsValidValue(AggregateEnum value) {
   hasField1_ = !!value;
 }
 @synthesize field1;
-- (void) dealloc {
-  self.field1 = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.field1 = @"";
@@ -707,7 +704,7 @@ static TestMessageWithCustomOptions* defaultTestMessageWithCustomOptionsInstance
   return (TestMessageWithCustomOptions*)[[[TestMessageWithCustomOptions builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (TestMessageWithCustomOptions_Builder*) builder {
-  return [[[TestMessageWithCustomOptions_Builder alloc] init] autorelease];
+  return [[TestMessageWithCustomOptions_Builder alloc] init] ;
 }
 + (TestMessageWithCustomOptions_Builder*) builderWithPrototype:(TestMessageWithCustomOptions*) prototype {
   return [[TestMessageWithCustomOptions builder] mergeFrom:prototype];
@@ -758,18 +755,15 @@ BOOL TestMessageWithCustomOptions_AnEnumIsValidValue(TestMessageWithCustomOption
   }
 }
 @interface TestMessageWithCustomOptions_Builder()
-@property (retain) TestMessageWithCustomOptions* result;
+@property (strong) TestMessageWithCustomOptions* result;
 @end
 
 @implementation TestMessageWithCustomOptions_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[TestMessageWithCustomOptions alloc] init] autorelease];
+    self.result = [[TestMessageWithCustomOptions alloc] init] ;
   }
   return self;
 }
@@ -777,7 +771,7 @@ BOOL TestMessageWithCustomOptions_AnEnumIsValidValue(TestMessageWithCustomOption
   return result;
 }
 - (TestMessageWithCustomOptions_Builder*) clear {
-  self.result = [[[TestMessageWithCustomOptions alloc] init] autorelease];
+  self.result = [[TestMessageWithCustomOptions alloc] init] ;
   return self;
 }
 - (TestMessageWithCustomOptions_Builder*) clone {
@@ -791,7 +785,7 @@ BOOL TestMessageWithCustomOptions_AnEnumIsValidValue(TestMessageWithCustomOption
   return [self buildPartial];
 }
 - (TestMessageWithCustomOptions*) buildPartial {
-  TestMessageWithCustomOptions* returnMe = [[result retain] autorelease];
+  TestMessageWithCustomOptions* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -853,9 +847,7 @@ BOOL TestMessageWithCustomOptions_AnEnumIsValidValue(TestMessageWithCustomOption
 
 @implementation CustomOptionFooRequest
 
-- (void) dealloc {
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
   }
@@ -909,7 +901,7 @@ static CustomOptionFooRequest* defaultCustomOptionFooRequestInstance = nil;
   return (CustomOptionFooRequest*)[[[CustomOptionFooRequest builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (CustomOptionFooRequest_Builder*) builder {
-  return [[[CustomOptionFooRequest_Builder alloc] init] autorelease];
+  return [[CustomOptionFooRequest_Builder alloc] init] ;
 }
 + (CustomOptionFooRequest_Builder*) builderWithPrototype:(CustomOptionFooRequest*) prototype {
   return [[CustomOptionFooRequest builder] mergeFrom:prototype];
@@ -942,18 +934,15 @@ static CustomOptionFooRequest* defaultCustomOptionFooRequestInstance = nil;
 @end
 
 @interface CustomOptionFooRequest_Builder()
-@property (retain) CustomOptionFooRequest* result;
+@property (strong) CustomOptionFooRequest* result;
 @end
 
 @implementation CustomOptionFooRequest_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[CustomOptionFooRequest alloc] init] autorelease];
+    self.result = [[CustomOptionFooRequest alloc] init] ;
   }
   return self;
 }
@@ -961,7 +950,7 @@ static CustomOptionFooRequest* defaultCustomOptionFooRequestInstance = nil;
   return result;
 }
 - (CustomOptionFooRequest_Builder*) clear {
-  self.result = [[[CustomOptionFooRequest alloc] init] autorelease];
+  self.result = [[CustomOptionFooRequest alloc] init] ;
   return self;
 }
 - (CustomOptionFooRequest_Builder*) clone {
@@ -975,7 +964,7 @@ static CustomOptionFooRequest* defaultCustomOptionFooRequestInstance = nil;
   return [self buildPartial];
 }
 - (CustomOptionFooRequest*) buildPartial {
-  CustomOptionFooRequest* returnMe = [[result retain] autorelease];
+  CustomOptionFooRequest* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -1014,9 +1003,7 @@ static CustomOptionFooRequest* defaultCustomOptionFooRequestInstance = nil;
 
 @implementation CustomOptionFooResponse
 
-- (void) dealloc {
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
   }
@@ -1070,7 +1057,7 @@ static CustomOptionFooResponse* defaultCustomOptionFooResponseInstance = nil;
   return (CustomOptionFooResponse*)[[[CustomOptionFooResponse builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (CustomOptionFooResponse_Builder*) builder {
-  return [[[CustomOptionFooResponse_Builder alloc] init] autorelease];
+  return [[CustomOptionFooResponse_Builder alloc] init] ;
 }
 + (CustomOptionFooResponse_Builder*) builderWithPrototype:(CustomOptionFooResponse*) prototype {
   return [[CustomOptionFooResponse builder] mergeFrom:prototype];
@@ -1103,18 +1090,15 @@ static CustomOptionFooResponse* defaultCustomOptionFooResponseInstance = nil;
 @end
 
 @interface CustomOptionFooResponse_Builder()
-@property (retain) CustomOptionFooResponse* result;
+@property (strong) CustomOptionFooResponse* result;
 @end
 
 @implementation CustomOptionFooResponse_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[CustomOptionFooResponse alloc] init] autorelease];
+    self.result = [[CustomOptionFooResponse alloc] init] ;
   }
   return self;
 }
@@ -1122,7 +1106,7 @@ static CustomOptionFooResponse* defaultCustomOptionFooResponseInstance = nil;
   return result;
 }
 - (CustomOptionFooResponse_Builder*) clear {
-  self.result = [[[CustomOptionFooResponse alloc] init] autorelease];
+  self.result = [[CustomOptionFooResponse alloc] init] ;
   return self;
 }
 - (CustomOptionFooResponse_Builder*) clone {
@@ -1136,7 +1120,7 @@ static CustomOptionFooResponse* defaultCustomOptionFooResponseInstance = nil;
   return [self buildPartial];
 }
 - (CustomOptionFooResponse*) buildPartial {
-  CustomOptionFooResponse* returnMe = [[result retain] autorelease];
+  CustomOptionFooResponse* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -1175,9 +1159,7 @@ static CustomOptionFooResponse* defaultCustomOptionFooResponseInstance = nil;
 
 @implementation DummyMessageContainingEnum
 
-- (void) dealloc {
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
   }
@@ -1231,7 +1213,7 @@ static DummyMessageContainingEnum* defaultDummyMessageContainingEnumInstance = n
   return (DummyMessageContainingEnum*)[[[DummyMessageContainingEnum builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (DummyMessageContainingEnum_Builder*) builder {
-  return [[[DummyMessageContainingEnum_Builder alloc] init] autorelease];
+  return [[DummyMessageContainingEnum_Builder alloc] init] ;
 }
 + (DummyMessageContainingEnum_Builder*) builderWithPrototype:(DummyMessageContainingEnum*) prototype {
   return [[DummyMessageContainingEnum builder] mergeFrom:prototype];
@@ -1273,18 +1255,15 @@ BOOL DummyMessageContainingEnum_TestEnumTypeIsValidValue(DummyMessageContainingE
   }
 }
 @interface DummyMessageContainingEnum_Builder()
-@property (retain) DummyMessageContainingEnum* result;
+@property (strong) DummyMessageContainingEnum* result;
 @end
 
 @implementation DummyMessageContainingEnum_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[DummyMessageContainingEnum alloc] init] autorelease];
+    self.result = [[DummyMessageContainingEnum alloc] init] ;
   }
   return self;
 }
@@ -1292,7 +1271,7 @@ BOOL DummyMessageContainingEnum_TestEnumTypeIsValidValue(DummyMessageContainingE
   return result;
 }
 - (DummyMessageContainingEnum_Builder*) clear {
-  self.result = [[[DummyMessageContainingEnum alloc] init] autorelease];
+  self.result = [[DummyMessageContainingEnum alloc] init] ;
   return self;
 }
 - (DummyMessageContainingEnum_Builder*) clone {
@@ -1306,7 +1285,7 @@ BOOL DummyMessageContainingEnum_TestEnumTypeIsValidValue(DummyMessageContainingE
   return [self buildPartial];
 }
 - (DummyMessageContainingEnum*) buildPartial {
-  DummyMessageContainingEnum* returnMe = [[result retain] autorelease];
+  DummyMessageContainingEnum* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -1345,9 +1324,7 @@ BOOL DummyMessageContainingEnum_TestEnumTypeIsValidValue(DummyMessageContainingE
 
 @implementation DummyMessageInvalidAsOptionType
 
-- (void) dealloc {
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
   }
@@ -1401,7 +1378,7 @@ static DummyMessageInvalidAsOptionType* defaultDummyMessageInvalidAsOptionTypeIn
   return (DummyMessageInvalidAsOptionType*)[[[DummyMessageInvalidAsOptionType builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (DummyMessageInvalidAsOptionType_Builder*) builder {
-  return [[[DummyMessageInvalidAsOptionType_Builder alloc] init] autorelease];
+  return [[DummyMessageInvalidAsOptionType_Builder alloc] init] ;
 }
 + (DummyMessageInvalidAsOptionType_Builder*) builderWithPrototype:(DummyMessageInvalidAsOptionType*) prototype {
   return [[DummyMessageInvalidAsOptionType builder] mergeFrom:prototype];
@@ -1434,18 +1411,15 @@ static DummyMessageInvalidAsOptionType* defaultDummyMessageInvalidAsOptionTypeIn
 @end
 
 @interface DummyMessageInvalidAsOptionType_Builder()
-@property (retain) DummyMessageInvalidAsOptionType* result;
+@property (strong) DummyMessageInvalidAsOptionType* result;
 @end
 
 @implementation DummyMessageInvalidAsOptionType_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[DummyMessageInvalidAsOptionType alloc] init] autorelease];
+    self.result = [[DummyMessageInvalidAsOptionType alloc] init] ;
   }
   return self;
 }
@@ -1453,7 +1427,7 @@ static DummyMessageInvalidAsOptionType* defaultDummyMessageInvalidAsOptionTypeIn
   return result;
 }
 - (DummyMessageInvalidAsOptionType_Builder*) clear {
-  self.result = [[[DummyMessageInvalidAsOptionType alloc] init] autorelease];
+  self.result = [[DummyMessageInvalidAsOptionType alloc] init] ;
   return self;
 }
 - (DummyMessageInvalidAsOptionType_Builder*) clone {
@@ -1467,7 +1441,7 @@ static DummyMessageInvalidAsOptionType* defaultDummyMessageInvalidAsOptionTypeIn
   return [self buildPartial];
 }
 - (DummyMessageInvalidAsOptionType*) buildPartial {
-  DummyMessageInvalidAsOptionType* returnMe = [[result retain] autorelease];
+  DummyMessageInvalidAsOptionType* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -1506,9 +1480,7 @@ static DummyMessageInvalidAsOptionType* defaultDummyMessageInvalidAsOptionTypeIn
 
 @implementation CustomOptionMinIntegerValues
 
-- (void) dealloc {
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
   }
@@ -1562,7 +1534,7 @@ static CustomOptionMinIntegerValues* defaultCustomOptionMinIntegerValuesInstance
   return (CustomOptionMinIntegerValues*)[[[CustomOptionMinIntegerValues builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (CustomOptionMinIntegerValues_Builder*) builder {
-  return [[[CustomOptionMinIntegerValues_Builder alloc] init] autorelease];
+  return [[CustomOptionMinIntegerValues_Builder alloc] init] ;
 }
 + (CustomOptionMinIntegerValues_Builder*) builderWithPrototype:(CustomOptionMinIntegerValues*) prototype {
   return [[CustomOptionMinIntegerValues builder] mergeFrom:prototype];
@@ -1595,18 +1567,15 @@ static CustomOptionMinIntegerValues* defaultCustomOptionMinIntegerValuesInstance
 @end
 
 @interface CustomOptionMinIntegerValues_Builder()
-@property (retain) CustomOptionMinIntegerValues* result;
+@property (strong) CustomOptionMinIntegerValues* result;
 @end
 
 @implementation CustomOptionMinIntegerValues_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[CustomOptionMinIntegerValues alloc] init] autorelease];
+    self.result = [[CustomOptionMinIntegerValues alloc] init] ;
   }
   return self;
 }
@@ -1614,7 +1583,7 @@ static CustomOptionMinIntegerValues* defaultCustomOptionMinIntegerValuesInstance
   return result;
 }
 - (CustomOptionMinIntegerValues_Builder*) clear {
-  self.result = [[[CustomOptionMinIntegerValues alloc] init] autorelease];
+  self.result = [[CustomOptionMinIntegerValues alloc] init] ;
   return self;
 }
 - (CustomOptionMinIntegerValues_Builder*) clone {
@@ -1628,7 +1597,7 @@ static CustomOptionMinIntegerValues* defaultCustomOptionMinIntegerValuesInstance
   return [self buildPartial];
 }
 - (CustomOptionMinIntegerValues*) buildPartial {
-  CustomOptionMinIntegerValues* returnMe = [[result retain] autorelease];
+  CustomOptionMinIntegerValues* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -1667,9 +1636,7 @@ static CustomOptionMinIntegerValues* defaultCustomOptionMinIntegerValuesInstance
 
 @implementation CustomOptionMaxIntegerValues
 
-- (void) dealloc {
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
   }
@@ -1723,7 +1690,7 @@ static CustomOptionMaxIntegerValues* defaultCustomOptionMaxIntegerValuesInstance
   return (CustomOptionMaxIntegerValues*)[[[CustomOptionMaxIntegerValues builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (CustomOptionMaxIntegerValues_Builder*) builder {
-  return [[[CustomOptionMaxIntegerValues_Builder alloc] init] autorelease];
+  return [[CustomOptionMaxIntegerValues_Builder alloc] init] ;
 }
 + (CustomOptionMaxIntegerValues_Builder*) builderWithPrototype:(CustomOptionMaxIntegerValues*) prototype {
   return [[CustomOptionMaxIntegerValues builder] mergeFrom:prototype];
@@ -1756,18 +1723,15 @@ static CustomOptionMaxIntegerValues* defaultCustomOptionMaxIntegerValuesInstance
 @end
 
 @interface CustomOptionMaxIntegerValues_Builder()
-@property (retain) CustomOptionMaxIntegerValues* result;
+@property (strong) CustomOptionMaxIntegerValues* result;
 @end
 
 @implementation CustomOptionMaxIntegerValues_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[CustomOptionMaxIntegerValues alloc] init] autorelease];
+    self.result = [[CustomOptionMaxIntegerValues alloc] init] ;
   }
   return self;
 }
@@ -1775,7 +1739,7 @@ static CustomOptionMaxIntegerValues* defaultCustomOptionMaxIntegerValuesInstance
   return result;
 }
 - (CustomOptionMaxIntegerValues_Builder*) clear {
-  self.result = [[[CustomOptionMaxIntegerValues alloc] init] autorelease];
+  self.result = [[CustomOptionMaxIntegerValues alloc] init] ;
   return self;
 }
 - (CustomOptionMaxIntegerValues_Builder*) clone {
@@ -1789,7 +1753,7 @@ static CustomOptionMaxIntegerValues* defaultCustomOptionMaxIntegerValuesInstance
   return [self buildPartial];
 }
 - (CustomOptionMaxIntegerValues*) buildPartial {
-  CustomOptionMaxIntegerValues* returnMe = [[result retain] autorelease];
+  CustomOptionMaxIntegerValues* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -1828,9 +1792,7 @@ static CustomOptionMaxIntegerValues* defaultCustomOptionMaxIntegerValuesInstance
 
 @implementation CustomOptionOtherValues
 
-- (void) dealloc {
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
   }
@@ -1884,7 +1846,7 @@ static CustomOptionOtherValues* defaultCustomOptionOtherValuesInstance = nil;
   return (CustomOptionOtherValues*)[[[CustomOptionOtherValues builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (CustomOptionOtherValues_Builder*) builder {
-  return [[[CustomOptionOtherValues_Builder alloc] init] autorelease];
+  return [[CustomOptionOtherValues_Builder alloc] init] ;
 }
 + (CustomOptionOtherValues_Builder*) builderWithPrototype:(CustomOptionOtherValues*) prototype {
   return [[CustomOptionOtherValues builder] mergeFrom:prototype];
@@ -1917,18 +1879,15 @@ static CustomOptionOtherValues* defaultCustomOptionOtherValuesInstance = nil;
 @end
 
 @interface CustomOptionOtherValues_Builder()
-@property (retain) CustomOptionOtherValues* result;
+@property (strong) CustomOptionOtherValues* result;
 @end
 
 @implementation CustomOptionOtherValues_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[CustomOptionOtherValues alloc] init] autorelease];
+    self.result = [[CustomOptionOtherValues alloc] init] ;
   }
   return self;
 }
@@ -1936,7 +1895,7 @@ static CustomOptionOtherValues* defaultCustomOptionOtherValuesInstance = nil;
   return result;
 }
 - (CustomOptionOtherValues_Builder*) clear {
-  self.result = [[[CustomOptionOtherValues alloc] init] autorelease];
+  self.result = [[CustomOptionOtherValues alloc] init] ;
   return self;
 }
 - (CustomOptionOtherValues_Builder*) clone {
@@ -1950,7 +1909,7 @@ static CustomOptionOtherValues* defaultCustomOptionOtherValuesInstance = nil;
   return [self buildPartial];
 }
 - (CustomOptionOtherValues*) buildPartial {
-  CustomOptionOtherValues* returnMe = [[result retain] autorelease];
+  CustomOptionOtherValues* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -1989,9 +1948,7 @@ static CustomOptionOtherValues* defaultCustomOptionOtherValuesInstance = nil;
 
 @implementation SettingRealsFromPositiveInts
 
-- (void) dealloc {
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
   }
@@ -2045,7 +2002,7 @@ static SettingRealsFromPositiveInts* defaultSettingRealsFromPositiveIntsInstance
   return (SettingRealsFromPositiveInts*)[[[SettingRealsFromPositiveInts builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (SettingRealsFromPositiveInts_Builder*) builder {
-  return [[[SettingRealsFromPositiveInts_Builder alloc] init] autorelease];
+  return [[SettingRealsFromPositiveInts_Builder alloc] init] ;
 }
 + (SettingRealsFromPositiveInts_Builder*) builderWithPrototype:(SettingRealsFromPositiveInts*) prototype {
   return [[SettingRealsFromPositiveInts builder] mergeFrom:prototype];
@@ -2078,18 +2035,15 @@ static SettingRealsFromPositiveInts* defaultSettingRealsFromPositiveIntsInstance
 @end
 
 @interface SettingRealsFromPositiveInts_Builder()
-@property (retain) SettingRealsFromPositiveInts* result;
+@property (strong) SettingRealsFromPositiveInts* result;
 @end
 
 @implementation SettingRealsFromPositiveInts_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[SettingRealsFromPositiveInts alloc] init] autorelease];
+    self.result = [[SettingRealsFromPositiveInts alloc] init] ;
   }
   return self;
 }
@@ -2097,7 +2051,7 @@ static SettingRealsFromPositiveInts* defaultSettingRealsFromPositiveIntsInstance
   return result;
 }
 - (SettingRealsFromPositiveInts_Builder*) clear {
-  self.result = [[[SettingRealsFromPositiveInts alloc] init] autorelease];
+  self.result = [[SettingRealsFromPositiveInts alloc] init] ;
   return self;
 }
 - (SettingRealsFromPositiveInts_Builder*) clone {
@@ -2111,7 +2065,7 @@ static SettingRealsFromPositiveInts* defaultSettingRealsFromPositiveIntsInstance
   return [self buildPartial];
 }
 - (SettingRealsFromPositiveInts*) buildPartial {
-  SettingRealsFromPositiveInts* returnMe = [[result retain] autorelease];
+  SettingRealsFromPositiveInts* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -2150,9 +2104,7 @@ static SettingRealsFromPositiveInts* defaultSettingRealsFromPositiveIntsInstance
 
 @implementation SettingRealsFromNegativeInts
 
-- (void) dealloc {
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
   }
@@ -2206,7 +2158,7 @@ static SettingRealsFromNegativeInts* defaultSettingRealsFromNegativeIntsInstance
   return (SettingRealsFromNegativeInts*)[[[SettingRealsFromNegativeInts builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (SettingRealsFromNegativeInts_Builder*) builder {
-  return [[[SettingRealsFromNegativeInts_Builder alloc] init] autorelease];
+  return [[SettingRealsFromNegativeInts_Builder alloc] init] ;
 }
 + (SettingRealsFromNegativeInts_Builder*) builderWithPrototype:(SettingRealsFromNegativeInts*) prototype {
   return [[SettingRealsFromNegativeInts builder] mergeFrom:prototype];
@@ -2239,18 +2191,15 @@ static SettingRealsFromNegativeInts* defaultSettingRealsFromNegativeIntsInstance
 @end
 
 @interface SettingRealsFromNegativeInts_Builder()
-@property (retain) SettingRealsFromNegativeInts* result;
+@property (strong) SettingRealsFromNegativeInts* result;
 @end
 
 @implementation SettingRealsFromNegativeInts_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[SettingRealsFromNegativeInts alloc] init] autorelease];
+    self.result = [[SettingRealsFromNegativeInts alloc] init] ;
   }
   return self;
 }
@@ -2258,7 +2207,7 @@ static SettingRealsFromNegativeInts* defaultSettingRealsFromNegativeIntsInstance
   return result;
 }
 - (SettingRealsFromNegativeInts_Builder*) clear {
-  self.result = [[[SettingRealsFromNegativeInts alloc] init] autorelease];
+  self.result = [[SettingRealsFromNegativeInts alloc] init] ;
   return self;
 }
 - (SettingRealsFromNegativeInts_Builder*) clone {
@@ -2272,7 +2221,7 @@ static SettingRealsFromNegativeInts* defaultSettingRealsFromNegativeIntsInstance
   return [self buildPartial];
 }
 - (SettingRealsFromNegativeInts*) buildPartial {
-  SettingRealsFromNegativeInts* returnMe = [[result retain] autorelease];
+  SettingRealsFromNegativeInts* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -2335,9 +2284,7 @@ static SettingRealsFromNegativeInts* defaultSettingRealsFromNegativeIntsInstance
   hasFoo3_ = !!value;
 }
 @synthesize foo3;
-- (void) dealloc {
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.foo = 0;
@@ -2419,7 +2366,7 @@ static ComplexOptionType1* defaultComplexOptionType1Instance = nil;
   return (ComplexOptionType1*)[[[ComplexOptionType1 builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (ComplexOptionType1_Builder*) builder {
-  return [[[ComplexOptionType1_Builder alloc] init] autorelease];
+  return [[ComplexOptionType1_Builder alloc] init] ;
 }
 + (ComplexOptionType1_Builder*) builderWithPrototype:(ComplexOptionType1*) prototype {
   return [[ComplexOptionType1 builder] mergeFrom:prototype];
@@ -2486,18 +2433,15 @@ static ComplexOptionType1* defaultComplexOptionType1Instance = nil;
 @end
 
 @interface ComplexOptionType1_Builder()
-@property (retain) ComplexOptionType1* result;
+@property (strong) ComplexOptionType1* result;
 @end
 
 @implementation ComplexOptionType1_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[ComplexOptionType1 alloc] init] autorelease];
+    self.result = [[ComplexOptionType1 alloc] init] ;
   }
   return self;
 }
@@ -2505,7 +2449,7 @@ static ComplexOptionType1* defaultComplexOptionType1Instance = nil;
   return result;
 }
 - (ComplexOptionType1_Builder*) clear {
-  self.result = [[[ComplexOptionType1 alloc] init] autorelease];
+  self.result = [[ComplexOptionType1 alloc] init] ;
   return self;
 }
 - (ComplexOptionType1_Builder*) clone {
@@ -2519,7 +2463,7 @@ static ComplexOptionType1* defaultComplexOptionType1Instance = nil;
   return [self buildPartial];
 }
 - (ComplexOptionType1*) buildPartial {
-  ComplexOptionType1* returnMe = [[result retain] autorelease];
+  ComplexOptionType1* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -2624,9 +2568,9 @@ static ComplexOptionType1* defaultComplexOptionType1Instance = nil;
 @end
 
 @interface ComplexOptionType2 ()
-@property (retain) ComplexOptionType1* bar;
+@property (strong) ComplexOptionType1* bar;
 @property int32_t baz;
-@property (retain) ComplexOptionType2_ComplexOptionType4* fred;
+@property (strong) ComplexOptionType2_ComplexOptionType4* fred;
 @end
 
 @implementation ComplexOptionType2
@@ -2652,11 +2596,7 @@ static ComplexOptionType1* defaultComplexOptionType1Instance = nil;
   hasFred_ = !!value;
 }
 @synthesize fred;
-- (void) dealloc {
-  self.bar = nil;
-  self.fred = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.bar = [ComplexOptionType1 defaultInstance];
@@ -2743,7 +2683,7 @@ static ComplexOptionType2* defaultComplexOptionType2Instance = nil;
   return (ComplexOptionType2*)[[[ComplexOptionType2 builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (ComplexOptionType2_Builder*) builder {
-  return [[[ComplexOptionType2_Builder alloc] init] autorelease];
+  return [[ComplexOptionType2_Builder alloc] init] ;
 }
 + (ComplexOptionType2_Builder*) builderWithPrototype:(ComplexOptionType2*) prototype {
   return [[ComplexOptionType2 builder] mergeFrom:prototype];
@@ -2828,9 +2768,7 @@ static ComplexOptionType2* defaultComplexOptionType2Instance = nil;
   hasWaldo_ = !!value;
 }
 @synthesize waldo;
-- (void) dealloc {
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.waldo = 0;
@@ -2894,7 +2832,7 @@ static ComplexOptionType2_ComplexOptionType4* defaultComplexOptionType2_ComplexO
   return (ComplexOptionType2_ComplexOptionType4*)[[[ComplexOptionType2_ComplexOptionType4 builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (ComplexOptionType2_ComplexOptionType4_Builder*) builder {
-  return [[[ComplexOptionType2_ComplexOptionType4_Builder alloc] init] autorelease];
+  return [[ComplexOptionType2_ComplexOptionType4_Builder alloc] init] ;
 }
 + (ComplexOptionType2_ComplexOptionType4_Builder*) builderWithPrototype:(ComplexOptionType2_ComplexOptionType4*) prototype {
   return [[ComplexOptionType2_ComplexOptionType4 builder] mergeFrom:prototype];
@@ -2936,18 +2874,15 @@ static ComplexOptionType2_ComplexOptionType4* defaultComplexOptionType2_ComplexO
 @end
 
 @interface ComplexOptionType2_ComplexOptionType4_Builder()
-@property (retain) ComplexOptionType2_ComplexOptionType4* result;
+@property (strong) ComplexOptionType2_ComplexOptionType4* result;
 @end
 
 @implementation ComplexOptionType2_ComplexOptionType4_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[ComplexOptionType2_ComplexOptionType4 alloc] init] autorelease];
+    self.result = [[ComplexOptionType2_ComplexOptionType4 alloc] init] ;
   }
   return self;
 }
@@ -2955,7 +2890,7 @@ static ComplexOptionType2_ComplexOptionType4* defaultComplexOptionType2_ComplexO
   return result;
 }
 - (ComplexOptionType2_ComplexOptionType4_Builder*) clear {
-  self.result = [[[ComplexOptionType2_ComplexOptionType4 alloc] init] autorelease];
+  self.result = [[ComplexOptionType2_ComplexOptionType4 alloc] init] ;
   return self;
 }
 - (ComplexOptionType2_ComplexOptionType4_Builder*) clone {
@@ -2969,7 +2904,7 @@ static ComplexOptionType2_ComplexOptionType4* defaultComplexOptionType2_ComplexO
   return [self buildPartial];
 }
 - (ComplexOptionType2_ComplexOptionType4*) buildPartial {
-  ComplexOptionType2_ComplexOptionType4* returnMe = [[result retain] autorelease];
+  ComplexOptionType2_ComplexOptionType4* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -3027,18 +2962,15 @@ static ComplexOptionType2_ComplexOptionType4* defaultComplexOptionType2_ComplexO
 @end
 
 @interface ComplexOptionType2_Builder()
-@property (retain) ComplexOptionType2* result;
+@property (strong) ComplexOptionType2* result;
 @end
 
 @implementation ComplexOptionType2_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[ComplexOptionType2 alloc] init] autorelease];
+    self.result = [[ComplexOptionType2 alloc] init] ;
   }
   return self;
 }
@@ -3046,7 +2978,7 @@ static ComplexOptionType2_ComplexOptionType4* defaultComplexOptionType2_ComplexO
   return result;
 }
 - (ComplexOptionType2_Builder*) clear {
-  self.result = [[[ComplexOptionType2 alloc] init] autorelease];
+  self.result = [[ComplexOptionType2 alloc] init] ;
   return self;
 }
 - (ComplexOptionType2_Builder*) clone {
@@ -3060,7 +2992,7 @@ static ComplexOptionType2_ComplexOptionType4* defaultComplexOptionType2_ComplexO
   return [self buildPartial];
 }
 - (ComplexOptionType2*) buildPartial {
-  ComplexOptionType2* returnMe = [[result retain] autorelease];
+  ComplexOptionType2* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -3204,7 +3136,7 @@ static ComplexOptionType2_ComplexOptionType4* defaultComplexOptionType2_ComplexO
 
 @interface ComplexOptionType3 ()
 @property int32_t qux;
-@property (retain) ComplexOptionType3_ComplexOptionType5* complexOptionType5;
+@property (strong) ComplexOptionType3_ComplexOptionType5* complexOptionType5;
 @end
 
 @implementation ComplexOptionType3
@@ -3223,10 +3155,7 @@ static ComplexOptionType2_ComplexOptionType4* defaultComplexOptionType2_ComplexO
   hasComplexOptionType5_ = !!value;
 }
 @synthesize complexOptionType5;
-- (void) dealloc {
-  self.complexOptionType5 = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.qux = 0;
@@ -3294,7 +3223,7 @@ static ComplexOptionType3* defaultComplexOptionType3Instance = nil;
   return (ComplexOptionType3*)[[[ComplexOptionType3 builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (ComplexOptionType3_Builder*) builder {
-  return [[[ComplexOptionType3_Builder alloc] init] autorelease];
+  return [[ComplexOptionType3_Builder alloc] init] ;
 }
 + (ComplexOptionType3_Builder*) builderWithPrototype:(ComplexOptionType3*) prototype {
   return [[ComplexOptionType3 builder] mergeFrom:prototype];
@@ -3360,9 +3289,7 @@ static ComplexOptionType3* defaultComplexOptionType3Instance = nil;
   hasPlugh_ = !!value;
 }
 @synthesize plugh;
-- (void) dealloc {
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.plugh = 0;
@@ -3423,7 +3350,7 @@ static ComplexOptionType3_ComplexOptionType5* defaultComplexOptionType3_ComplexO
   return (ComplexOptionType3_ComplexOptionType5*)[[[ComplexOptionType3_ComplexOptionType5 builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (ComplexOptionType3_ComplexOptionType5_Builder*) builder {
-  return [[[ComplexOptionType3_ComplexOptionType5_Builder alloc] init] autorelease];
+  return [[ComplexOptionType3_ComplexOptionType5_Builder alloc] init] ;
 }
 + (ComplexOptionType3_ComplexOptionType5_Builder*) builderWithPrototype:(ComplexOptionType3_ComplexOptionType5*) prototype {
   return [[ComplexOptionType3_ComplexOptionType5 builder] mergeFrom:prototype];
@@ -3465,18 +3392,15 @@ static ComplexOptionType3_ComplexOptionType5* defaultComplexOptionType3_ComplexO
 @end
 
 @interface ComplexOptionType3_ComplexOptionType5_Builder()
-@property (retain) ComplexOptionType3_ComplexOptionType5* result;
+@property (strong) ComplexOptionType3_ComplexOptionType5* result;
 @end
 
 @implementation ComplexOptionType3_ComplexOptionType5_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[ComplexOptionType3_ComplexOptionType5 alloc] init] autorelease];
+    self.result = [[ComplexOptionType3_ComplexOptionType5 alloc] init] ;
   }
   return self;
 }
@@ -3484,7 +3408,7 @@ static ComplexOptionType3_ComplexOptionType5* defaultComplexOptionType3_ComplexO
   return result;
 }
 - (ComplexOptionType3_ComplexOptionType5_Builder*) clear {
-  self.result = [[[ComplexOptionType3_ComplexOptionType5 alloc] init] autorelease];
+  self.result = [[ComplexOptionType3_ComplexOptionType5 alloc] init] ;
   return self;
 }
 - (ComplexOptionType3_ComplexOptionType5_Builder*) clone {
@@ -3498,7 +3422,7 @@ static ComplexOptionType3_ComplexOptionType5* defaultComplexOptionType3_ComplexO
   return [self buildPartial];
 }
 - (ComplexOptionType3_ComplexOptionType5*) buildPartial {
-  ComplexOptionType3_ComplexOptionType5* returnMe = [[result retain] autorelease];
+  ComplexOptionType3_ComplexOptionType5* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -3556,18 +3480,15 @@ static ComplexOptionType3_ComplexOptionType5* defaultComplexOptionType3_ComplexO
 @end
 
 @interface ComplexOptionType3_Builder()
-@property (retain) ComplexOptionType3* result;
+@property (strong) ComplexOptionType3* result;
 @end
 
 @implementation ComplexOptionType3_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[ComplexOptionType3 alloc] init] autorelease];
+    self.result = [[ComplexOptionType3 alloc] init] ;
   }
   return self;
 }
@@ -3575,7 +3496,7 @@ static ComplexOptionType3_ComplexOptionType5* defaultComplexOptionType3_ComplexO
   return result;
 }
 - (ComplexOptionType3_Builder*) clear {
-  self.result = [[[ComplexOptionType3 alloc] init] autorelease];
+  self.result = [[ComplexOptionType3 alloc] init] ;
   return self;
 }
 - (ComplexOptionType3_Builder*) clone {
@@ -3589,7 +3510,7 @@ static ComplexOptionType3_ComplexOptionType5* defaultComplexOptionType3_ComplexO
   return [self buildPartial];
 }
 - (ComplexOptionType3*) buildPartial {
-  ComplexOptionType3* returnMe = [[result retain] autorelease];
+  ComplexOptionType3* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -3701,9 +3622,7 @@ static ComplexOptionType3_ComplexOptionType5* defaultComplexOptionType3_ComplexO
   hasXyzzy_ = !!value;
 }
 @synthesize xyzzy;
-- (void) dealloc {
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.xyzzy = 0;
@@ -3764,7 +3683,7 @@ static ComplexOpt6* defaultComplexOpt6Instance = nil;
   return (ComplexOpt6*)[[[ComplexOpt6 builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (ComplexOpt6_Builder*) builder {
-  return [[[ComplexOpt6_Builder alloc] init] autorelease];
+  return [[ComplexOpt6_Builder alloc] init] ;
 }
 + (ComplexOpt6_Builder*) builderWithPrototype:(ComplexOpt6*) prototype {
   return [[ComplexOpt6 builder] mergeFrom:prototype];
@@ -3806,18 +3725,15 @@ static ComplexOpt6* defaultComplexOpt6Instance = nil;
 @end
 
 @interface ComplexOpt6_Builder()
-@property (retain) ComplexOpt6* result;
+@property (strong) ComplexOpt6* result;
 @end
 
 @implementation ComplexOpt6_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[ComplexOpt6 alloc] init] autorelease];
+    self.result = [[ComplexOpt6 alloc] init] ;
   }
   return self;
 }
@@ -3825,7 +3741,7 @@ static ComplexOpt6* defaultComplexOpt6Instance = nil;
   return result;
 }
 - (ComplexOpt6_Builder*) clear {
-  self.result = [[[ComplexOpt6 alloc] init] autorelease];
+  self.result = [[ComplexOpt6 alloc] init] ;
   return self;
 }
 - (ComplexOpt6_Builder*) clone {
@@ -3839,7 +3755,7 @@ static ComplexOpt6* defaultComplexOpt6Instance = nil;
   return [self buildPartial];
 }
 - (ComplexOpt6*) buildPartial {
-  ComplexOpt6* returnMe = [[result retain] autorelease];
+  ComplexOpt6* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -3901,9 +3817,7 @@ static ComplexOpt6* defaultComplexOpt6Instance = nil;
 
 @implementation VariousComplexOptions
 
-- (void) dealloc {
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
   }
@@ -3957,7 +3871,7 @@ static VariousComplexOptions* defaultVariousComplexOptionsInstance = nil;
   return (VariousComplexOptions*)[[[VariousComplexOptions builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (VariousComplexOptions_Builder*) builder {
-  return [[[VariousComplexOptions_Builder alloc] init] autorelease];
+  return [[VariousComplexOptions_Builder alloc] init] ;
 }
 + (VariousComplexOptions_Builder*) builderWithPrototype:(VariousComplexOptions*) prototype {
   return [[VariousComplexOptions builder] mergeFrom:prototype];
@@ -3990,18 +3904,15 @@ static VariousComplexOptions* defaultVariousComplexOptionsInstance = nil;
 @end
 
 @interface VariousComplexOptions_Builder()
-@property (retain) VariousComplexOptions* result;
+@property (strong) VariousComplexOptions* result;
 @end
 
 @implementation VariousComplexOptions_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[VariousComplexOptions alloc] init] autorelease];
+    self.result = [[VariousComplexOptions alloc] init] ;
   }
   return self;
 }
@@ -4009,7 +3920,7 @@ static VariousComplexOptions* defaultVariousComplexOptionsInstance = nil;
   return result;
 }
 - (VariousComplexOptions_Builder*) clear {
-  self.result = [[[VariousComplexOptions alloc] init] autorelease];
+  self.result = [[VariousComplexOptions alloc] init] ;
   return self;
 }
 - (VariousComplexOptions_Builder*) clone {
@@ -4023,7 +3934,7 @@ static VariousComplexOptions* defaultVariousComplexOptionsInstance = nil;
   return [self buildPartial];
 }
 - (VariousComplexOptions*) buildPartial {
-  VariousComplexOptions* returnMe = [[result retain] autorelease];
+  VariousComplexOptions* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -4062,9 +3973,7 @@ static VariousComplexOptions* defaultVariousComplexOptionsInstance = nil;
 
 @implementation AggregateMessageSet
 
-- (void) dealloc {
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
   }
@@ -4125,7 +4034,7 @@ static AggregateMessageSet* defaultAggregateMessageSetInstance = nil;
   return (AggregateMessageSet*)[[[AggregateMessageSet builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (AggregateMessageSet_Builder*) builder {
-  return [[[AggregateMessageSet_Builder alloc] init] autorelease];
+  return [[AggregateMessageSet_Builder alloc] init] ;
 }
 + (AggregateMessageSet_Builder*) builderWithPrototype:(AggregateMessageSet*) prototype {
   return [[AggregateMessageSet builder] mergeFrom:prototype];
@@ -4165,18 +4074,15 @@ static AggregateMessageSet* defaultAggregateMessageSetInstance = nil;
 @end
 
 @interface AggregateMessageSet_Builder()
-@property (retain) AggregateMessageSet* result;
+@property (strong) AggregateMessageSet* result;
 @end
 
 @implementation AggregateMessageSet_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[AggregateMessageSet alloc] init] autorelease];
+    self.result = [[AggregateMessageSet alloc] init] ;
   }
   return self;
 }
@@ -4184,7 +4090,7 @@ static AggregateMessageSet* defaultAggregateMessageSetInstance = nil;
   return result;
 }
 - (AggregateMessageSet_Builder*) clear {
-  self.result = [[[AggregateMessageSet alloc] init] autorelease];
+  self.result = [[AggregateMessageSet alloc] init] ;
   return self;
 }
 - (AggregateMessageSet_Builder*) clone {
@@ -4198,7 +4104,7 @@ static AggregateMessageSet* defaultAggregateMessageSetInstance = nil;
   return [self buildPartial];
 }
 - (AggregateMessageSet*) buildPartial {
-  AggregateMessageSet* returnMe = [[result retain] autorelease];
+  AggregateMessageSet* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -4234,7 +4140,7 @@ static AggregateMessageSet* defaultAggregateMessageSetInstance = nil;
 @end
 
 @interface AggregateMessageSetElement ()
-@property (retain) NSString* s;
+@property (strong) NSString* s;
 @end
 
 @implementation AggregateMessageSetElement
@@ -4246,10 +4152,7 @@ static AggregateMessageSet* defaultAggregateMessageSetInstance = nil;
   hasS_ = !!value;
 }
 @synthesize s;
-- (void) dealloc {
-  self.s = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.s = @"";
@@ -4313,7 +4216,7 @@ static AggregateMessageSetElement* defaultAggregateMessageSetElementInstance = n
   return (AggregateMessageSetElement*)[[[AggregateMessageSetElement builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (AggregateMessageSetElement_Builder*) builder {
-  return [[[AggregateMessageSetElement_Builder alloc] init] autorelease];
+  return [[AggregateMessageSetElement_Builder alloc] init] ;
 }
 + (AggregateMessageSetElement_Builder*) builderWithPrototype:(AggregateMessageSetElement*) prototype {
   return [[AggregateMessageSetElement builder] mergeFrom:prototype];
@@ -4355,18 +4258,15 @@ static AggregateMessageSetElement* defaultAggregateMessageSetElementInstance = n
 @end
 
 @interface AggregateMessageSetElement_Builder()
-@property (retain) AggregateMessageSetElement* result;
+@property (strong) AggregateMessageSetElement* result;
 @end
 
 @implementation AggregateMessageSetElement_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[AggregateMessageSetElement alloc] init] autorelease];
+    self.result = [[AggregateMessageSetElement alloc] init] ;
   }
   return self;
 }
@@ -4374,7 +4274,7 @@ static AggregateMessageSetElement* defaultAggregateMessageSetElementInstance = n
   return result;
 }
 - (AggregateMessageSetElement_Builder*) clear {
-  self.result = [[[AggregateMessageSetElement alloc] init] autorelease];
+  self.result = [[AggregateMessageSetElement alloc] init] ;
   return self;
 }
 - (AggregateMessageSetElement_Builder*) clone {
@@ -4388,7 +4288,7 @@ static AggregateMessageSetElement* defaultAggregateMessageSetElementInstance = n
   return [self buildPartial];
 }
 - (AggregateMessageSetElement*) buildPartial {
-  AggregateMessageSetElement* returnMe = [[result retain] autorelease];
+  AggregateMessageSetElement* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -4447,10 +4347,10 @@ static AggregateMessageSetElement* defaultAggregateMessageSetElementInstance = n
 
 @interface Aggregate ()
 @property int32_t i;
-@property (retain) NSString* s;
-@property (retain) Aggregate* sub;
-@property (retain) PBFileOptions* file;
-@property (retain) AggregateMessageSet* mset;
+@property (strong) NSString* s;
+@property (strong) Aggregate* sub;
+@property (strong) PBFileOptions* file;
+@property (strong) AggregateMessageSet* mset;
 @end
 
 @implementation Aggregate
@@ -4490,13 +4390,7 @@ static AggregateMessageSetElement* defaultAggregateMessageSetElementInstance = n
   hasMset_ = !!value;
 }
 @synthesize mset;
-- (void) dealloc {
-  self.s = nil;
-  self.sub = nil;
-  self.file = nil;
-  self.mset = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.i = 0;
@@ -4603,7 +4497,7 @@ static Aggregate* defaultAggregateInstance = nil;
   return (Aggregate*)[[[Aggregate builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (Aggregate_Builder*) builder {
-  return [[[Aggregate_Builder alloc] init] autorelease];
+  return [[Aggregate_Builder alloc] init] ;
 }
 + (Aggregate_Builder*) builderWithPrototype:(Aggregate*) prototype {
   return [[Aggregate builder] mergeFrom:prototype];
@@ -4690,18 +4584,15 @@ static Aggregate* defaultAggregateInstance = nil;
 @end
 
 @interface Aggregate_Builder()
-@property (retain) Aggregate* result;
+@property (strong) Aggregate* result;
 @end
 
 @implementation Aggregate_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[Aggregate alloc] init] autorelease];
+    self.result = [[Aggregate alloc] init] ;
   }
   return self;
 }
@@ -4709,7 +4600,7 @@ static Aggregate* defaultAggregateInstance = nil;
   return result;
 }
 - (Aggregate_Builder*) clear {
-  self.result = [[[Aggregate alloc] init] autorelease];
+  self.result = [[Aggregate alloc] init] ;
   return self;
 }
 - (Aggregate_Builder*) clone {
@@ -4723,7 +4614,7 @@ static Aggregate* defaultAggregateInstance = nil;
   return [self buildPartial];
 }
 - (Aggregate*) buildPartial {
-  Aggregate* returnMe = [[result retain] autorelease];
+  Aggregate* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -4942,9 +4833,7 @@ static Aggregate* defaultAggregateInstance = nil;
   hasFieldname_ = !!value;
 }
 @synthesize fieldname;
-- (void) dealloc {
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.fieldname = 0;
@@ -5005,7 +4894,7 @@ static AggregateMessage* defaultAggregateMessageInstance = nil;
   return (AggregateMessage*)[[[AggregateMessage builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (AggregateMessage_Builder*) builder {
-  return [[[AggregateMessage_Builder alloc] init] autorelease];
+  return [[AggregateMessage_Builder alloc] init] ;
 }
 + (AggregateMessage_Builder*) builderWithPrototype:(AggregateMessage*) prototype {
   return [[AggregateMessage builder] mergeFrom:prototype];
@@ -5047,18 +4936,15 @@ static AggregateMessage* defaultAggregateMessageInstance = nil;
 @end
 
 @interface AggregateMessage_Builder()
-@property (retain) AggregateMessage* result;
+@property (strong) AggregateMessage* result;
 @end
 
 @implementation AggregateMessage_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[AggregateMessage alloc] init] autorelease];
+    self.result = [[AggregateMessage alloc] init] ;
   }
   return self;
 }
@@ -5066,7 +4952,7 @@ static AggregateMessage* defaultAggregateMessageInstance = nil;
   return result;
 }
 - (AggregateMessage_Builder*) clear {
-  self.result = [[[AggregateMessage alloc] init] autorelease];
+  self.result = [[AggregateMessage alloc] init] ;
   return self;
 }
 - (AggregateMessage_Builder*) clone {
@@ -5080,7 +4966,7 @@ static AggregateMessage* defaultAggregateMessageInstance = nil;
   return [self buildPartial];
 }
 - (AggregateMessage*) buildPartial {
-  AggregateMessage* returnMe = [[result retain] autorelease];
+  AggregateMessage* returnMe = result;
   self.result = nil;
   return returnMe;
 }

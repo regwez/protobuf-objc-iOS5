@@ -115,7 +115,7 @@
   TestAllTypes* message;
 }
 - (BOOL) hasMessage;
-@property (readonly, retain) TestAllTypes* message;
+@property (readonly, strong) TestAllTypes* message;
 
 + (TestLiteImportsNonlite*) defaultInstance;
 - (TestLiteImportsNonlite*) defaultInstance;

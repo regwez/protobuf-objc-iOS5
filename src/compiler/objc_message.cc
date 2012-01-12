@@ -619,6 +619,7 @@ namespace google { namespace protobuf { namespace compiler { namespace objective
     printer->Print(
       "- (void) writeDescriptionTo:(NSMutableString*) output withIndent:(NSString*) indent {\n");
     printer->Indent();
+	printer->Print("NSUInteger listCount = 0;\n");
 
     // Merge the fields and the extension ranges, both sorted by field number.
     for (int i = 0, j = 0;
@@ -713,6 +714,7 @@ namespace google { namespace protobuf { namespace compiler { namespace objective
     printer->Indent();
 
     printer->Print("NSUInteger hashCode = 7;\n");
+	printer->Print("NSUInteger listCount = 0;\n");
 
     // Merge the fields and the extension ranges, both sorted by field number.
     for (int i = 0, j = 0;

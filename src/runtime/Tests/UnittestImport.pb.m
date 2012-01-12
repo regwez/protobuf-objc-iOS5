@@ -12,7 +12,7 @@ static PBExtensionRegistry* extensionRegistry = nil;
   if (self == [UnittestImportRoot class]) {
     PBMutableExtensionRegistry* registry = [PBMutableExtensionRegistry registry];
     [self registerAllExtensions:registry];
-    extensionRegistry = [registry retain];
+    extensionRegistry = registry;
   }
 }
 + (void) registerAllExtensions:(PBMutableExtensionRegistry*) registry {
@@ -42,9 +42,7 @@ BOOL ImportEnumIsValidValue(ImportEnum value) {
   hasD_ = !!value;
 }
 @synthesize d;
-- (void) dealloc {
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.d = 0;
@@ -105,7 +103,7 @@ static ImportMessage* defaultImportMessageInstance = nil;
   return (ImportMessage*)[[[ImportMessage builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (ImportMessage_Builder*) builder {
-  return [[[ImportMessage_Builder alloc] init] autorelease];
+  return [[ImportMessage_Builder alloc] init] ;
 }
 + (ImportMessage_Builder*) builderWithPrototype:(ImportMessage*) prototype {
   return [[ImportMessage builder] mergeFrom:prototype];
@@ -147,18 +145,15 @@ static ImportMessage* defaultImportMessageInstance = nil;
 @end
 
 @interface ImportMessage_Builder()
-@property (retain) ImportMessage* result;
+@property (strong) ImportMessage* result;
 @end
 
 @implementation ImportMessage_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[ImportMessage alloc] init] autorelease];
+    self.result = [[ImportMessage alloc] init] ;
   }
   return self;
 }
@@ -166,7 +161,7 @@ static ImportMessage* defaultImportMessageInstance = nil;
   return result;
 }
 - (ImportMessage_Builder*) clear {
-  self.result = [[[ImportMessage alloc] init] autorelease];
+  self.result = [[ImportMessage alloc] init] ;
   return self;
 }
 - (ImportMessage_Builder*) clone {
@@ -180,7 +175,7 @@ static ImportMessage* defaultImportMessageInstance = nil;
   return [self buildPartial];
 }
 - (ImportMessage*) buildPartial {
-  ImportMessage* returnMe = [[result retain] autorelease];
+  ImportMessage* returnMe = result;
   self.result = nil;
   return returnMe;
 }

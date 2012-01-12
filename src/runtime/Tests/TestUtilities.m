@@ -297,7 +297,7 @@
 }
 
 + (void) assertAllExtensionsSet:(TestAllExtensions*) message {
-  return [[[[TestUtilities alloc] init] autorelease] assertAllExtensionsSet:message];
+  return [[[TestUtilities alloc] init] assertAllExtensionsSet:message];
 }
 
 
@@ -398,7 +398,7 @@
 
 
 + (void) assertRepeatedExtensionsModified:(TestAllExtensions*) message {
-  [[[[TestUtilities alloc] init] autorelease] assertRepeatedExtensionsModified:message];
+  [[[TestUtilities alloc] init]  assertRepeatedExtensionsModified:message];
 }
 
 
@@ -606,7 +606,7 @@
 }
 
 + (void) assertAllFieldsSet:(TestAllTypes*) message {
-  [[[[TestUtilities alloc] init] autorelease] assertAllFieldsSet:message];
+  [[[TestUtilities alloc] init]  assertAllFieldsSet:message];
 }
 
 
@@ -1138,7 +1138,7 @@
 
 
 + (void) assertClear:(TestAllTypes*) message {
-  return [[[[TestUtilities alloc] init] autorelease] assertClear:message];
+  return [[[TestUtilities alloc] init]  assertClear:message];
 }
 
 
@@ -1294,7 +1294,7 @@
 
 
 + (void) assertExtensionsClear:(TestAllExtensions*) message {
-  [[[[TestUtilities alloc] init] autorelease] assertExtensionsClear:message];
+  [[[TestUtilities alloc] init]  assertExtensionsClear:message];
 }
 
 + (void) setPackedFields:(TestPackedTypes_Builder*) message {
@@ -1377,7 +1377,7 @@
 
 
 + (void) assertPackedFieldsSet:(TestPackedTypes*) message {
-  [[[[TestUtilities alloc] init] autorelease] assertPackedFieldsSet:message];
+  [[[TestUtilities alloc] init]  assertPackedFieldsSet:message];
 }
 
 
@@ -1462,7 +1462,7 @@
 
 
 + (void) assertPackedExtensionsSet:(TestPackedExtensions*) message {
-  [[[[TestUtilities alloc] init] autorelease] assertPackedExtensionsSet:message];
+  [[[TestUtilities alloc] init]  assertPackedExtensionsSet:message];
 }
 
 

@@ -20,7 +20,7 @@
   int32_t blockSize;
 }
 
-@property (retain) NSInputStream* underlyingStream;
+@property (strong) NSInputStream* underlyingStream;
 
 + (SmallBlockInputStream*) streamWithData:(NSData*) data blockSize:(int32_t) blockSize;
 

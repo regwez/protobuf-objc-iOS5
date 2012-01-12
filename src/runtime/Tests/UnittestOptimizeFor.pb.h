@@ -123,7 +123,7 @@
 - (BOOL) hasI;
 - (BOOL) hasMsg;
 @property (readonly) int32_t i;
-@property (readonly, retain) ForeignMessage* msg;
+@property (readonly, strong) ForeignMessage* msg;
 
 + (TestOptimizedForSize*) defaultInstance;
 - (TestOptimizedForSize*) defaultInstance;
@@ -230,7 +230,7 @@
   TestRequiredOptimizedForSize* o;
 }
 - (BOOL) hasO;
-@property (readonly, retain) TestRequiredOptimizedForSize* o;
+@property (readonly, strong) TestRequiredOptimizedForSize* o;
 
 + (TestOptionalOptimizedForSize*) defaultInstance;
 - (TestOptionalOptimizedForSize*) defaultInstance;

@@ -79,7 +79,7 @@
   TestMessageSet* messageSet;
 }
 - (BOOL) hasMessageSet;
-@property (readonly, retain) TestMessageSet* messageSet;
+@property (readonly, strong) TestMessageSet* messageSet;
 
 + (TestMessageSetContainer*) defaultInstance;
 - (TestMessageSetContainer*) defaultInstance;
@@ -180,7 +180,7 @@
   NSString* str;
 }
 - (BOOL) hasStr;
-@property (readonly, retain) NSString* str;
+@property (readonly, strong) NSString* str;
 
 + (TestMessageSetExtension2*) defaultInstance;
 - (TestMessageSetExtension2*) defaultInstance;
@@ -226,9 +226,9 @@
 
 @interface RawMessageSet : PBGeneratedMessage {
 @private
-  PBAppendableArray * itemArray;
+  NSMutableArray * itemArray;
 }
-@property (readonly, retain) PBArray * item;
+@property (readonly, strong) NSArray * item;
 - (RawMessageSet_Item*)itemAtIndex:(NSUInteger)index;
 
 + (RawMessageSet*) defaultInstance;
@@ -259,7 +259,7 @@
 - (BOOL) hasTypeId;
 - (BOOL) hasMessage;
 @property (readonly) int32_t typeId;
-@property (readonly, retain) NSData* message;
+@property (readonly, strong) NSData* message;
 
 + (RawMessageSet_Item*) defaultInstance;
 - (RawMessageSet_Item*) defaultInstance;
@@ -328,7 +328,6 @@
 - (RawMessageSet_Item*)itemAtIndex:(NSUInteger)index;
 - (RawMessageSet_Builder *)addItem:(RawMessageSet_Item*)value;
 - (RawMessageSet_Builder *)setItemArray:(NSArray *)array;
-- (RawMessageSet_Builder *)setItemValues:(const RawMessageSet_Item* *)values count:(NSUInteger)count;
 - (RawMessageSet_Builder *)clearItem;
 @end
 

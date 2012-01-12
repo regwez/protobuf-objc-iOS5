@@ -17,7 +17,6 @@
 
 #import "UtilitiesTests.h"
 #import "ProtocolBuffers.h"
-
 @implementation UtilitiesTests
 
 - (void) testRightShiftFunctions {

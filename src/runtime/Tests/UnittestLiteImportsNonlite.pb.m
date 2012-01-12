@@ -13,7 +13,7 @@ static PBExtensionRegistry* extensionRegistry = nil;
     PBMutableExtensionRegistry* registry = [PBMutableExtensionRegistry registry];
     [self registerAllExtensions:registry];
     [UnittestRoot registerAllExtensions:registry];
-    extensionRegistry = [registry retain];
+    extensionRegistry = registry;
   }
 }
 + (void) registerAllExtensions:(PBMutableExtensionRegistry*) registry {
@@ -21,7 +21,7 @@ static PBExtensionRegistry* extensionRegistry = nil;
 @end
 
 @interface TestLiteImportsNonlite ()
-@property (retain) TestAllTypes* message;
+@property (strong) TestAllTypes* message;
 @end
 
 @implementation TestLiteImportsNonlite
@@ -33,10 +33,7 @@ static PBExtensionRegistry* extensionRegistry = nil;
   hasMessage_ = !!value;
 }
 @synthesize message;
-- (void) dealloc {
-  self.message = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.message = [TestAllTypes defaultInstance];
@@ -97,7 +94,7 @@ static TestLiteImportsNonlite* defaultTestLiteImportsNonliteInstance = nil;
   return (TestLiteImportsNonlite*)[[[TestLiteImportsNonlite builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (TestLiteImportsNonlite_Builder*) builder {
-  return [[[TestLiteImportsNonlite_Builder alloc] init] autorelease];
+  return [[TestLiteImportsNonlite_Builder alloc] init] ;
 }
 + (TestLiteImportsNonlite_Builder*) builderWithPrototype:(TestLiteImportsNonlite*) prototype {
   return [[TestLiteImportsNonlite builder] mergeFrom:prototype];
@@ -142,18 +139,15 @@ static TestLiteImportsNonlite* defaultTestLiteImportsNonliteInstance = nil;
 @end
 
 @interface TestLiteImportsNonlite_Builder()
-@property (retain) TestLiteImportsNonlite* result;
+@property (strong) TestLiteImportsNonlite* result;
 @end
 
 @implementation TestLiteImportsNonlite_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[TestLiteImportsNonlite alloc] init] autorelease];
+    self.result = [[TestLiteImportsNonlite alloc] init] ;
   }
   return self;
 }
@@ -161,7 +155,7 @@ static TestLiteImportsNonlite* defaultTestLiteImportsNonliteInstance = nil;
   return result;
 }
 - (TestLiteImportsNonlite_Builder*) clear {
-  self.result = [[[TestLiteImportsNonlite alloc] init] autorelease];
+  self.result = [[TestLiteImportsNonlite alloc] init] ;
   return self;
 }
 - (TestLiteImportsNonlite_Builder*) clone {
@@ -175,7 +169,7 @@ static TestLiteImportsNonlite* defaultTestLiteImportsNonliteInstance = nil;
   return [self buildPartial];
 }
 - (TestLiteImportsNonlite*) buildPartial {
-  TestLiteImportsNonlite* returnMe = [[result retain] autorelease];
+  TestLiteImportsNonlite* returnMe = result;
   self.result = nil;
   return returnMe;
 }

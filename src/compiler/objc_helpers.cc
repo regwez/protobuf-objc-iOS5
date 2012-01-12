@@ -528,16 +528,39 @@ namespace google { namespace protobuf { namespace compiler { namespace objective
       case FieldDescriptor::TYPE_FLOAT   : return "PBArrayValueTypeFloat" ;
       case FieldDescriptor::TYPE_DOUBLE  : return "PBArrayValueTypeDouble";
       case FieldDescriptor::TYPE_BOOL    : return "PBArrayValueTypeBool"  ;
-      case FieldDescriptor::TYPE_STRING  : return "PBArrayValueTypeObject";
-      case FieldDescriptor::TYPE_BYTES   : return "PBArrayValueTypeObject";
-      case FieldDescriptor::TYPE_ENUM    : return "PBArrayValueTypeObject";
-      case FieldDescriptor::TYPE_GROUP   : return "PBArrayValueTypeObject";
-      case FieldDescriptor::TYPE_MESSAGE : return "PBArrayValueTypeObject";
-    }
 
+//      case FieldDescriptor::TYPE_MESSAGE : return "PBArrayValueTypeObject";
+    }
     GOOGLE_LOG(FATAL) << "Can't get here.";
     return NULL;
   }
+
+ bool isObjectArray(const FieldDescriptor* field){
+	 switch (field->type()) {
+		  case FieldDescriptor::TYPE_STRING  : 
+	      case FieldDescriptor::TYPE_BYTES   : 
+	      case FieldDescriptor::TYPE_ENUM    : 
+	      case FieldDescriptor::TYPE_GROUP   : 
+	      case FieldDescriptor::TYPE_MESSAGE : return true;
+	      case FieldDescriptor::TYPE_INT32   : 
+	      case FieldDescriptor::TYPE_UINT32  :
+	      case FieldDescriptor::TYPE_SINT32  :
+	      case FieldDescriptor::TYPE_FIXED32 :
+	      case FieldDescriptor::TYPE_SFIXED32:
+	      case FieldDescriptor::TYPE_INT64   :
+	      case FieldDescriptor::TYPE_UINT64  : 
+	      case FieldDescriptor::TYPE_SINT64  : 
+	      case FieldDescriptor::TYPE_FIXED64 : 
+	      case FieldDescriptor::TYPE_SFIXED64: 
+	      case FieldDescriptor::TYPE_FLOAT   :
+	      case FieldDescriptor::TYPE_DOUBLE  :
+	      case FieldDescriptor::TYPE_BOOL    : return false  ;
+	      
+	    }
+	    GOOGLE_LOG(FATAL) << "Can't get here.";
+	    return NULL;
+  }
+
 
   // Escape C++ trigraphs by escaping question marks to \?
   string EscapeTrigraphs(const string& to_escape) {

@@ -12,7 +12,7 @@ static PBExtensionRegistry* extensionRegistry = nil;
   if (self == [UnittestImportLiteRoot class]) {
     PBMutableExtensionRegistry* registry = [PBMutableExtensionRegistry registry];
     [self registerAllExtensions:registry];
-    extensionRegistry = [registry retain];
+    extensionRegistry = registry;
   }
 }
 + (void) registerAllExtensions:(PBMutableExtensionRegistry*) registry {
@@ -42,9 +42,7 @@ BOOL ImportEnumLiteIsValidValue(ImportEnumLite value) {
   hasD_ = !!value;
 }
 @synthesize d;
-- (void) dealloc {
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.d = 0;
@@ -105,7 +103,7 @@ static ImportMessageLite* defaultImportMessageLiteInstance = nil;
   return (ImportMessageLite*)[[[ImportMessageLite builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (ImportMessageLite_Builder*) builder {
-  return [[[ImportMessageLite_Builder alloc] init] autorelease];
+  return [[ImportMessageLite_Builder alloc] init] ;
 }
 + (ImportMessageLite_Builder*) builderWithPrototype:(ImportMessageLite*) prototype {
   return [[ImportMessageLite builder] mergeFrom:prototype];
@@ -147,18 +145,15 @@ static ImportMessageLite* defaultImportMessageLiteInstance = nil;
 @end
 
 @interface ImportMessageLite_Builder()
-@property (retain) ImportMessageLite* result;
+@property (strong) ImportMessageLite* result;
 @end
 
 @implementation ImportMessageLite_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[ImportMessageLite alloc] init] autorelease];
+    self.result = [[ImportMessageLite alloc] init] ;
   }
   return self;
 }
@@ -166,7 +161,7 @@ static ImportMessageLite* defaultImportMessageLiteInstance = nil;
   return result;
 }
 - (ImportMessageLite_Builder*) clear {
-  self.result = [[[ImportMessageLite alloc] init] autorelease];
+  self.result = [[ImportMessageLite alloc] init] ;
   return self;
 }
 - (ImportMessageLite_Builder*) clone {
@@ -180,7 +175,7 @@ static ImportMessageLite* defaultImportMessageLiteInstance = nil;
   return [self buildPartial];
 }
 - (ImportMessageLite*) buildPartial {
-  ImportMessageLite* returnMe = [[result retain] autorelease];
+  ImportMessageLite* returnMe = result;
   self.result = nil;
   return returnMe;
 }

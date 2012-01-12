@@ -12,7 +12,7 @@ static PBExtensionRegistry* extensionRegistry = nil;
   if (self == [PBDescriptorRoot class]) {
     PBMutableExtensionRegistry* registry = [PBMutableExtensionRegistry registry];
     [self registerAllExtensions:registry];
-    extensionRegistry = [registry retain];
+    extensionRegistry = registry;
   }
 }
 + (void) registerAllExtensions:(PBMutableExtensionRegistry*) registry {
@@ -20,16 +20,13 @@ static PBExtensionRegistry* extensionRegistry = nil;
 @end
 
 @interface PBFileDescriptorSet ()
-@property (retain) NSMutableArray* mutableFileList;
+@property (strong) NSMutableArray* mutableFileList;
 @end
 
 @implementation PBFileDescriptorSet
 
 @synthesize mutableFileList;
-- (void) dealloc {
-  self.mutableFileList = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
   }
@@ -101,7 +98,7 @@ static PBFileDescriptorSet* defaultPBFileDescriptorSetInstance = nil;
   return (PBFileDescriptorSet*)[[[PBFileDescriptorSet builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (PBFileDescriptorSet_Builder*) builder {
-  return [[[PBFileDescriptorSet_Builder alloc] init] autorelease];
+  return [[PBFileDescriptorSet_Builder alloc] init] ;
 }
 + (PBFileDescriptorSet_Builder*) builderWithPrototype:(PBFileDescriptorSet*) prototype {
   return [[PBFileDescriptorSet builder] mergeFrom:prototype];
@@ -112,18 +109,15 @@ static PBFileDescriptorSet* defaultPBFileDescriptorSetInstance = nil;
 @end
 
 @interface PBFileDescriptorSet_Builder()
-@property (retain) PBFileDescriptorSet* result;
+@property (strong) PBFileDescriptorSet* result;
 @end
 
 @implementation PBFileDescriptorSet_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[PBFileDescriptorSet alloc] init] autorelease];
+    self.result = [[PBFileDescriptorSet alloc] init] ;
   }
   return self;
 }
@@ -131,7 +125,7 @@ static PBFileDescriptorSet* defaultPBFileDescriptorSetInstance = nil;
   return result;
 }
 - (PBFileDescriptorSet_Builder*) clear {
-  self.result = [[[PBFileDescriptorSet alloc] init] autorelease];
+  self.result = [[PBFileDescriptorSet alloc] init] ;
   return self;
 }
 - (PBFileDescriptorSet_Builder*) clone {
@@ -145,7 +139,7 @@ static PBFileDescriptorSet* defaultPBFileDescriptorSetInstance = nil;
   return [self buildPartial];
 }
 - (PBFileDescriptorSet*) buildPartial {
-  PBFileDescriptorSet* returnMe = [[result retain] autorelease];
+  PBFileDescriptorSet* returnMe = result ;
   self.result = nil;
   return returnMe;
 }
@@ -221,14 +215,14 @@ static PBFileDescriptorSet* defaultPBFileDescriptorSetInstance = nil;
 @end
 
 @interface PBFileDescriptorProto ()
-@property (retain) NSString* name;
-@property (retain) NSString* package;
-@property (retain) NSMutableArray* mutableDependencyList;
-@property (retain) NSMutableArray* mutableMessageTypeList;
-@property (retain) NSMutableArray* mutableEnumTypeList;
-@property (retain) NSMutableArray* mutableServiceList;
-@property (retain) NSMutableArray* mutableExtensionList;
-@property (retain) PBFileOptions* options;
+@property (strong) NSString* name;
+@property (strong) NSString* package;
+@property (strong) NSMutableArray* mutableDependencyList;
+@property (strong) NSMutableArray* mutableMessageTypeList;
+@property (strong) NSMutableArray* mutableEnumTypeList;
+@property (strong) NSMutableArray* mutableServiceList;
+@property (strong) NSMutableArray* mutableExtensionList;
+@property (strong) PBFileOptions* options;
 @end
 
 @implementation PBFileDescriptorProto
@@ -259,17 +253,7 @@ static PBFileDescriptorSet* defaultPBFileDescriptorSetInstance = nil;
   hasOptions_ = !!value;
 }
 @synthesize options;
-- (void) dealloc {
-  self.name = nil;
-  self.package = nil;
-  self.mutableDependencyList = nil;
-  self.mutableMessageTypeList = nil;
-  self.mutableEnumTypeList = nil;
-  self.mutableServiceList = nil;
-  self.mutableExtensionList = nil;
-  self.options = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.name = @"";
@@ -439,7 +423,7 @@ static PBFileDescriptorProto* defaultPBFileDescriptorProtoInstance = nil;
   return (PBFileDescriptorProto*)[[[PBFileDescriptorProto builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (PBFileDescriptorProto_Builder*) builder {
-  return [[[PBFileDescriptorProto_Builder alloc] init] autorelease];
+  return [[PBFileDescriptorProto_Builder alloc] init] ;
 }
 + (PBFileDescriptorProto_Builder*) builderWithPrototype:(PBFileDescriptorProto*) prototype {
   return [[PBFileDescriptorProto builder] mergeFrom:prototype];
@@ -450,18 +434,14 @@ static PBFileDescriptorProto* defaultPBFileDescriptorProtoInstance = nil;
 @end
 
 @interface PBFileDescriptorProto_Builder()
-@property (retain) PBFileDescriptorProto* result;
+@property (strong) PBFileDescriptorProto* result;
 @end
 
 @implementation PBFileDescriptorProto_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[PBFileDescriptorProto alloc] init] autorelease];
+    self.result = [[PBFileDescriptorProto alloc] init] ;
   }
   return self;
 }
@@ -469,7 +449,7 @@ static PBFileDescriptorProto* defaultPBFileDescriptorProtoInstance = nil;
   return result;
 }
 - (PBFileDescriptorProto_Builder*) clear {
-  self.result = [[[PBFileDescriptorProto alloc] init] autorelease];
+  self.result = [[PBFileDescriptorProto alloc] init] ;
   return self;
 }
 - (PBFileDescriptorProto_Builder*) clone {
@@ -483,7 +463,7 @@ static PBFileDescriptorProto* defaultPBFileDescriptorProtoInstance = nil;
   return [self buildPartial];
 }
 - (PBFileDescriptorProto*) buildPartial {
-  PBFileDescriptorProto* returnMe = [[result retain] autorelease];
+  PBFileDescriptorProto* returnMe = result ;
   self.result = nil;
   return returnMe;
 }
@@ -811,13 +791,13 @@ static PBFileDescriptorProto* defaultPBFileDescriptorProtoInstance = nil;
 @end
 
 @interface PBDescriptorProto ()
-@property (retain) NSString* name;
-@property (retain) NSMutableArray* mutableFieldList;
-@property (retain) NSMutableArray* mutableExtensionList;
-@property (retain) NSMutableArray* mutableNestedTypeList;
-@property (retain) NSMutableArray* mutableEnumTypeList;
-@property (retain) NSMutableArray* mutableExtensionRangeList;
-@property (retain) PBMessageOptions* options;
+@property (strong) NSString* name;
+@property (strong) NSMutableArray* mutableFieldList;
+@property (strong) NSMutableArray* mutableExtensionList;
+@property (strong) NSMutableArray* mutableNestedTypeList;
+@property (strong) NSMutableArray* mutableEnumTypeList;
+@property (strong) NSMutableArray* mutableExtensionRangeList;
+@property (strong) PBMessageOptions* options;
 @end
 
 @implementation PBDescriptorProto
@@ -841,16 +821,7 @@ static PBFileDescriptorProto* defaultPBFileDescriptorProtoInstance = nil;
   hasOptions_ = !!value;
 }
 @synthesize options;
-- (void) dealloc {
-  self.name = nil;
-  self.mutableFieldList = nil;
-  self.mutableExtensionList = nil;
-  self.mutableNestedTypeList = nil;
-  self.mutableEnumTypeList = nil;
-  self.mutableExtensionRangeList = nil;
-  self.options = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.name = @"";
@@ -1008,7 +979,7 @@ static PBDescriptorProto* defaultPBDescriptorProtoInstance = nil;
   return (PBDescriptorProto*)[[[PBDescriptorProto builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (PBDescriptorProto_Builder*) builder {
-  return [[[PBDescriptorProto_Builder alloc] init] autorelease];
+  return [[PBDescriptorProto_Builder alloc] init];
 }
 + (PBDescriptorProto_Builder*) builderWithPrototype:(PBDescriptorProto*) prototype {
   return [[PBDescriptorProto builder] mergeFrom:prototype];
@@ -1039,9 +1010,7 @@ static PBDescriptorProto* defaultPBDescriptorProtoInstance = nil;
   hasEnd_ = !!value;
 }
 @synthesize end;
-- (void) dealloc {
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.start = 0;
@@ -1109,7 +1078,7 @@ static PBDescriptorProto_ExtensionRange* defaultPBDescriptorProto_ExtensionRange
   return (PBDescriptorProto_ExtensionRange*)[[[PBDescriptorProto_ExtensionRange builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (PBDescriptorProto_ExtensionRange_Builder*) builder {
-  return [[[PBDescriptorProto_ExtensionRange_Builder alloc] init] autorelease];
+  return [[PBDescriptorProto_ExtensionRange_Builder alloc] init] ;
 }
 + (PBDescriptorProto_ExtensionRange_Builder*) builderWithPrototype:(PBDescriptorProto_ExtensionRange*) prototype {
   return [[PBDescriptorProto_ExtensionRange builder] mergeFrom:prototype];
@@ -1120,18 +1089,15 @@ static PBDescriptorProto_ExtensionRange* defaultPBDescriptorProto_ExtensionRange
 @end
 
 @interface PBDescriptorProto_ExtensionRange_Builder()
-@property (retain) PBDescriptorProto_ExtensionRange* result;
+@property (strong) PBDescriptorProto_ExtensionRange* result;
 @end
 
 @implementation PBDescriptorProto_ExtensionRange_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[PBDescriptorProto_ExtensionRange alloc] init] autorelease];
+    self.result = [[PBDescriptorProto_ExtensionRange alloc] init];
   }
   return self;
 }
@@ -1139,7 +1105,7 @@ static PBDescriptorProto_ExtensionRange* defaultPBDescriptorProto_ExtensionRange
   return result;
 }
 - (PBDescriptorProto_ExtensionRange_Builder*) clear {
-  self.result = [[[PBDescriptorProto_ExtensionRange alloc] init] autorelease];
+  self.result = [[PBDescriptorProto_ExtensionRange alloc] init];
   return self;
 }
 - (PBDescriptorProto_ExtensionRange_Builder*) clone {
@@ -1153,7 +1119,7 @@ static PBDescriptorProto_ExtensionRange* defaultPBDescriptorProto_ExtensionRange
   return [self buildPartial];
 }
 - (PBDescriptorProto_ExtensionRange*) buildPartial {
-  PBDescriptorProto_ExtensionRange* returnMe = [[result retain] autorelease];
+  PBDescriptorProto_ExtensionRange* returnMe = result ;
   self.result = nil;
   return returnMe;
 }
@@ -1234,18 +1200,14 @@ static PBDescriptorProto_ExtensionRange* defaultPBDescriptorProto_ExtensionRange
 @end
 
 @interface PBDescriptorProto_Builder()
-@property (retain) PBDescriptorProto* result;
+@property (strong) PBDescriptorProto* result;
 @end
 
 @implementation PBDescriptorProto_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[PBDescriptorProto alloc] init] autorelease];
+    self.result = [[PBDescriptorProto alloc] init];
   }
   return self;
 }
@@ -1253,7 +1215,7 @@ static PBDescriptorProto_ExtensionRange* defaultPBDescriptorProto_ExtensionRange
   return result;
 }
 - (PBDescriptorProto_Builder*) clear {
-  self.result = [[[PBDescriptorProto alloc] init] autorelease];
+  self.result = [[PBDescriptorProto alloc] init];
   return self;
 }
 - (PBDescriptorProto_Builder*) clone {
@@ -1267,7 +1229,7 @@ static PBDescriptorProto_ExtensionRange* defaultPBDescriptorProto_ExtensionRange
   return [self buildPartial];
 }
 - (PBDescriptorProto*) buildPartial {
-  PBDescriptorProto* returnMe = [[result retain] autorelease];
+  PBDescriptorProto* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -1572,14 +1534,14 @@ static PBDescriptorProto_ExtensionRange* defaultPBDescriptorProto_ExtensionRange
 @end
 
 @interface PBFieldDescriptorProto ()
-@property (retain) NSString* name;
+@property (strong) NSString* name;
 @property int32_t number;
 @property PBFieldDescriptorProto_Label label;
 @property PBFieldDescriptorProto_Type type;
-@property (retain) NSString* typeName;
-@property (retain) NSString* extendee;
-@property (retain) NSString* defaultValue;
-@property (retain) PBFieldOptions* options;
+@property (strong) NSString* typeName;
+@property (strong) NSString* extendee;
+@property (strong) NSString* defaultValue;
+@property (strong) PBFieldOptions* options;
 @end
 
 @implementation PBFieldDescriptorProto
@@ -1640,14 +1602,6 @@ static PBDescriptorProto_ExtensionRange* defaultPBDescriptorProto_ExtensionRange
   hasOptions_ = !!value;
 }
 @synthesize options;
-- (void) dealloc {
-  self.name = nil;
-  self.typeName = nil;
-  self.extendee = nil;
-  self.defaultValue = nil;
-  self.options = nil;
-  [super dealloc];
-}
 - (id) init {
   if ((self = [super init])) {
     self.name = @"";
@@ -1762,7 +1716,7 @@ static PBFieldDescriptorProto* defaultPBFieldDescriptorProtoInstance = nil;
   return (PBFieldDescriptorProto*)[[[PBFieldDescriptorProto builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (PBFieldDescriptorProto_Builder*) builder {
-  return [[[PBFieldDescriptorProto_Builder alloc] init] autorelease];
+  return [[PBFieldDescriptorProto_Builder alloc] init];
 }
 + (PBFieldDescriptorProto_Builder*) builderWithPrototype:(PBFieldDescriptorProto*) prototype {
   return [[PBFieldDescriptorProto builder] mergeFrom:prototype];
@@ -1808,18 +1762,14 @@ BOOL PBFieldDescriptorProto_LabelIsValidValue(PBFieldDescriptorProto_Label value
   }
 }
 @interface PBFieldDescriptorProto_Builder()
-@property (retain) PBFieldDescriptorProto* result;
+@property (strong) PBFieldDescriptorProto* result;
 @end
 
 @implementation PBFieldDescriptorProto_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[PBFieldDescriptorProto alloc] init] autorelease];
+    self.result = [[PBFieldDescriptorProto alloc] init];
   }
   return self;
 }
@@ -1827,7 +1777,7 @@ BOOL PBFieldDescriptorProto_LabelIsValidValue(PBFieldDescriptorProto_Label value
   return result;
 }
 - (PBFieldDescriptorProto_Builder*) clear {
-  self.result = [[[PBFieldDescriptorProto alloc] init] autorelease];
+  self.result = [[PBFieldDescriptorProto alloc] init];
   return self;
 }
 - (PBFieldDescriptorProto_Builder*) clone {
@@ -1841,7 +1791,7 @@ BOOL PBFieldDescriptorProto_LabelIsValidValue(PBFieldDescriptorProto_Label value
   return [self buildPartial];
 }
 - (PBFieldDescriptorProto*) buildPartial {
-  PBFieldDescriptorProto* returnMe = [[result retain] autorelease];
+  PBFieldDescriptorProto* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -2089,9 +2039,9 @@ BOOL PBFieldDescriptorProto_LabelIsValidValue(PBFieldDescriptorProto_Label value
 @end
 
 @interface PBEnumDescriptorProto ()
-@property (retain) NSString* name;
-@property (retain) NSMutableArray* mutableValueList;
-@property (retain) PBEnumOptions* options;
+@property (strong) NSString* name;
+@property (strong) NSMutableArray* mutableValueList;
+@property (strong) PBEnumOptions* options;
 @end
 
 @implementation PBEnumDescriptorProto
@@ -2111,12 +2061,7 @@ BOOL PBFieldDescriptorProto_LabelIsValidValue(PBFieldDescriptorProto_Label value
   hasOptions_ = !!value;
 }
 @synthesize options;
-- (void) dealloc {
-  self.name = nil;
-  self.mutableValueList = nil;
-  self.options = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.name = @"";
@@ -2207,7 +2152,7 @@ static PBEnumDescriptorProto* defaultPBEnumDescriptorProtoInstance = nil;
   return (PBEnumDescriptorProto*)[[[PBEnumDescriptorProto builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (PBEnumDescriptorProto_Builder*) builder {
-  return [[[PBEnumDescriptorProto_Builder alloc] init] autorelease];
+  return [[PBEnumDescriptorProto_Builder alloc] init] ;
 }
 + (PBEnumDescriptorProto_Builder*) builderWithPrototype:(PBEnumDescriptorProto*) prototype {
   return [[PBEnumDescriptorProto builder] mergeFrom:prototype];
@@ -2218,18 +2163,15 @@ static PBEnumDescriptorProto* defaultPBEnumDescriptorProtoInstance = nil;
 @end
 
 @interface PBEnumDescriptorProto_Builder()
-@property (retain) PBEnumDescriptorProto* result;
+@property (strong) PBEnumDescriptorProto* result;
 @end
 
 @implementation PBEnumDescriptorProto_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[PBEnumDescriptorProto alloc] init] autorelease];
+    self.result = [[PBEnumDescriptorProto alloc] init];
   }
   return self;
 }
@@ -2237,7 +2179,7 @@ static PBEnumDescriptorProto* defaultPBEnumDescriptorProtoInstance = nil;
   return result;
 }
 - (PBEnumDescriptorProto_Builder*) clear {
-  self.result = [[[PBEnumDescriptorProto alloc] init] autorelease];
+  self.result = [[PBEnumDescriptorProto alloc] init] ;
   return self;
 }
 - (PBEnumDescriptorProto_Builder*) clone {
@@ -2251,7 +2193,7 @@ static PBEnumDescriptorProto* defaultPBEnumDescriptorProtoInstance = nil;
   return [self buildPartial];
 }
 - (PBEnumDescriptorProto*) buildPartial {
-  PBEnumDescriptorProto* returnMe = [[result retain] autorelease];
+  PBEnumDescriptorProto* returnMe = result ;
   self.result = nil;
   return returnMe;
 }
@@ -2392,9 +2334,9 @@ static PBEnumDescriptorProto* defaultPBEnumDescriptorProtoInstance = nil;
 @end
 
 @interface PBEnumValueDescriptorProto ()
-@property (retain) NSString* name;
+@property (strong) NSString* name;
 @property int32_t number;
-@property (retain) PBEnumValueOptions* options;
+@property (strong) PBEnumValueOptions* options;
 @end
 
 @implementation PBEnumValueDescriptorProto
@@ -2420,11 +2362,7 @@ static PBEnumDescriptorProto* defaultPBEnumDescriptorProtoInstance = nil;
   hasOptions_ = !!value;
 }
 @synthesize options;
-- (void) dealloc {
-  self.name = nil;
-  self.options = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.name = @"";
@@ -2504,7 +2442,7 @@ static PBEnumValueDescriptorProto* defaultPBEnumValueDescriptorProtoInstance = n
   return (PBEnumValueDescriptorProto*)[[[PBEnumValueDescriptorProto builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (PBEnumValueDescriptorProto_Builder*) builder {
-  return [[[PBEnumValueDescriptorProto_Builder alloc] init] autorelease];
+  return [[PBEnumValueDescriptorProto_Builder alloc] init] ;
 }
 + (PBEnumValueDescriptorProto_Builder*) builderWithPrototype:(PBEnumValueDescriptorProto*) prototype {
   return [[PBEnumValueDescriptorProto builder] mergeFrom:prototype];
@@ -2515,18 +2453,15 @@ static PBEnumValueDescriptorProto* defaultPBEnumValueDescriptorProtoInstance = n
 @end
 
 @interface PBEnumValueDescriptorProto_Builder()
-@property (retain) PBEnumValueDescriptorProto* result;
+@property (strong) PBEnumValueDescriptorProto* result;
 @end
 
 @implementation PBEnumValueDescriptorProto_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[PBEnumValueDescriptorProto alloc] init] autorelease];
+    self.result = [[PBEnumValueDescriptorProto alloc] init] ;
   }
   return self;
 }
@@ -2534,7 +2469,7 @@ static PBEnumValueDescriptorProto* defaultPBEnumValueDescriptorProtoInstance = n
   return result;
 }
 - (PBEnumValueDescriptorProto_Builder*) clear {
-  self.result = [[[PBEnumValueDescriptorProto alloc] init] autorelease];
+  self.result = [[PBEnumValueDescriptorProto alloc] init] ;
   return self;
 }
 - (PBEnumValueDescriptorProto_Builder*) clone {
@@ -2548,7 +2483,7 @@ static PBEnumValueDescriptorProto* defaultPBEnumValueDescriptorProtoInstance = n
   return [self buildPartial];
 }
 - (PBEnumValueDescriptorProto*) buildPartial {
-  PBEnumValueDescriptorProto* returnMe = [[result retain] autorelease];
+  PBEnumValueDescriptorProto* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -2671,9 +2606,9 @@ static PBEnumValueDescriptorProto* defaultPBEnumValueDescriptorProtoInstance = n
 @end
 
 @interface PBServiceDescriptorProto ()
-@property (retain) NSString* name;
-@property (retain) NSMutableArray* mutableMethodList;
-@property (retain) PBServiceOptions* options;
+@property (strong) NSString* name;
+@property (strong) NSMutableArray* mutableMethodList;
+@property (strong) PBServiceOptions* options;
 @end
 
 @implementation PBServiceDescriptorProto
@@ -2693,12 +2628,6 @@ static PBEnumValueDescriptorProto* defaultPBEnumValueDescriptorProtoInstance = n
   hasOptions_ = !!value;
 }
 @synthesize options;
-- (void) dealloc {
-  self.name = nil;
-  self.mutableMethodList = nil;
-  self.options = nil;
-  [super dealloc];
-}
 - (id) init {
   if ((self = [super init])) {
     self.name = @"";
@@ -2789,7 +2718,7 @@ static PBServiceDescriptorProto* defaultPBServiceDescriptorProtoInstance = nil;
   return (PBServiceDescriptorProto*)[[[PBServiceDescriptorProto builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (PBServiceDescriptorProto_Builder*) builder {
-  return [[[PBServiceDescriptorProto_Builder alloc] init] autorelease];
+  return [[PBServiceDescriptorProto_Builder alloc] init];
 }
 + (PBServiceDescriptorProto_Builder*) builderWithPrototype:(PBServiceDescriptorProto*) prototype {
   return [[PBServiceDescriptorProto builder] mergeFrom:prototype];
@@ -2800,18 +2729,14 @@ static PBServiceDescriptorProto* defaultPBServiceDescriptorProtoInstance = nil;
 @end
 
 @interface PBServiceDescriptorProto_Builder()
-@property (retain) PBServiceDescriptorProto* result;
+@property (strong) PBServiceDescriptorProto* result;
 @end
 
 @implementation PBServiceDescriptorProto_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[PBServiceDescriptorProto alloc] init] autorelease];
+    self.result = [[PBServiceDescriptorProto alloc] init];
   }
   return self;
 }
@@ -2819,7 +2744,7 @@ static PBServiceDescriptorProto* defaultPBServiceDescriptorProtoInstance = nil;
   return result;
 }
 - (PBServiceDescriptorProto_Builder*) clear {
-  self.result = [[[PBServiceDescriptorProto alloc] init] autorelease];
+  self.result = [[PBServiceDescriptorProto alloc] init];
   return self;
 }
 - (PBServiceDescriptorProto_Builder*) clone {
@@ -2833,7 +2758,7 @@ static PBServiceDescriptorProto* defaultPBServiceDescriptorProtoInstance = nil;
   return [self buildPartial];
 }
 - (PBServiceDescriptorProto*) buildPartial {
-  PBServiceDescriptorProto* returnMe = [[result retain] autorelease];
+  PBServiceDescriptorProto* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -2974,10 +2899,10 @@ static PBServiceDescriptorProto* defaultPBServiceDescriptorProtoInstance = nil;
 @end
 
 @interface PBMethodDescriptorProto ()
-@property (retain) NSString* name;
-@property (retain) NSString* inputType;
-@property (retain) NSString* outputType;
-@property (retain) PBMethodOptions* options;
+@property (strong) NSString* name;
+@property (strong) NSString* inputType;
+@property (strong) NSString* outputType;
+@property (strong) PBMethodOptions* options;
 @end
 
 @implementation PBMethodDescriptorProto
@@ -3010,13 +2935,6 @@ static PBServiceDescriptorProto* defaultPBServiceDescriptorProtoInstance = nil;
   hasOptions_ = !!value;
 }
 @synthesize options;
-- (void) dealloc {
-  self.name = nil;
-  self.inputType = nil;
-  self.outputType = nil;
-  self.options = nil;
-  [super dealloc];
-}
 - (id) init {
   if ((self = [super init])) {
     self.name = @"";
@@ -3103,7 +3021,7 @@ static PBMethodDescriptorProto* defaultPBMethodDescriptorProtoInstance = nil;
   return (PBMethodDescriptorProto*)[[[PBMethodDescriptorProto builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (PBMethodDescriptorProto_Builder*) builder {
-  return [[[PBMethodDescriptorProto_Builder alloc] init] autorelease];
+  return [[PBMethodDescriptorProto_Builder alloc] init];
 }
 + (PBMethodDescriptorProto_Builder*) builderWithPrototype:(PBMethodDescriptorProto*) prototype {
   return [[PBMethodDescriptorProto builder] mergeFrom:prototype];
@@ -3114,18 +3032,15 @@ static PBMethodDescriptorProto* defaultPBMethodDescriptorProtoInstance = nil;
 @end
 
 @interface PBMethodDescriptorProto_Builder()
-@property (retain) PBMethodDescriptorProto* result;
+@property (strong) PBMethodDescriptorProto* result;
 @end
 
 @implementation PBMethodDescriptorProto_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[PBMethodDescriptorProto alloc] init] autorelease];
+    self.result = [[PBMethodDescriptorProto alloc] init];
   }
   return self;
 }
@@ -3133,7 +3048,7 @@ static PBMethodDescriptorProto* defaultPBMethodDescriptorProtoInstance = nil;
   return result;
 }
 - (PBMethodDescriptorProto_Builder*) clear {
-  self.result = [[[PBMethodDescriptorProto alloc] init] autorelease];
+  self.result = [[PBMethodDescriptorProto alloc] init] ;
   return self;
 }
 - (PBMethodDescriptorProto_Builder*) clone {
@@ -3147,7 +3062,7 @@ static PBMethodDescriptorProto* defaultPBMethodDescriptorProtoInstance = nil;
   return [self buildPartial];
 }
 - (PBMethodDescriptorProto*) buildPartial {
-  PBMethodDescriptorProto* returnMe = [[result retain] autorelease];
+  PBMethodDescriptorProto* returnMe = result ;
   self.result = nil;
   return returnMe;
 }
@@ -3293,11 +3208,11 @@ static PBMethodDescriptorProto* defaultPBMethodDescriptorProtoInstance = nil;
 @end
 
 @interface PBFileOptions ()
-@property (retain) NSString* javaPackage;
-@property (retain) NSString* javaOuterClassname;
+@property (strong) NSString* javaPackage;
+@property (strong) NSString* javaOuterClassname;
 @property BOOL javaMultipleFiles;
 @property PBFileOptions_OptimizeMode optimizeFor;
-@property (retain) NSMutableArray* mutableUninterpretedOptionList;
+@property (strong) NSMutableArray* mutableUninterpretedOptionList;
 @end
 
 @implementation PBFileOptions
@@ -3336,12 +3251,7 @@ static PBMethodDescriptorProto* defaultPBMethodDescriptorProtoInstance = nil;
 }
 @synthesize optimizeFor;
 @synthesize mutableUninterpretedOptionList;
-- (void) dealloc {
-  self.javaPackage = nil;
-  self.javaOuterClassname = nil;
-  self.mutableUninterpretedOptionList = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.javaPackage = @"";
@@ -3448,7 +3358,7 @@ static PBFileOptions* defaultPBFileOptionsInstance = nil;
   return (PBFileOptions*)[[[PBFileOptions builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (PBFileOptions_Builder*) builder {
-  return [[[PBFileOptions_Builder alloc] init] autorelease];
+  return [[PBFileOptions_Builder alloc] init];
 }
 + (PBFileOptions_Builder*) builderWithPrototype:(PBFileOptions*) prototype {
   return [[PBFileOptions builder] mergeFrom:prototype];
@@ -3469,18 +3379,15 @@ BOOL PBFileOptions_OptimizeModeIsValidValue(PBFileOptions_OptimizeMode value) {
   }
 }
 @interface PBFileOptions_Builder()
-@property (retain) PBFileOptions* result;
+@property (strong) PBFileOptions* result;
 @end
 
 @implementation PBFileOptions_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[PBFileOptions alloc] init] autorelease];
+    self.result = [[PBFileOptions alloc] init];
   }
   return self;
 }
@@ -3488,7 +3395,7 @@ BOOL PBFileOptions_OptimizeModeIsValidValue(PBFileOptions_OptimizeMode value) {
   return result;
 }
 - (PBFileOptions_Builder*) clear {
-  self.result = [[[PBFileOptions alloc] init] autorelease];
+  self.result = [[PBFileOptions alloc] init];
   return self;
 }
 - (PBFileOptions_Builder*) clone {
@@ -3502,7 +3409,7 @@ BOOL PBFileOptions_OptimizeModeIsValidValue(PBFileOptions_OptimizeMode value) {
   return [self buildPartial];
 }
 - (PBFileOptions*) buildPartial {
-  PBFileOptions* returnMe = [[result retain] autorelease];
+  PBFileOptions* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -3678,7 +3585,7 @@ BOOL PBFileOptions_OptimizeModeIsValidValue(PBFileOptions_OptimizeMode value) {
 @interface PBMessageOptions ()
 @property BOOL messageSetWireFormat;
 @property BOOL noStandardDescriptorAccessor;
-@property (retain) NSMutableArray* mutableUninterpretedOptionList;
+@property (strong) NSMutableArray* mutableUninterpretedOptionList;
 @end
 
 @implementation PBMessageOptions
@@ -3708,10 +3615,7 @@ BOOL PBFileOptions_OptimizeModeIsValidValue(PBFileOptions_OptimizeMode value) {
   noStandardDescriptorAccessor_ = !!value;
 }
 @synthesize mutableUninterpretedOptionList;
-- (void) dealloc {
-  self.mutableUninterpretedOptionList = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.messageSetWireFormat = NO;
@@ -3804,7 +3708,7 @@ static PBMessageOptions* defaultPBMessageOptionsInstance = nil;
   return (PBMessageOptions*)[[[PBMessageOptions builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (PBMessageOptions_Builder*) builder {
-  return [[[PBMessageOptions_Builder alloc] init] autorelease];
+  return [[PBMessageOptions_Builder alloc] init];
 }
 + (PBMessageOptions_Builder*) builderWithPrototype:(PBMessageOptions*) prototype {
   return [[PBMessageOptions builder] mergeFrom:prototype];
@@ -3815,18 +3719,15 @@ static PBMessageOptions* defaultPBMessageOptionsInstance = nil;
 @end
 
 @interface PBMessageOptions_Builder()
-@property (retain) PBMessageOptions* result;
+@property (strong) PBMessageOptions* result;
 @end
 
 @implementation PBMessageOptions_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[PBMessageOptions alloc] init] autorelease];
+    self.result = [[PBMessageOptions alloc] init];
   }
   return self;
 }
@@ -3834,7 +3735,7 @@ static PBMessageOptions* defaultPBMessageOptionsInstance = nil;
   return result;
 }
 - (PBMessageOptions_Builder*) clear {
-  self.result = [[[PBMessageOptions alloc] init] autorelease];
+  self.result = [[PBMessageOptions alloc] init];
   return self;
 }
 - (PBMessageOptions_Builder*) clone {
@@ -3848,7 +3749,7 @@ static PBMessageOptions* defaultPBMessageOptionsInstance = nil;
   return [self buildPartial];
 }
 - (PBMessageOptions*) buildPartial {
-  PBMessageOptions* returnMe = [[result retain] autorelease];
+  PBMessageOptions* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -3974,8 +3875,8 @@ static PBMessageOptions* defaultPBMessageOptionsInstance = nil;
 @property PBFieldOptions_CType ctype;
 @property BOOL packed;
 @property BOOL deprecated;
-@property (retain) NSString* experimentalMapKey;
-@property (retain) NSMutableArray* mutableUninterpretedOptionList;
+@property (strong) NSString* experimentalMapKey;
+@property (strong) NSMutableArray* mutableUninterpretedOptionList;
 @end
 
 @implementation PBFieldOptions
@@ -4019,11 +3920,7 @@ static PBMessageOptions* defaultPBMessageOptionsInstance = nil;
 }
 @synthesize experimentalMapKey;
 @synthesize mutableUninterpretedOptionList;
-- (void) dealloc {
-  self.experimentalMapKey = nil;
-  self.mutableUninterpretedOptionList = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.ctype = PBFieldOptions_CTypeCord;
@@ -4130,7 +4027,7 @@ static PBFieldOptions* defaultPBFieldOptionsInstance = nil;
   return (PBFieldOptions*)[[[PBFieldOptions builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (PBFieldOptions_Builder*) builder {
-  return [[[PBFieldOptions_Builder alloc] init] autorelease];
+  return [[PBFieldOptions_Builder alloc] init];
 }
 + (PBFieldOptions_Builder*) builderWithPrototype:(PBFieldOptions*) prototype {
   return [[PBFieldOptions builder] mergeFrom:prototype];
@@ -4150,18 +4047,14 @@ BOOL PBFieldOptions_CTypeIsValidValue(PBFieldOptions_CType value) {
   }
 }
 @interface PBFieldOptions_Builder()
-@property (retain) PBFieldOptions* result;
+@property (strong) PBFieldOptions* result;
 @end
 
 @implementation PBFieldOptions_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[PBFieldOptions alloc] init] autorelease];
+    self.result = [[PBFieldOptions alloc] init];
   }
   return self;
 }
@@ -4169,7 +4062,7 @@ BOOL PBFieldOptions_CTypeIsValidValue(PBFieldOptions_CType value) {
   return result;
 }
 - (PBFieldOptions_Builder*) clear {
-  self.result = [[[PBFieldOptions alloc] init] autorelease];
+  self.result = [[PBFieldOptions alloc] init];
   return self;
 }
 - (PBFieldOptions_Builder*) clone {
@@ -4183,7 +4076,7 @@ BOOL PBFieldOptions_CTypeIsValidValue(PBFieldOptions_CType value) {
   return [self buildPartial];
 }
 - (PBFieldOptions*) buildPartial {
-  PBFieldOptions* returnMe = [[result retain] autorelease];
+  PBFieldOptions* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -4357,16 +4250,13 @@ BOOL PBFieldOptions_CTypeIsValidValue(PBFieldOptions_CType value) {
 @end
 
 @interface PBEnumOptions ()
-@property (retain) NSMutableArray* mutableUninterpretedOptionList;
+@property (strong) NSMutableArray* mutableUninterpretedOptionList;
 @end
 
 @implementation PBEnumOptions
 
 @synthesize mutableUninterpretedOptionList;
-- (void) dealloc {
-  self.mutableUninterpretedOptionList = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
   }
@@ -4445,7 +4335,7 @@ static PBEnumOptions* defaultPBEnumOptionsInstance = nil;
   return (PBEnumOptions*)[[[PBEnumOptions builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (PBEnumOptions_Builder*) builder {
-  return [[[PBEnumOptions_Builder alloc] init] autorelease];
+  return [[PBEnumOptions_Builder alloc] init];
 }
 + (PBEnumOptions_Builder*) builderWithPrototype:(PBEnumOptions*) prototype {
   return [[PBEnumOptions builder] mergeFrom:prototype];
@@ -4456,18 +4346,15 @@ static PBEnumOptions* defaultPBEnumOptionsInstance = nil;
 @end
 
 @interface PBEnumOptions_Builder()
-@property (retain) PBEnumOptions* result;
+@property (strong) PBEnumOptions* result;
 @end
 
 @implementation PBEnumOptions_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[PBEnumOptions alloc] init] autorelease];
+    self.result = [[PBEnumOptions alloc] init];
   }
   return self;
 }
@@ -4475,7 +4362,7 @@ static PBEnumOptions* defaultPBEnumOptionsInstance = nil;
   return result;
 }
 - (PBEnumOptions_Builder*) clear {
-  self.result = [[[PBEnumOptions alloc] init] autorelease];
+  self.result = [[PBEnumOptions alloc] init] ;
   return self;
 }
 - (PBEnumOptions_Builder*) clone {
@@ -4489,7 +4376,7 @@ static PBEnumOptions* defaultPBEnumOptionsInstance = nil;
   return [self buildPartial];
 }
 - (PBEnumOptions*) buildPartial {
-  PBEnumOptions* returnMe = [[result retain] autorelease];
+  PBEnumOptions* returnMe = result ;
   self.result = nil;
   return returnMe;
 }
@@ -4566,16 +4453,13 @@ static PBEnumOptions* defaultPBEnumOptionsInstance = nil;
 @end
 
 @interface PBEnumValueOptions ()
-@property (retain) NSMutableArray* mutableUninterpretedOptionList;
+@property (strong) NSMutableArray* mutableUninterpretedOptionList;
 @end
 
 @implementation PBEnumValueOptions
 
 @synthesize mutableUninterpretedOptionList;
-- (void) dealloc {
-  self.mutableUninterpretedOptionList = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
   }
@@ -4654,7 +4538,7 @@ static PBEnumValueOptions* defaultPBEnumValueOptionsInstance = nil;
   return (PBEnumValueOptions*)[[[PBEnumValueOptions builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (PBEnumValueOptions_Builder*) builder {
-  return [[[PBEnumValueOptions_Builder alloc] init] autorelease];
+  return [[PBEnumValueOptions_Builder alloc] init];
 }
 + (PBEnumValueOptions_Builder*) builderWithPrototype:(PBEnumValueOptions*) prototype {
   return [[PBEnumValueOptions builder] mergeFrom:prototype];
@@ -4665,18 +4549,15 @@ static PBEnumValueOptions* defaultPBEnumValueOptionsInstance = nil;
 @end
 
 @interface PBEnumValueOptions_Builder()
-@property (retain) PBEnumValueOptions* result;
+@property (strong) PBEnumValueOptions* result;
 @end
 
 @implementation PBEnumValueOptions_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[PBEnumValueOptions alloc] init] autorelease];
+    self.result = [[PBEnumValueOptions alloc] init];
   }
   return self;
 }
@@ -4684,7 +4565,7 @@ static PBEnumValueOptions* defaultPBEnumValueOptionsInstance = nil;
   return result;
 }
 - (PBEnumValueOptions_Builder*) clear {
-  self.result = [[[PBEnumValueOptions alloc] init] autorelease];
+  self.result = [[PBEnumValueOptions alloc] init];
   return self;
 }
 - (PBEnumValueOptions_Builder*) clone {
@@ -4698,7 +4579,7 @@ static PBEnumValueOptions* defaultPBEnumValueOptionsInstance = nil;
   return [self buildPartial];
 }
 - (PBEnumValueOptions*) buildPartial {
-  PBEnumValueOptions* returnMe = [[result retain] autorelease];
+  PBEnumValueOptions* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -4775,16 +4656,12 @@ static PBEnumValueOptions* defaultPBEnumValueOptionsInstance = nil;
 @end
 
 @interface PBServiceOptions ()
-@property (retain) NSMutableArray* mutableUninterpretedOptionList;
+@property (strong) NSMutableArray* mutableUninterpretedOptionList;
 @end
 
 @implementation PBServiceOptions
 
 @synthesize mutableUninterpretedOptionList;
-- (void) dealloc {
-  self.mutableUninterpretedOptionList = nil;
-  [super dealloc];
-}
 - (id) init {
   if ((self = [super init])) {
   }
@@ -4863,7 +4740,7 @@ static PBServiceOptions* defaultPBServiceOptionsInstance = nil;
   return (PBServiceOptions*)[[[PBServiceOptions builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (PBServiceOptions_Builder*) builder {
-  return [[[PBServiceOptions_Builder alloc] init] autorelease];
+  return [[PBServiceOptions_Builder alloc] init] ;
 }
 + (PBServiceOptions_Builder*) builderWithPrototype:(PBServiceOptions*) prototype {
   return [[PBServiceOptions builder] mergeFrom:prototype];
@@ -4874,18 +4751,15 @@ static PBServiceOptions* defaultPBServiceOptionsInstance = nil;
 @end
 
 @interface PBServiceOptions_Builder()
-@property (retain) PBServiceOptions* result;
+@property (strong) PBServiceOptions* result;
 @end
 
 @implementation PBServiceOptions_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[PBServiceOptions alloc] init] autorelease];
+    self.result = [[PBServiceOptions alloc] init];
   }
   return self;
 }
@@ -4893,7 +4767,7 @@ static PBServiceOptions* defaultPBServiceOptionsInstance = nil;
   return result;
 }
 - (PBServiceOptions_Builder*) clear {
-  self.result = [[[PBServiceOptions alloc] init] autorelease];
+  self.result = [[PBServiceOptions alloc] init] ;
   return self;
 }
 - (PBServiceOptions_Builder*) clone {
@@ -4907,7 +4781,7 @@ static PBServiceOptions* defaultPBServiceOptionsInstance = nil;
   return [self buildPartial];
 }
 - (PBServiceOptions*) buildPartial {
-  PBServiceOptions* returnMe = [[result retain] autorelease];
+  PBServiceOptions* returnMe = result  ;
   self.result = nil;
   return returnMe;
 }
@@ -4984,16 +4858,13 @@ static PBServiceOptions* defaultPBServiceOptionsInstance = nil;
 @end
 
 @interface PBMethodOptions ()
-@property (retain) NSMutableArray* mutableUninterpretedOptionList;
+@property (strong) NSMutableArray* mutableUninterpretedOptionList;
 @end
 
 @implementation PBMethodOptions
 
 @synthesize mutableUninterpretedOptionList;
-- (void) dealloc {
-  self.mutableUninterpretedOptionList = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
   }
@@ -5072,7 +4943,7 @@ static PBMethodOptions* defaultPBMethodOptionsInstance = nil;
   return (PBMethodOptions*)[[[PBMethodOptions builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (PBMethodOptions_Builder*) builder {
-  return [[[PBMethodOptions_Builder alloc] init] autorelease];
+  return [[PBMethodOptions_Builder alloc] init] ;
 }
 + (PBMethodOptions_Builder*) builderWithPrototype:(PBMethodOptions*) prototype {
   return [[PBMethodOptions builder] mergeFrom:prototype];
@@ -5083,18 +4954,14 @@ static PBMethodOptions* defaultPBMethodOptionsInstance = nil;
 @end
 
 @interface PBMethodOptions_Builder()
-@property (retain) PBMethodOptions* result;
+@property (strong) PBMethodOptions* result;
 @end
 
 @implementation PBMethodOptions_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[PBMethodOptions alloc] init] autorelease];
+    self.result = [[PBMethodOptions alloc] init] ;
   }
   return self;
 }
@@ -5102,7 +4969,7 @@ static PBMethodOptions* defaultPBMethodOptionsInstance = nil;
   return result;
 }
 - (PBMethodOptions_Builder*) clear {
-  self.result = [[[PBMethodOptions alloc] init] autorelease];
+  self.result = [[PBMethodOptions alloc] init] ;
   return self;
 }
 - (PBMethodOptions_Builder*) clone {
@@ -5116,7 +4983,7 @@ static PBMethodOptions* defaultPBMethodOptionsInstance = nil;
   return [self buildPartial];
 }
 - (PBMethodOptions*) buildPartial {
-  PBMethodOptions* returnMe = [[result retain] autorelease];
+  PBMethodOptions* returnMe = result ;
   self.result = nil;
   return returnMe;
 }
@@ -5193,12 +5060,12 @@ static PBMethodOptions* defaultPBMethodOptionsInstance = nil;
 @end
 
 @interface PBUninterpretedOption ()
-@property (retain) NSMutableArray* mutableNameList;
-@property (retain) NSString* identifierValue;
+@property (strong) NSMutableArray* mutableNameList;
+@property (strong) NSString* identifierValue;
 @property int64_t positiveIntValue;
 @property int64_t negativeIntValue;
 @property Float64 doubleValue;
-@property (retain) NSData* stringValue;
+@property (strong) NSData* stringValue;
 @end
 
 @implementation PBUninterpretedOption
@@ -5239,12 +5106,7 @@ static PBMethodOptions* defaultPBMethodOptionsInstance = nil;
   hasStringValue_ = !!value;
 }
 @synthesize stringValue;
-- (void) dealloc {
-  self.mutableNameList = nil;
-  self.identifierValue = nil;
-  self.stringValue = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.identifierValue = @"";
@@ -5351,7 +5213,7 @@ static PBUninterpretedOption* defaultPBUninterpretedOptionInstance = nil;
   return (PBUninterpretedOption*)[[[PBUninterpretedOption builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (PBUninterpretedOption_Builder*) builder {
-  return [[[PBUninterpretedOption_Builder alloc] init] autorelease];
+  return [[PBUninterpretedOption_Builder alloc] init] ;
 }
 + (PBUninterpretedOption_Builder*) builderWithPrototype:(PBUninterpretedOption*) prototype {
   return [[PBUninterpretedOption builder] mergeFrom:prototype];
@@ -5362,7 +5224,7 @@ static PBUninterpretedOption* defaultPBUninterpretedOptionInstance = nil;
 @end
 
 @interface PBUninterpretedOption_NamePart ()
-@property (retain) NSString* namePart;
+@property (strong) NSString* namePart;
 @property BOOL isExtension;
 @end
 
@@ -5387,10 +5249,7 @@ static PBUninterpretedOption* defaultPBUninterpretedOptionInstance = nil;
 - (void) setIsExtension:(BOOL) value {
   isExtension_ = !!value;
 }
-- (void) dealloc {
-  self.namePart = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.namePart = @"";
@@ -5464,7 +5323,7 @@ static PBUninterpretedOption_NamePart* defaultPBUninterpretedOption_NamePartInst
   return (PBUninterpretedOption_NamePart*)[[[PBUninterpretedOption_NamePart builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (PBUninterpretedOption_NamePart_Builder*) builder {
-  return [[[PBUninterpretedOption_NamePart_Builder alloc] init] autorelease];
+  return [[PBUninterpretedOption_NamePart_Builder alloc] init] ;
 }
 + (PBUninterpretedOption_NamePart_Builder*) builderWithPrototype:(PBUninterpretedOption_NamePart*) prototype {
   return [[PBUninterpretedOption_NamePart builder] mergeFrom:prototype];
@@ -5475,18 +5334,15 @@ static PBUninterpretedOption_NamePart* defaultPBUninterpretedOption_NamePartInst
 @end
 
 @interface PBUninterpretedOption_NamePart_Builder()
-@property (retain) PBUninterpretedOption_NamePart* result;
+@property (strong) PBUninterpretedOption_NamePart* result;
 @end
 
 @implementation PBUninterpretedOption_NamePart_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[PBUninterpretedOption_NamePart alloc] init] autorelease];
+    self.result = [[PBUninterpretedOption_NamePart alloc] init] ;
   }
   return self;
 }
@@ -5494,7 +5350,7 @@ static PBUninterpretedOption_NamePart* defaultPBUninterpretedOption_NamePartInst
   return result;
 }
 - (PBUninterpretedOption_NamePart_Builder*) clear {
-  self.result = [[[PBUninterpretedOption_NamePart alloc] init] autorelease];
+  self.result = [[PBUninterpretedOption_NamePart alloc] init] ;
   return self;
 }
 - (PBUninterpretedOption_NamePart_Builder*) clone {
@@ -5508,7 +5364,7 @@ static PBUninterpretedOption_NamePart* defaultPBUninterpretedOption_NamePartInst
   return [self buildPartial];
 }
 - (PBUninterpretedOption_NamePart*) buildPartial {
-  PBUninterpretedOption_NamePart* returnMe = [[result retain] autorelease];
+  PBUninterpretedOption_NamePart* returnMe = result  ;
   self.result = nil;
   return returnMe;
 }
@@ -5589,18 +5445,15 @@ static PBUninterpretedOption_NamePart* defaultPBUninterpretedOption_NamePartInst
 @end
 
 @interface PBUninterpretedOption_Builder()
-@property (retain) PBUninterpretedOption* result;
+@property (strong) PBUninterpretedOption* result;
 @end
 
 @implementation PBUninterpretedOption_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[PBUninterpretedOption alloc] init] autorelease];
+    self.result = [[PBUninterpretedOption alloc] init] ;
   }
   return self;
 }
@@ -5608,7 +5461,7 @@ static PBUninterpretedOption_NamePart* defaultPBUninterpretedOption_NamePartInst
   return result;
 }
 - (PBUninterpretedOption_Builder*) clear {
-  self.result = [[[PBUninterpretedOption alloc] init] autorelease];
+  self.result = [[PBUninterpretedOption alloc] init] ;
   return self;
 }
 - (PBUninterpretedOption_Builder*) clone {
@@ -5622,7 +5475,7 @@ static PBUninterpretedOption_NamePart* defaultPBUninterpretedOption_NamePartInst
   return [self buildPartial];
 }
 - (PBUninterpretedOption*) buildPartial {
-  PBUninterpretedOption* returnMe = [[result retain] autorelease];
+  PBUninterpretedOption* returnMe = result ;
   self.result = nil;
   return returnMe;
 }

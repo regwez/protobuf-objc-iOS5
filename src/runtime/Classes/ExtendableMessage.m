@@ -24,11 +24,6 @@
 @synthesize extensionMap;
 @synthesize extensionRegistry;
 
-- (void) dealloc {
-  self.extensionMap = nil;
-  self.extensionRegistry = nil;
-  [super dealloc];
-}
 
 
 - (BOOL) isInitialized:(id) object {

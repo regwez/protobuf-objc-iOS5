@@ -19,7 +19,14 @@
 
 #import "Utilities.h"
 
+BOOL isOctal(unichar c) ;
+BOOL allZeroes(NSString* string);
+BOOL isDecimal(unichar c) ;
+BOOL isHex(unichar c);
+int32_t digitValue(unichar c);
+
 @implementation PBTextFormat
+
 
 
 BOOL allZeroes(NSString* string) {

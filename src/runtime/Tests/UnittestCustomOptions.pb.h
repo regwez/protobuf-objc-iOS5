@@ -178,7 +178,7 @@ BOOL DummyMessageContainingEnum_TestEnumTypeIsValidValue(DummyMessageContainingE
   NSString* field1;
 }
 - (BOOL) hasField1;
-@property (readonly, retain) NSString* field1;
+@property (readonly, strong) NSString* field1;
 
 + (TestMessageWithCustomOptions*) defaultInstance;
 - (TestMessageWithCustomOptions*) defaultInstance;
@@ -660,9 +660,9 @@ BOOL DummyMessageContainingEnum_TestEnumTypeIsValidValue(DummyMessageContainingE
 - (BOOL) hasBar;
 - (BOOL) hasBaz;
 - (BOOL) hasFred;
-@property (readonly, retain) ComplexOptionType1* bar;
+@property (readonly, strong) ComplexOptionType1* bar;
 @property (readonly) int32_t baz;
-@property (readonly, retain) ComplexOptionType2_ComplexOptionType4* fred;
+@property (readonly, strong) ComplexOptionType2_ComplexOptionType4* fred;
 
 + (ComplexOptionType2*) defaultInstance;
 - (ComplexOptionType2*) defaultInstance;
@@ -779,7 +779,7 @@ BOOL DummyMessageContainingEnum_TestEnumTypeIsValidValue(DummyMessageContainingE
 - (BOOL) hasQux;
 - (BOOL) hasComplexOptionType5;
 @property (readonly) int32_t qux;
-@property (readonly, retain) ComplexOptionType3_ComplexOptionType5* complexOptionType5;
+@property (readonly, strong) ComplexOptionType3_ComplexOptionType5* complexOptionType5;
 
 + (ComplexOptionType3*) defaultInstance;
 - (ComplexOptionType3*) defaultInstance;
@@ -1013,7 +1013,7 @@ BOOL DummyMessageContainingEnum_TestEnumTypeIsValidValue(DummyMessageContainingE
   NSString* s;
 }
 - (BOOL) hasS;
-@property (readonly, retain) NSString* s;
+@property (readonly, strong) NSString* s;
 
 + (AggregateMessageSetElement*) defaultInstance;
 - (AggregateMessageSetElement*) defaultInstance;
@@ -1076,10 +1076,10 @@ BOOL DummyMessageContainingEnum_TestEnumTypeIsValidValue(DummyMessageContainingE
 - (BOOL) hasFile;
 - (BOOL) hasMset;
 @property (readonly) int32_t i;
-@property (readonly, retain) NSString* s;
-@property (readonly, retain) Aggregate* sub;
-@property (readonly, retain) PBFileOptions* file;
-@property (readonly, retain) AggregateMessageSet* mset;
+@property (readonly, strong) NSString* s;
+@property (readonly, strong) Aggregate* sub;
+@property (readonly, strong) PBFileOptions* file;
+@property (readonly, strong) AggregateMessageSet* mset;
 
 + (Aggregate*) defaultInstance;
 - (Aggregate*) defaultInstance;

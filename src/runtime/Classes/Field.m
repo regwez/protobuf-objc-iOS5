@@ -38,14 +38,6 @@ static PBField *sDefaultInstance = nil;
 	}
 }
 
-- (void)dealloc {
-	[_varintArray release];
-	[_fixed32Array release];
-	[_fixed64Array release];
-	[_lengthDelimitedArray release];
-	[_groupArray release];
-	[super dealloc];
-}
 
 + (PBField *)defaultInstance {
 	return sDefaultInstance;
@@ -136,15 +128,24 @@ static PBField *sDefaultInstance = nil;
 - (void)writeDescriptionFor:(int32_t) fieldNumber
                          to:(NSMutableString*) output
                  withIndent:(NSString*) indent {
-  for (NSNumber* value in self.varintArray) {
-    [output appendFormat:@"%@%d: %qi\n", indent, fieldNumber, value.longLongValue];
+    NSInteger arraySize;
+    
+    arraySize=_varintArray.count;
+    for (int i=0; i<arraySize ; i++) {
+        [output appendFormat:@"%@%d: %qi\n", indent, fieldNumber, [_varintArray int64AtIndex:i]];
+    }
+    
+    arraySize=_fixed32Array.count;
+    for (int i=0; i<arraySize ; i++) {
+        [output appendFormat:@"%@%d: %d\n", indent, fieldNumber, [_fixed32Array int32AtIndex:i]];
+    }
+
+ 
+  arraySize=_fixed64Array.count;
+  for (int i=0; i<arraySize ; i++) {
+      [output appendFormat:@"%@%d: %qi\n", indent, fieldNumber, [_fixed64Array int64AtIndex:i]];
   }
-  for (NSNumber* value in self.fixed32Array) {
-    [output appendFormat:@"%@%d: %d\n", indent, fieldNumber, value.intValue];
-  }
-  for (NSNumber* value in self.fixed64Array) {
-    [output appendFormat:@"%@%d: %qi\n", indent, fieldNumber, value.longLongValue];
-  }
+ 
   for (NSData* value in self.lengthDelimitedArray) {
     [output appendFormat:@"%@%d: %@\n", indent, fieldNumber, value];
   }

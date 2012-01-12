@@ -12,17 +12,17 @@ static PBExtensionRegistry* extensionRegistry = nil;
 + (void) initialize {
   if (self == [UnittestNoGenericServicesRoot class]) {
     UnittestNoGenericServicesRoot_testExtension =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeInt32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeInt32
                                      extendedClass:[TestMessage class]
                                        fieldNumber:1000
                                       defaultValue:[NSNumber numberWithInt:0]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO] ;
     PBMutableExtensionRegistry* registry = [PBMutableExtensionRegistry registry];
     [self registerAllExtensions:registry];
-    extensionRegistry = [registry retain];
+    extensionRegistry = registry;
   }
 }
 + (void) registerAllExtensions:(PBMutableExtensionRegistry*) registry {
@@ -54,9 +54,7 @@ BOOL TestEnumIsValidValue(TestEnum value) {
   hasA_ = !!value;
 }
 @synthesize a;
-- (void) dealloc {
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.a = 0;
@@ -124,7 +122,7 @@ static TestMessage* defaultTestMessageInstance = nil;
   return (TestMessage*)[[[TestMessage builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (TestMessage_Builder*) builder {
-  return [[[TestMessage_Builder alloc] init] autorelease];
+  return [[TestMessage_Builder alloc] init] ;
 }
 + (TestMessage_Builder*) builderWithPrototype:(TestMessage*) prototype {
   return [[TestMessage builder] mergeFrom:prototype];
@@ -173,18 +171,15 @@ static TestMessage* defaultTestMessageInstance = nil;
 @end
 
 @interface TestMessage_Builder()
-@property (retain) TestMessage* result;
+@property (strong) TestMessage* result;
 @end
 
 @implementation TestMessage_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[TestMessage alloc] init] autorelease];
+    self.result = [[TestMessage alloc] init] ;
   }
   return self;
 }
@@ -192,7 +187,7 @@ static TestMessage* defaultTestMessageInstance = nil;
   return result;
 }
 - (TestMessage_Builder*) clear {
-  self.result = [[[TestMessage alloc] init] autorelease];
+  self.result = [[TestMessage alloc] init] ;
   return self;
 }
 - (TestMessage_Builder*) clone {
@@ -206,7 +201,7 @@ static TestMessage* defaultTestMessageInstance = nil;
   return [self buildPartial];
 }
 - (TestMessage*) buildPartial {
-  TestMessage* returnMe = [[result retain] autorelease];
+  TestMessage* returnMe = result;
   self.result = nil;
   return returnMe;
 }

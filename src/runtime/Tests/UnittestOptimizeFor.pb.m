@@ -13,27 +13,27 @@ static PBExtensionRegistry* extensionRegistry = nil;
 + (void) initialize {
   if (self == [UnittestOptimizeForRoot class]) {
     TestOptimizedForSize_testExtension =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeInt32
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeInt32
                                      extendedClass:[TestOptimizedForSize class]
                                        fieldNumber:1234
                                       defaultValue:[NSNumber numberWithInt:0]
                                messageOrGroupClass:[NSNumber class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO] ;
     TestOptimizedForSize_testExtension2 =
-      [[PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
+      [PBConcreteExtensionField extensionWithType:PBExtensionTypeMessage
                                      extendedClass:[TestOptimizedForSize class]
                                        fieldNumber:1235
                                       defaultValue:[TestRequiredOptimizedForSize defaultInstance]
                                messageOrGroupClass:[TestRequiredOptimizedForSize class]
                                         isRepeated:NO
                                           isPacked:NO
-                            isMessageSetWireFormat:NO] retain];
+                            isMessageSetWireFormat:NO] ;
     PBMutableExtensionRegistry* registry = [PBMutableExtensionRegistry registry];
     [self registerAllExtensions:registry];
     [UnittestRoot registerAllExtensions:registry];
-    extensionRegistry = [registry retain];
+    extensionRegistry = registry;
   }
 }
 + (void) registerAllExtensions:(PBMutableExtensionRegistry*) registry {
@@ -44,7 +44,7 @@ static PBExtensionRegistry* extensionRegistry = nil;
 
 @interface TestOptimizedForSize ()
 @property int32_t i;
-@property (retain) ForeignMessage* msg;
+@property (strong) ForeignMessage* msg;
 @end
 
 @implementation TestOptimizedForSize
@@ -63,10 +63,7 @@ static PBExtensionRegistry* extensionRegistry = nil;
   hasMsg_ = !!value;
 }
 @synthesize msg;
-- (void) dealloc {
-  self.msg = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.i = 0;
@@ -147,7 +144,7 @@ static TestOptimizedForSize* defaultTestOptimizedForSizeInstance = nil;
   return (TestOptimizedForSize*)[[[TestOptimizedForSize builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (TestOptimizedForSize_Builder*) builder {
-  return [[[TestOptimizedForSize_Builder alloc] init] autorelease];
+  return [[TestOptimizedForSize_Builder alloc] init] ;
 }
 + (TestOptimizedForSize_Builder*) builderWithPrototype:(TestOptimizedForSize*) prototype {
   return [[TestOptimizedForSize builder] mergeFrom:prototype];
@@ -208,18 +205,15 @@ static TestOptimizedForSize* defaultTestOptimizedForSizeInstance = nil;
 @end
 
 @interface TestOptimizedForSize_Builder()
-@property (retain) TestOptimizedForSize* result;
+@property (strong) TestOptimizedForSize* result;
 @end
 
 @implementation TestOptimizedForSize_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[TestOptimizedForSize alloc] init] autorelease];
+    self.result = [[TestOptimizedForSize alloc] init] ;
   }
   return self;
 }
@@ -227,7 +221,7 @@ static TestOptimizedForSize* defaultTestOptimizedForSizeInstance = nil;
   return result;
 }
 - (TestOptimizedForSize_Builder*) clear {
-  self.result = [[[TestOptimizedForSize alloc] init] autorelease];
+  self.result = [[TestOptimizedForSize alloc] init] ;
   return self;
 }
 - (TestOptimizedForSize_Builder*) clone {
@@ -241,7 +235,7 @@ static TestOptimizedForSize* defaultTestOptimizedForSizeInstance = nil;
   return [self buildPartial];
 }
 - (TestOptimizedForSize*) buildPartial {
-  TestOptimizedForSize* returnMe = [[result retain] autorelease];
+  TestOptimizedForSize* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -354,9 +348,7 @@ static TestOptimizedForSize* defaultTestOptimizedForSizeInstance = nil;
   hasX_ = !!value;
 }
 @synthesize x;
-- (void) dealloc {
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.x = 0;
@@ -420,7 +412,7 @@ static TestRequiredOptimizedForSize* defaultTestRequiredOptimizedForSizeInstance
   return (TestRequiredOptimizedForSize*)[[[TestRequiredOptimizedForSize builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (TestRequiredOptimizedForSize_Builder*) builder {
-  return [[[TestRequiredOptimizedForSize_Builder alloc] init] autorelease];
+  return [[TestRequiredOptimizedForSize_Builder alloc] init] ;
 }
 + (TestRequiredOptimizedForSize_Builder*) builderWithPrototype:(TestRequiredOptimizedForSize*) prototype {
   return [[TestRequiredOptimizedForSize builder] mergeFrom:prototype];
@@ -462,18 +454,15 @@ static TestRequiredOptimizedForSize* defaultTestRequiredOptimizedForSizeInstance
 @end
 
 @interface TestRequiredOptimizedForSize_Builder()
-@property (retain) TestRequiredOptimizedForSize* result;
+@property (strong) TestRequiredOptimizedForSize* result;
 @end
 
 @implementation TestRequiredOptimizedForSize_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[TestRequiredOptimizedForSize alloc] init] autorelease];
+    self.result = [[TestRequiredOptimizedForSize alloc] init] ;
   }
   return self;
 }
@@ -481,7 +470,7 @@ static TestRequiredOptimizedForSize* defaultTestRequiredOptimizedForSizeInstance
   return result;
 }
 - (TestRequiredOptimizedForSize_Builder*) clear {
-  self.result = [[[TestRequiredOptimizedForSize alloc] init] autorelease];
+  self.result = [[TestRequiredOptimizedForSize alloc] init] ;
   return self;
 }
 - (TestRequiredOptimizedForSize_Builder*) clone {
@@ -495,7 +484,7 @@ static TestRequiredOptimizedForSize* defaultTestRequiredOptimizedForSizeInstance
   return [self buildPartial];
 }
 - (TestRequiredOptimizedForSize*) buildPartial {
-  TestRequiredOptimizedForSize* returnMe = [[result retain] autorelease];
+  TestRequiredOptimizedForSize* returnMe = result;
   self.result = nil;
   return returnMe;
 }
@@ -553,7 +542,7 @@ static TestRequiredOptimizedForSize* defaultTestRequiredOptimizedForSizeInstance
 @end
 
 @interface TestOptionalOptimizedForSize ()
-@property (retain) TestRequiredOptimizedForSize* o;
+@property (strong) TestRequiredOptimizedForSize* o;
 @end
 
 @implementation TestOptionalOptimizedForSize
@@ -565,10 +554,7 @@ static TestRequiredOptimizedForSize* defaultTestRequiredOptimizedForSizeInstance
   hasO_ = !!value;
 }
 @synthesize o;
-- (void) dealloc {
-  self.o = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
     self.o = [TestRequiredOptimizedForSize defaultInstance];
@@ -634,7 +620,7 @@ static TestOptionalOptimizedForSize* defaultTestOptionalOptimizedForSizeInstance
   return (TestOptionalOptimizedForSize*)[[[TestOptionalOptimizedForSize builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (TestOptionalOptimizedForSize_Builder*) builder {
-  return [[[TestOptionalOptimizedForSize_Builder alloc] init] autorelease];
+  return [[TestOptionalOptimizedForSize_Builder alloc] init] ;
 }
 + (TestOptionalOptimizedForSize_Builder*) builderWithPrototype:(TestOptionalOptimizedForSize*) prototype {
   return [[TestOptionalOptimizedForSize builder] mergeFrom:prototype];
@@ -679,18 +665,15 @@ static TestOptionalOptimizedForSize* defaultTestOptionalOptimizedForSizeInstance
 @end
 
 @interface TestOptionalOptimizedForSize_Builder()
-@property (retain) TestOptionalOptimizedForSize* result;
+@property (strong) TestOptionalOptimizedForSize* result;
 @end
 
 @implementation TestOptionalOptimizedForSize_Builder
 @synthesize result;
-- (void) dealloc {
-  self.result = nil;
-  [super dealloc];
-}
+
 - (id) init {
   if ((self = [super init])) {
-    self.result = [[[TestOptionalOptimizedForSize alloc] init] autorelease];
+    self.result = [[TestOptionalOptimizedForSize alloc] init] ;
   }
   return self;
 }
@@ -698,7 +681,7 @@ static TestOptionalOptimizedForSize* defaultTestOptionalOptimizedForSizeInstance
   return result;
 }
 - (TestOptionalOptimizedForSize_Builder*) clear {
-  self.result = [[[TestOptionalOptimizedForSize alloc] init] autorelease];
+  self.result = [[TestOptionalOptimizedForSize alloc] init] ;
   return self;
 }
 - (TestOptionalOptimizedForSize_Builder*) clone {
@@ -712,7 +695,7 @@ static TestOptionalOptimizedForSize* defaultTestOptionalOptimizedForSizeInstance
   return [self buildPartial];
 }
 - (TestOptionalOptimizedForSize*) buildPartial {
-  TestOptionalOptimizedForSize* returnMe = [[result retain] autorelease];
+  TestOptionalOptimizedForSize* returnMe = result;
   self.result = nil;
   return returnMe;
 }

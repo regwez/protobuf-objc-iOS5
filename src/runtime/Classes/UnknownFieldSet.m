@@ -23,7 +23,7 @@
 #import "UnknownFieldSet_Builder.h"
 
 @interface PBUnknownFieldSet()
-@property (retain) NSDictionary* fields;
+@property (strong) NSDictionary* fields;
 @end
 
 
@@ -33,18 +33,12 @@ static PBUnknownFieldSet* defaultInstance = nil;
 
 + (void) initialize {
   if (self == [PBUnknownFieldSet class]) {
-    defaultInstance = [[PBUnknownFieldSet setWithFields:[NSMutableDictionary dictionary]] retain];
+    defaultInstance = [PBUnknownFieldSet setWithFields:[NSMutableDictionary dictionary]];
   }
 }
 
 
 @synthesize fields;
-
-- (void) dealloc {
-  self.fields = nil;
-
-  [super dealloc];
-}
 
 
 + (PBUnknownFieldSet*) defaultInstance {
@@ -62,7 +56,7 @@ static PBUnknownFieldSet* defaultInstance = nil;
 
 
 + (PBUnknownFieldSet*) setWithFields:(NSMutableDictionary*) fields {
-  return [[[PBUnknownFieldSet alloc] initWithFields:fields] autorelease];
+  return [[PBUnknownFieldSet alloc] initWithFields:fields];
 }
 
 
@@ -119,7 +113,7 @@ static PBUnknownFieldSet* defaultInstance = nil;
 
 
 + (PBUnknownFieldSet_Builder*) builder {
-  return [[[PBUnknownFieldSet_Builder alloc] init] autorelease];
+  return [[PBUnknownFieldSet_Builder alloc] init];
 }
 
 
