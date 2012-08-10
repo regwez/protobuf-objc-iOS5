@@ -377,7 +377,7 @@ namespace google { namespace protobuf { namespace compiler { namespace objective
       "  return self;\n"
       "}\n"
       "- ($classname$_Builder *)set$capitalized_name$Array:(NSArray *)array {\n"
-      "  result.$list_name$ = [[NSMutableArray alloc]init];\n"
+      "  result.$list_name$ = [[NSMutableArray alloc]initWithArray:array];\n"
       "  return self;\n"
       "}\n"
       "- ($classname$_Builder *)clear$capitalized_name$ {\n"
